@@ -35,8 +35,10 @@ Cinemachine是完全免费的。和其他package安装的过程一样，在Unity
 
 安装成功后，在Project窗口的package文件夹中会出现一个新的Cinemachine文件夹；在顶部的菜单中，也会出现一个新的Cinemachine菜单；在Hierarchy视图中右键单击时，~~也可以访问此菜单~~（存疑，本人的Unity2020.3.26f版本中没有此特性）。
 
-![Cinemachine in Project Gizmos folder](https://github.com/wcai49/cinemachine_doc_Chinese/blob/main/Figures/project_gizmos_folder.png)
-![Cinemachine in menu](https://github.com/wcai49/cinemachine_doc_Chinese/blob/main/Figures/Cinemachine_window_menu.png)
+<p>
+<img alt="Cinemachine in Project Gizmos folder" src="https://github.com/wcai49/cinemachine_doc_Chinese/blob/main/Figures/project_gizmos_folder.png" width="250" height="280">
+<img alt="Cinemachine in menu" src="https://github.com/wcai49/cinemachine_doc_Chinese/blob/main/Figures/Cinemachine_window_menu.png" width="200" height="220" >
+</p>
 
 ### 相关要求
 
