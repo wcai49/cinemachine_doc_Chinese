@@ -4,6 +4,14 @@
 
 This project is about Unity's official verified package: cinemachine's documentation translated in Chinese.
 
+## 快速向导
+- [背景](#背景)
+- [关于Cinemachine](#关于cinemachine)
+- [安装Cinemachine](#安装cinemachine)
+- [相关要求](#相关要求)
+- [通过CinemachineAsset Package升级](#通过cinemachineasset-package升级)
+
+
 ### 背景
 
 本人作为Unity的业余爱好者，最近在研究Cinemachine相关的用法。最开始的时候，我尝试通过Youtube视频学习如何使用Cinemachine，我看了最经常关注的Youtuber： Brackeys的视频之后，发现对于此类的插件，仅仅观看视频跟着做很难学到其精髓、原理，从而导致每次再遇到相同的问题时，还是需要翻找视频跟着做一遍，这样不好。
