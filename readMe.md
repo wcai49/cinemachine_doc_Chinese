@@ -15,7 +15,7 @@ This project is about Unity's official verified package: cinemachine's documenta
 
 
 ### 关于Cinemachine
-![Cinemachine](https://github.com/wcai49/cinemachine_doc_Chinese/blob/main/About%20Cinemachine/Cinemachine_Intro.png)
+![Cinemachine](https://github.com/wcai49/cinemachine_doc_Chinese/blob/main/Figures/Cinemachine_Intro.png)
 
 Cinemachine是Unity中用于控制操作camera的一系列模块。它可以用于解决为了实现关于镜头间的目标跟踪、组合、协调、和切换效果而产生的复杂数学和逻辑问题。一句话描述来说，Cinemachine就是为显著减少开发过程中，手动调试和修改unity脚本（script）所耗费的大量时间而生的。
 
@@ -35,8 +35,8 @@ Cinemachine是完全免费的。和其他package安装的过程一样，在Unity
 
 安装成功后，在Project窗口的package文件夹中会出现一个新的Cinemachine文件夹；在顶部的菜单中，也会出现一个新的Cinemachine菜单；在Hierarchy视图中右键单击时，~~也可以访问此菜单~~（存疑，本人的Unity2020.3.26f版本中没有此特性）。
 
-![Cinemachine in Project Gizmos folder](https://github.com/wcai49/cinemachine_doc_Chinese/blob/main/About%20Cinemachine/project_gizmos_folder.png)
-![Cinemachine in menu](https://github.com/wcai49/cinemachine_doc_Chinese/blob/main/About%20Cinemachine/Cinemachine_window_menu.png)
+![Cinemachine in Project Gizmos folder](https://github.com/wcai49/cinemachine_doc_Chinese/blob/main/Figures/project_gizmos_folder.png)
+![Cinemachine in menu](https://github.com/wcai49/cinemachine_doc_Chinese/blob/main/Figures/Cinemachine_window_menu.png)
 
 ### 相关要求
 
