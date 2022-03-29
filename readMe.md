@@ -12,9 +12,7 @@ This project is about Unity's official verified package: cinemachine's documenta
 
 由于我只是一个程序员，并非英语专业，因此可能会有一些翻译得不好的地方，还请各位多多指出，希望有更好见解的同学一起完善这个文档。
 
-## 官方文档地址
 
-这里是官方的英文文档地址： https://docs.unity3d.com/Packages/com.unity.cinemachine@2.8/manual/index.html 。
 
 ## 目录
 
@@ -36,3 +34,7 @@ This project is about Unity's official verified package: cinemachine's documenta
 
   * [关于Cinemachine](./Using_Cinemachine/Using_Cinemachine.md)
 </details>
+
+## 官方文档地址
+
+这里是官方的英文文档地址： https://docs.unity3d.com/Packages/com.unity.cinemachine@2.8/manual/index.html 。
