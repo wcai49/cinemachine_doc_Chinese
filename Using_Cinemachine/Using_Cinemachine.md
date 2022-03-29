@@ -1,7 +1,24 @@
 # 使用Cinemachine
 
-当使用Cinemachine时，你需要换一个新的思维方式去调试camera。 例如，你有可能曾经在编写用于控制camera行为的script上投入了大量精力，花费了很多的时间；而使用Cinemachine可以在更短的时间内提供同样的结果。
+当使用Cinemachine时，你需要重新认识调试camera这项工作。例如，你有可能曾经花费了很多的时间和精力，去写控制camera行为的script；然而使用Cinemachine做这件事，可以在更短的时间内获得至少相同的效果。
 
 ## Virtual Cameras （虚拟摄像机）
 
-Cinemachine不会去创建一个新的camera。相反，它的原理是指导Unity的camera去拍摄不同的摄像角度，开发者通过Virtual cameras来完成这些组合拍摄的效果，而非创造很多个camera出来。Virtual camera会移动和旋转Unity的camera，并且控制Unity camera的相关设置。
+Cinemachine不会去创建一个新的camera。相反，它的原理是指导Unity的camera去拍摄不同的摄像角度，开发者通过Virtual cameras（以下都称为虚拟摄像机）来完成这些组合拍摄的效果，而非创造很多个camera出来。Virtual camera会移动和旋转Unity的camera，并且控制Unity camera的相关设置。
+
+这些虚拟摄像机就是Unity camera分离出来的GameObjects，它们各自完全独立。例如，在一个Scene的Hierarchy面板中，很可能会有很多虚拟摄像机像这样分布：
+
+虚拟摄像机的主要任务是：
+  - 将Scene中的camera定位
+  - 将camera对准某个东西
+  - 为camera添加一些噪音（Noise）。噪音用于模拟各种场景，例如手持摄像或载具摇晃等
+
+Cinemachine鼓励开发者多创造一些虚拟摄像机，得益于这些虚拟摄像机被设计为占用处理器性能很少的特点。当然，如果你的Scene对于性能非常敏感，也可以将一些特定时段内，除了必要的以外，其他的虚拟摄像机禁用，以获得最好的性能。
+
+推荐的做法是，为每一此单独拍摄使用（创建）单独的虚拟摄像机，利用这一做法来创造戏剧性，或微妙的混剪效果。例如：
+  - 对于两个角色互相对话的过场动画场景，使用三个虚拟摄像机:一个摄像机用于两个角色都在内的中间镜头，再分别用两个单独的虚拟摄像机处理每个角色的特写镜头。使用Timeline将音频与虚拟摄像机同步。
+  - 复制一个已有的虚拟摄像机，使两个虚拟相机在Scene中处于完全相同的位置。对于第二个虚拟摄像机，改变FOV或构图的设置。当玩家触发了某个触发器（trigger）时，Cinemachine可以将第一台虚拟摄像机混合至第二台，通过两台虚拟摄像机的混合来强调动作的变化等效果。
+
+一台虚拟摄像机可以随时控制Unity camera的各项属性。此时它就是**实时虚拟摄像机**。 当然也有例外情况，当这台虚拟摄像机正在混合至下一台时，两者都为实时的。
+
+## Cinemachine Brain （大脑）
