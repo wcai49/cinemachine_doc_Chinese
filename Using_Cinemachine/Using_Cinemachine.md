@@ -8,6 +8,8 @@ Cinemachine不会去创建一个新的camera。相反，它的原理是指导Uni
 
 这些虚拟摄像机就是Unity camera分离出来的GameObjects，它们各自完全独立。例如，在一个Scene的Hierarchy面板中，很可能会有很多虚拟摄像机像这样分布：
 
+![Cinemachine](https://github.com/wcai49/cinemachine_doc_Chinese/blob/main/Figures/using_cinemachine_seperate.png)
+
 虚拟摄像机的主要任务是：
   - 将Scene中的camera定位
   - 将camera对准某个东西
