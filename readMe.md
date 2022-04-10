@@ -34,6 +34,8 @@ This project is about Unity's official verified package: cinemachine's documenta
 
   * [使用Cinemachine](./Using_Cinemachine/Using_Cinemachine.md)
   * [Virtual Camera 虚拟摄像机](./Using_Cinemachine/Using_Cinemachine.md#virtual-cameras-虚拟摄像机)
+  * [Cinemachine Brain](./Using_Cinemachine/Using_Cinemachine.md#Cinemachine-Brain)
+  * [移动与对准](./Using_Cinemachine/Using_Cinemachine.md#移动与瞄准)
   
 </details>
 
