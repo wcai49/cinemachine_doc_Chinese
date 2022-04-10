@@ -31,3 +31,31 @@ Cinemachine Brain是Unity Camera中的一个component（你可以选则camera，
 在实时（realtime）情况中， 使用cinemachine brain来处理动态的游戏事件（game events），这样就可以通过控制优先级属性的方式来操控camera，迎合你的游戏运行逻辑。这个控制摄像机的方法在实际游戏运行的过程中非常有效，因为玩家在游戏中的操作是不可预测的。
 
 使用Cinemachine Timeline来为可预测的情况编排摄像机动作，例如转场等。Timeline会覆盖Brain的优先级系统的逻辑，让你更精确地掌控摄像机每一帧的控制。
+
+## 移动与瞄准
+
+使用虚拟摄像机的Body属性来定义它在Scene中的移动方式；使用Aim属性来定义如何旋转它。
+
+一台虚拟摄像机拥有两个目标属性：
+  - Follow target， 定义虚拟摄像机将与之一同移动的物体；
+  - Look At target， 定义虚拟摄像机将对准的物体。
+
+Cinemachine包含了一整套用于控制移动和瞄准的程序算法。 每一种算法用于解决某一特定的问题， 并且你也可以自定义一些属性来满足你的一些具体的需求。Cinemachine将这些算法通过**CinemachineComponent**的形式提供给开发者， 开发者可以使用**CinemachineComponent class**来执行一些移动和瞄准的行为。
+
+Body属性提供了如下的程序算法，供开发者设置虚拟摄像机在Scene中的移动行为：
+  - **Transposer**: 以一个固定的关系去跟随目标。有阻尼属性供选择；
+  - **Do Nothing**: 不移动虚拟摄像机；
+  - **Framing Transposer**: 在屏幕空间内，以一个固定的关系去跟随目标。有阻尼属性供选择；
+  - **Orbital Transposer**: 根据变量关系与Follow目标移动；（一般多）接受玩家的操作输入控制；（例如，魔兽世界点击左键可以旋转相机，滚轮可以控制远近，译者注）
+  - **Tracked Dolly**: 沿着预定义的路径移动；
+  - **Hard Lock to Target**: 使用与Follow目标完全相同的位置。
+
+Aim属性提供了如下的程序性算法，来旋转虚拟摄像机以达到瞄准Look At目标的目的：
+
+  - **Composer**: 使Look At目标保持在相机框架中，并附加复合的约束条件；
+  - **Group Composer**: 使多个Look At目标保持在相机框架中；
+  - **Do Noting**: 不旋转虚拟摄像机；
+  - **POV**: 根据用户的游戏输入值旋转虚拟摄像机；
+  - **Same As Follow Target**: 当Follow Target一起旋转；
+  - **Hard Look At**: 将Look At目标保持在相机框架的正中央。
+
