@@ -59,3 +59,11 @@ Aim属性提供了如下的程序性算法，来旋转虚拟摄像机以达到�
   - **Same As Follow Target**: 当Follow Target一起旋转；
   - **Hard Look At**: 将Look At目标保持在相机框架的正中央。
 
+## 构建一个镜头
+
+你将在Framing Transposer， Composer， 和Group Composer这三个算法的帮助下，通过定义好摄像机每一帧画面的不同区域的方法，来构建你的一个拍摄镜头。下面是这些区域的定义：
+
+  - **Dead zone**： Cinemachine会将你之前设置的target目标保持在这个区域中；
+  - **Soft zone**： 如果target目标进入到了该区域，那么摄像机会重新移动定位，直至target目标回**dead zone**。这个重新定位的过程可快可慢，取决于你在Damping设置中设定的时间长短；
+  - **Screen**： 
+
