@@ -68,3 +68,18 @@ Aim属性提供了如下的程序性算法，来旋转虚拟摄像机以达到�
   - **Screen**： Dead zone中心的屏幕位置。数值0.5即是屏幕的中心；
   - **Damping**: 该属性模拟了一个真实的操作摄像机人员在操作很重的摄像机时会造成的延迟。该属性体现了当target进入到soft zone的时候，摄像机跟随target的快慢。使用较小的数值可以模拟出反应更灵敏的摄像机，更利落地移动和对准动作让target保持在dead zone内；使用较大的数值可以模拟出更重的摄像机拍摄，所有的行为都会变缓慢。可以说damping值越大，Cinemachine就会允许target进入越多的soft zone区域。
 
+下方图片为Cinemacchine的Game Window Guides，它为上述几个区域的提供了可视化的展示。在Unity的Game窗口内，按照不同的颜色区分。
+
+![Cinemachine](https://github.com/wcai49/cinemachine_doc_Chinese/blob/main/Figures/using_cinemachine_tinted_areas.png)
+
+中间空的区域为dead zone。蓝色的区域为soft zone。 dead zone和soft zone为屏幕的实际位置。红色的区域为no pass区，cinemachine的target永远不会被放进该区域。黄色的正方形标记了当前的target位置。
+
+开发者应当通过调整这些区域的分布，来使Unity camera获得各种表现行为。可以在Unity的Game窗口内拖拽各个区域的边界线，或者在inspector窗口重调整各项数值。例如，输入更大的damping值，来模拟更重的摄像机设备的拍摄效果。也可以扩大soft zone和dead zone的区域，从而达到忽略target移动带来的影响。
+（译者注：这里的意思应当是：扩大了dead zone和soft zone之后，屏幕和target的比例就会变大，镜头变远，形成远景镜头效果。此时物体进行移动的时候，摄像机也不会有大幅度的移动。相反，如果镜头与target距离很近，就会形成特写镜头的效果，如果target进行移动，那么摄像机也需要随之大幅度移动）。
+当处理类似动画循环情景的时候，利用这个特性，你可以在target只做小范围移动时阻止摄像机跟随一起移动。
+
+## 使用Noise来模拟镜头晃动
+
+在现实生活中，使用的真实的摄像机通常是笨重的。有时候摄影师需要手持或在不稳定的坐骑（例如行驶中的载具）上进行拍摄。使用Cinemachine的noise属性，就可以模拟出上述的镜头晃动效果。例如，你可以为跟随的一个奔跑的人物对象添加晃动效果，为玩家带来沉浸感。
+
+在每一帧更新的时候，Cinemachine会单独为摄像机移动添加noise从而达到跟随target目标的效果，noise并不会影响Unity camera在下一帧的位置。因此，noise属性也就不会影响到damping属性做出的效果（模拟摄像机笨重程度）。
