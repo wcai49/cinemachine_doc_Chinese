@@ -4,16 +4,16 @@
 
 ## Virtual Cameras （虚拟摄像机）
 
-Cinemachine不会去创建一个新的camera。相反，它的原理是指导Unity的camera去拍摄不同的摄像角度，开发者通过Virtual cameras（以下都称为虚拟摄像机）来完成这些组合拍摄的效果，而非创造很多个camera出来。Virtual camera会移动和旋转Unity的camera，并且控制Unity camera的相关设置。
+Cinemachine不会去创建一个新的camera。相反，它的原理是指导Unity的camera去拍摄不同的摄像角度，开发者通过Virtual cameras（以下都称为虚拟摄像机）来完成这些组合拍摄的效果，而非创造很多个camera出来。虚拟摄像机会移动和旋转Unit camera，并且控制Unity camera的相关设置。
 
-这些虚拟摄像机就是Unity camera分离出来的GameObjects，它们各自完全独立。例如，在一个Scene的Hierarchy面板中，很可能会有很多虚拟摄像机像这样分布：
+这些虚拟摄像机就是与Unity camera区分开来的不同GameObjects，它们各自完全独立。例如，在一个Scene的Hierarchy面板中，很可能会有很多虚拟摄像机像这样分布：
 
 ![Cinemachine](https://github.com/wcai49/cinemachine_doc_Chinese/blob/main/Figures/using_cinemachine_seperate.png)
 
 虚拟摄像机的主要任务是：
-  - 将Scene中的camera定位
-  - 将camera对准某个东西
-  - 为camera添加一些噪音（Noise）。噪音用于模拟各种场景，例如手持摄像或载具摇晃等
+  - 将Scene中的Unity camera定位
+  - 将Unity camera对准某个东西
+  - 为Unity camera添加一些噪音（Noise）。噪音用于模拟各种场景，例如手持摄像或载具摇晃等
 
 Cinemachine鼓励开发者多创造一些虚拟摄像机，得益于这些虚拟摄像机被设计为占用处理器性能很少的特点, 通常拥有很多的虚拟摄像机也不会影响性能。当然，如果你的Scene对于性能要求很高，也可以在一些特定时段内，将除了必要的以外其他的虚拟摄像机禁用，以获得最好的性能表现。
 
@@ -37,7 +37,7 @@ Cinemachine Brain是Unity Camera中的一个component（你可以选则camera，
 使用虚拟摄像机的Body属性来定义它在Scene中的移动方式；使用Aim属性来定义如何旋转它。
 
 一台虚拟摄像机拥有两个目标属性：
-  - Follow target， 定义虚拟摄像机将与之一同移动的物体；
+  - Follow target， 定义虚拟摄像机将跟随并与之一同移动的物体；
   - Look At target， 定义虚拟摄像机将对准的物体。
 
 Cinemachine包含了一整套用于控制移动和瞄准的程序算法。 每一种算法用于解决某一特定的问题， 并且你也可以自定义一些属性来满足你的一些具体的需求。Cinemachine将这些算法通过**CinemachineComponent**的形式提供给开发者， 开发者可以使用**CinemachineComponent class**来执行一些移动和瞄准的行为。
@@ -46,7 +46,7 @@ Body属性提供了如下的程序算法，供开发者设置虚拟摄像机在S
   - **Transposer**: 以一个固定的关系去跟随目标。有阻尼属性供选择；
   - **Do Nothing**: 不移动虚拟摄像机；
   - **Framing Transposer**: 在屏幕空间内，以一个固定的关系去跟随目标。有阻尼属性供选择；
-  - **Orbital Transposer**: 根据变量关系与Follow目标移动；（一般多）接受玩家的操作输入控制；（例如，魔兽世界点击左键可以旋转相机，滚轮可以控制远近，译者注）
+  - **Orbital Transposer**: 根据变量关系与Follow目标移动；接受玩家的操作输入控制；（例如，魔兽世界点击左键可以旋转相机，滚轮可以控制远近，译者注）
   - **Tracked Dolly**: 沿着预定义的路径移动；
   - **Hard Lock to Target**: 使用与Follow目标完全相同的位置。
 
@@ -65,5 +65,6 @@ Aim属性提供了如下的程序性算法，来旋转虚拟摄像机以达到�
 
   - **Dead zone**： Cinemachine会将你之前设置的target目标保持在这个区域中；
   - **Soft zone**： 如果target目标进入到了该区域，那么摄像机会重新移动定位，直至target目标回**dead zone**。这个重新定位的过程可快可慢，取决于你在Damping设置中设定的时间长短；
-  - **Screen**： 
+  - **Screen**： Dead zone中心的屏幕位置。数值0.5即是屏幕的中心；
+  - **Damping**: 该属性模拟了一个真实的操作摄像机人员在操作很重的摄像机时会造成的延迟。该属性体现了当target进入到soft zone的时候，摄像机跟随target的快慢。使用较小的数值可以模拟出反应更灵敏的摄像机，更利落地移动和对准动作让target保持在dead zone内；使用较大的数值可以模拟出更重的摄像机拍摄，所有的行为都会变缓慢。可以说damping值越大，Cinemachine就会允许target进入越多的soft zone区域。
 
