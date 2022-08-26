@@ -70,7 +70,7 @@ Aim属性提供了如下的程序性算法，来旋转虚拟摄像机以达到�
 
 下方图片为Cinemacchine的Game Window Guides，它为上述几个区域的提供了可视化的展示。在Unity的Game窗口内，按照不同的颜色区分。
 
-![Cinemachine](https://github.com/wcai49/cinemachine_doc_Chinese/blob/main/Figures/using_cinemachine_tinted_areas.png)
+![Cinemachine](https://github.com/wcai49/cinemachine_doc_Chinese/blob/main/Figures/tinted_areas.png)
 
 中间空的区域为dead zone。蓝色的区域为soft zone。 dead zone和soft zone为屏幕的实际位置。红色的区域为no pass区，cinemachine的target永远不会被放进该区域。黄色的正方形标记了当前的target位置。
 
