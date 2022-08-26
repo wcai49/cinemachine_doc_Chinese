@@ -36,6 +36,8 @@ This project is about Unity's official verified package: cinemachine's documenta
   * [Virtual Camera 虚拟摄像机](./Using_Cinemachine/Using_Cinemachine.md#virtual-cameras-虚拟摄像机)
   * [Cinemachine Brain](./Using_Cinemachine/Using_Cinemachine.md#Cinemachine-Brain)
   * [移动与对准](./Using_Cinemachine/Using_Cinemachine.md#移动与瞄准)
+  * [构建一个镜头](./Using_Cinemachine/Using_Cinemachine.md#构建一个镜头)
+  * [使用noise来模拟镜头晃动](./Using_Cinemachine/Using_Cinemachine.md#使用noise来模拟镜头晃动)
   
 </details>
 
