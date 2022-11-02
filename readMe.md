@@ -1,6 +1,6 @@
 # Cinemachine_doc_Chinese
 
-这个项目是关于Unity官方认证的package：Cinemachine的技术文档中文翻译。
+这个项目是关于Unity官方认证的package：Cinemachine(V2.8.9)的技术文档中文翻译。
 
 This project is about Unity's official verified package: cinemachine's documentation translated in Chinese.
 
@@ -39,6 +39,14 @@ This project is about Unity's official verified package: cinemachine's documenta
   * [构建一个镜头](./Using_Cinemachine/Using_Cinemachine.md#构建一个镜头)
   * [使用noise来模拟镜头晃动](./Using_Cinemachine/Using_Cinemachine.md#使用noise来模拟镜头晃动)
   
+</details>
+
+<details>
+  <summary>
+    使用虚拟摄像机VM
+  </summary>
+  
+  * [如何添加VM]()
 </details>
 
 ## 官方文档地址
