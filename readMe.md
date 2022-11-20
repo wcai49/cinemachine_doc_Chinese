@@ -46,7 +46,20 @@ This project is about Unity's official verified package: cinemachine's documenta
     使用虚拟摄像机VM
   </summary>
   
-  * [如何添加VM]()
+  ---
+  在你的项目中，管理好你的Hierarchy面板，使之在只含有一个Unity自带的camera的同时（并添加CinemachineBrain component），可以拥有数个虚拟摄像机Virtual Camera（以下简称VM）。
+
+  如何添加一个VM到Scene中：
+  1. 在Unity的菜单中，选择GameObject > Cinemachine > Virtual Camera。
+  Unity会自动生成一个GameObject，同时附加上Cinemachine Virtual Camera Component。如果这是你添加的第一个VM，那么Unity还会给场景中的Unity自带camera添加上Cinemachine Brain component。
+  2. 设置VM的Follow属性，从而确定你要VM**跟随**的是场景中的哪个GameObject。
+  VM会自动将Unity Camera永远定位到该GameObject相对应的位置上。甚至当你在调试游戏时的Scene窗口中拖动，它也会实时更新。
+  3. 设置VM的LookAt属性，从而确定你要VM**对准**的是场景中的哪个GameObject。
+  VM会自动旋转Unity Camera，使之保持面对该GameObject的位置。甚至当你在调试游戏时的Scene窗口中拖动，它也会实时更新。
+  4. 根据自身需求，自定义VM的属性
+  你可以自定义VM的跟随和对准的算法，也可以调整例如：跟随的偏差，跟随的阻尼感，屏幕的构图，和Camera重新瞄准时的阻尼感。
+
+  * [设置VM的属性]()
 </details>
 
 ## 官方文档地址
