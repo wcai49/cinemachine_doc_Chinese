@@ -1,4 +1,4 @@
-### 关于Cinemachine
+### About Cinemachine 【关于Cinemachine】
 ![Cinemachine](../Figures/AboutCinemachine/Cinemachine_Intro.png)
 
 Cinemachine是Unity中用于控制操作camera的一系列模块。它可以用于解决为了实现关于镜头间的目标跟踪、组合、协调、和切换效果而产生的复杂数学和逻辑问题。一句话描述来说，Cinemachine就是为显著减少开发过程中，手动调试和修改unity脚本（script）所耗费的大量时间而生的。
