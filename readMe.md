@@ -18,7 +18,7 @@ This project is about Unity's official verified package: cinemachine's documenta
 
 [About Cinemachine 【关于Cinemachine】](./About_Cinemachine/About_Cinemachine.md#关于cinemachine)
 
-[Using Cinemachine 【使用Cinemachine】](./Using_Cinemachine/index.md)
+[Using Cinemachine 【使用Cinemachine】](./Using_Cinemachine/Using_Cinemachine.md)
 
 [Upgrading from Cinemachine 2.x 【将Cinemachine从2.x版本升级（至当前版本）】](./Upgrading_Cinemachine/Upgrading_Cinemachine.md)
 
