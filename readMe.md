@@ -1,6 +1,6 @@
 # Cinemachine_doc_Chinese
 
-这个项目是关于Unity官方认证的package：Cinemachine(V3.3.0)的技术文档中文翻译。
+这个项目是关于Unity官方认证的package：Cinemachine(V3.0.0)的技术文档中文翻译。
 
 This project is about Unity's official verified package: cinemachine's documentation translated in Chinese.
 
