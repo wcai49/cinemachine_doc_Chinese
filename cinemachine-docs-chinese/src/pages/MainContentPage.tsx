@@ -5,14 +5,10 @@
  * Description: MainContentPage component for the application
  */
 
-import React from 'react';
+import React from "react";
 
 const MainContentPage: React.FC = () => {
-    return (
-        <div>
-            Cinemachine package
-        </div>
-    )
-}
+  return <div className="FlexOne">Cinemachine package</div>;
+};
 
 export default MainContentPage;
