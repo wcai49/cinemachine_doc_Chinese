@@ -1,0 +1,17 @@
+.App {
+    
+}
+
+.AppHeader {
+    height: 45px;
+    background-color: #282c34;
+    color: #ffffff;
+}
+
+.AppBody {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 45px);
+}
