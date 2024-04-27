@@ -1,0 +1,174 @@
+[
+  {
+    "label": "Cinemachine组件",
+    "key": "section1-Cinemachine-package"
+  },
+  {
+    "label": "安装和升级",
+    "key": "section2-Installation-and-upgrade",
+    "subItems": [
+      {
+        "label": "从Cinemachine 2.x升级",
+        "key": "section2-1-Upgrading-from-Cinemachine-2.x"
+      }
+    ]
+  },
+  {
+    "label": "入门指南",
+    "key": "section3-Get-started",
+    "subItems": [
+      {
+        "label": "了解Cinemachine概念",
+        "key": "section3-1-Discover-Cinemachine-concepts",
+        "subItems": [
+          {
+            "label": "Cinemachine基本元素",
+            "key": "section3-1-1-Cinemachine-essential-elements"
+          },
+          {
+            "label": "相机控制与过渡",
+            "key": "section3-1-2-Camera-control-and-transitions"
+          },
+          {
+            "label": "程序化运动",
+            "key": "section3-1-3-Procedural-motion"
+          },
+          {
+            "label": "Cinemachine与时间轴",
+            "key": "section3-1-4-Cinemachine-and-Timeline"
+          }
+        ]
+      },
+      {
+        "label": "设置基本Cinemachine环境",
+        "key": "section3-2-Set-up-a-basic-Cinemachine-environment"
+      },
+      {
+        "label": "设置多个Cinemachine摄像机和过渡",
+        "key": "section3-3-Set-up-multiple-Cinemachine-Cameras-and-transitions"
+      },
+      {
+        "label": "向Cinemachine摄像机添加程序化行为",
+        "key": "section3-4-Add-procedural-behavior-to-a-Cinemachine-Camera"
+      },
+      {
+        "label": "使用Cinemachine摄像机设置时间轴",
+        "key": "section3-5-Set-up-Timeline-with-Cinemachine-Cameras"
+      },
+      {
+        "label": "使用方便的工具和快捷方式",
+        "key": "section3-6-Use-convenient-tools-and-shortcuts",
+        "subItems": [
+          {
+            "label": "预置相机",
+            "key": "section3-6-1-Pre-built-cameras"
+          },
+          {
+            "label": "场景处理",
+            "key": "section3-6-2-Scene-Handles"
+          },
+          {
+            "label": "播放模式下保存",
+            "key": "section3-6-3-Saving-in-Play-Mode"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "label": "3D跟踪场景",
+    "key": "section4-3D-tracking-scenarios",
+    "subItems": [
+      {
+        "label": "跟踪和框定角色",
+        "key": "section4-1-Follow-and-frame-a-character"
+      },
+      {
+        "label": "跟踪和框定群组",
+        "key": "section4-2-Follow-and-frame-a-group"
+      },
+      {
+        "label": "创建自由视角相机",
+        "key": "section4-3-Create-a-FreeLook-Camera"
+      },
+      {
+        "label": "创建第三人称相机",
+        "key": "section4-4-Create-a-Third-Person-Camera"
+      }
+    ]
+  },
+  {
+    "label": "2D和俯视游戏",
+    "key": "section5-2D-and-top-down-games",
+    "subItems": [
+      {
+        "label": "Cinemachine与2D图形",
+        "key": "section5-1-Cinemachine-and-2D-graphics"
+      },
+      {
+        "label": "Cinemachine与俯视游戏",
+        "key": "section5-2-Cinemachine-and-top-down-games"
+      }
+    ]
+  },
+  {
+    "label": "将相机约束到路径",
+    "key": "section6-Constraint-a-camera-to-a-path"
+  },
+  {
+    "label": "应用噪声模拟相机抖动",
+    "key": "section7-Apply-noise-to-simulate-camera-shake"
+  },
+  {
+    "label": "管理分组摄像机",
+    "key": "section8-Manage-grouped-cameras"
+  },
+  {
+    "label": "避免碰撞和评估镜头",
+    "key": "section9-Avoid-collisions-and-evaluate-shots"
+  },
+  {
+    "label": "Cinemachine事件",
+    "key": "section10-Cinemachine-Events"
+  },
+  {
+    "label": "Cinemachine冲击",
+    "key": "section11-Cinemachine-Impulse",
+    "subItems": [
+      {
+        "label": "Cinemachine冲击源",
+        "key": "section11-1-Cinemachine-Impulse-Sources"
+      },
+      {
+        "label": "过滤冲击",
+        "key": "section11-2-Filtering-impulses"
+      }
+    ]
+  },
+  {
+    "label": "分屏和多个Unity相机",
+    "key": "section12-Split-screen-and-multiple-Unity-Cameras"
+  },
+  {
+    "label": "使用输入系统与Cinemachine",
+    "key": "section13-Use-Input-System-with-Cinemachine"
+  },
+  {
+    "label": "示例和教程",
+    "key": "section14-Samples-and-tutorials",
+    "subItems": [
+      {
+        "label": "将示例导入到您的项目中",
+        "key": "section14-1-Import-samples-to-your-project"
+      }
+    ]
+  },
+  {
+    "label": "参考",
+    "key": "section15-Reference"
+  },
+  {
+    "label": "已知问题",
+    "key": "section16-Known-Issues"
+  }
+]

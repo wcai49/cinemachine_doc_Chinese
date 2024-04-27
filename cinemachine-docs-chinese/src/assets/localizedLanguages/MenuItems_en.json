@@ -1,0 +1,174 @@
+[
+  {
+    "label": "Cinemachine package",
+    "key": "section1-Cinemachine-package"
+  },
+  {
+    "label": "Installation and upgrade",
+    "key": "section2-Installation-and-upgrade",
+    "subItems": [
+      {
+        "label": "Upgrading from Cinemachine 2.x",
+        "key": "section2-1-Upgrading-from-Cinemachine-2.x"
+      }
+    ]
+  },
+  {
+    "label": "Get started",
+    "key": "section3-Get-started",
+    "subItems": [
+      {
+        "label": "Discover Cinemachine concepts",
+        "key": "section3-1-Discover-Cinemachine-concepts",
+        "subItems": [
+          {
+            "label": "Cinemachine essential elements",
+            "key": "section3-1-1-Cinemachine-essential-elements"
+          },
+          {
+            "label": "Camera control and transitions",
+            "key": "section3-1-2-Camera-control-and-transitions"
+          },
+          {
+            "label": "Procedural motion",
+            "key": "section3-1-3-Procedural-motion"
+          },
+          {
+            "label": "Cinemachine and Timeline",
+            "key": "section3-1-4-Cinemachine-and-Timeline"
+          }
+        ]
+      },
+      {
+        "label": "Set up a basic Cinemachine environment",
+        "key": "section3-2-Set-up-a-basic-Cinemachine-environment"
+      },
+      {
+        "label": "Set up multiple Cinemachine Cameras and transitions",
+        "key": "section3-3-Set-up-multiple-Cinemachine-Cameras-and-transitions"
+      },
+      {
+        "label": "Add procedural behavior to a Cinemachine Camera",
+        "key": "section3-4-Add-procedural-behavior-to-a-Cinemachine-Camera"
+      },
+      {
+        "label": "Set up Timeline with Cinemachine Cameras",
+        "key": "section3-5-Set-up-Timeline-with-Cinemachine-Cameras"
+      },
+      {
+        "label": "Use convenient tools and shortcuts",
+        "key": "section3-6-Use-convenient-tools-and-shortcuts",
+        "subItems": [
+          {
+            "label": "Pre-built cameras",
+            "key": "section3-6-1-Pre-built-cameras"
+          },
+          {
+            "label": "Scene Handles",
+            "key": "section3-6-2-Scene-Handles"
+          },
+          {
+            "label": "Saving in Play Mode",
+            "key": "section3-6-3-Saving-in-Play-Mode"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "label": "3D tracking scenarios",
+    "key": "section4-3D-tracking-scenarios",
+    "subItems": [
+      {
+        "label": "Follow and frame a character",
+        "key": "section4-1-Follow-and-frame-a-character"
+      },
+      {
+        "label": "Follow and frame a group",
+        "key": "section4-2-Follow-and-frame-a-group"
+      },
+      {
+        "label": "Create a FreeLook Camera",
+        "key": "section4-3-Create-a-FreeLook-Camera"
+      },
+      {
+        "label": "Create a Third Person Camera",
+        "key": "section4-4-Create-a-Third-Person-Camera"
+      }
+    ]
+  },
+  {
+    "label": "2D and top-down games",
+    "key": "section5-2D-and-top-down-games",
+    "subItems": [
+      {
+        "label": "Cinemachine and 2D graphics",
+        "key": "section5-1-Cinemachine-and-2D-graphics"
+      },
+      {
+        "label": "Cinemachine and top-down games",
+        "key": "section5-2-Cinemachine-and-top-down-games"
+      }
+    ]
+  },
+  {
+    "label": "Constraint a camera to a path",
+    "key": "section6-Constraint-a-camera-to-a-path"
+  },
+  {
+    "label": "Apply noise to simulate camera shake",
+    "key": "section7-Apply-noise-to-simulate-camera-shake"
+  },
+  {
+    "label": "Manage grouped cameras",
+    "key": "section8-Manage-grouped-cameras"
+  },
+  {
+    "label": "Avoid collisions and evaluate shots",
+    "key": "section9-Avoid-collisions-and-evaluate-shots"
+  },
+  {
+    "label": "Cinemachine Events",
+    "key": "section10-Cinemachine-Events"
+  },
+  {
+    "label": "Cinemachine Impulse",
+    "key": "section11-Cinemachine-Impulse",
+    "subItems": [
+      {
+        "label": "Cinemachine Impulse Sources",
+        "key": "section11-1-Cinemachine-Impulse-Sources"
+      },
+      {
+        "label": "Filtering impulses",
+        "key": "section11-2-Filtering-impulses"
+      }
+    ]
+  },
+  {
+    "label": "Split screen and multiple Unity Cameras",
+    "key": "section12-Split-screen-and-multiple-Unity-Cameras"
+  },
+  {
+    "label": "Use Input System with Cinemachine",
+    "key": "section13-Use-Input-System-with-Cinemachine"
+  },
+  {
+    "label": "Samples and tutorials",
+    "key": "section14-Samples-and-tutorials",
+    "subItems": [
+      {
+        "label": "Import samples to your project",
+        "key": "section14-1-Import-samples-to-your-project"
+      }
+    ]
+  },
+  {
+    "label": "Reference",
+    "key": "section15-Reference"
+  },
+  {
+    "label": "Known Issues",
+    "key": "section16-Known-Issues"
+  }
+]
