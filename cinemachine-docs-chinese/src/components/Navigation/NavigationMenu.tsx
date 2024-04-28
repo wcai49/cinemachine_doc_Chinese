@@ -9,7 +9,7 @@ import React, { useState } from "react";
 import { Menu, MenuProps } from "antd";
 import { getItem } from "./NavigationUtils.ts";
 import { PlusOutlined } from "@ant-design/icons";
-import menuItems from "../../assets/localizedLanguages/MenuItems_zh.json";
+import menuItems from "../../assets/localizedLanguages/MenuItems/MenuItems_zh.json";
 
 interface NavigationMenuProps {
   navigateClick: (route: string) => void;
@@ -19,6 +19,12 @@ const NavigationMenu: React.FC<NavigationMenuProps> = ({ navigateClick }) => {
   const [selectedKey, setSelectedKey] = useState(
     "section1-Cinemachine-package"
   );
+
+  const onClick = (e) => {
+    const path = e.key ? e.key.toString() : e;
+    setSelectedKey(path);
+    navigateClick(path);
+  };
 
   const generateMenuItems = (items: any[]): MenuProps["items"] => {
     return items.map((item) => {
@@ -30,21 +36,17 @@ const NavigationMenu: React.FC<NavigationMenuProps> = ({ navigateClick }) => {
         subItems = generateMenuItems(item.subItems);
       }
       const menuItem = getItem(
-        item.label,
+        <div onClick={() => onClick(item.key)}>{item.label}</div>,
         item.key,
         item.subItems ? <PlusOutlined /> : undefined,
-        subItems
+        subItems,
+        item.type
       );
 
       return menuItem;
     });
   };
   const fetchedMenuItems: MenuProps["items"] = generateMenuItems(menuItems);
-
-  const onClick: MenuProps["onClick"] = (e) => {
-    setSelectedKey(e.key);
-    navigateClick(e.keyPath.toString());
-  };
 
   return (
     <Menu
@@ -55,7 +57,8 @@ const NavigationMenu: React.FC<NavigationMenuProps> = ({ navigateClick }) => {
       expandIcon={null}
       selectedKeys={[selectedKey]}
       defaultSelectedKeys={["section1-Cinemachine-package"]}
-    />
+      onSelect={onClick}
+    ></Menu>
   );
 };
 

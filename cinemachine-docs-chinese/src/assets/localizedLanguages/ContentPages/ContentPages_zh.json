@@ -1,0 +1,14 @@
+{
+  "CinemachinePackage": {
+    "title": "Cinemachine 组件",
+    "title.comment": "Cinemachine package's title",
+    "descriptionFirstParagraph": "Cinemachine 是一套用于控制 Unity 摄像机的模块组件。Cinemachine 解决了跟踪目标、合成、混合和切换镜头之间的复杂数学和逻辑问题。它旨在显著减少开发过程中耗费时间的手动操作和脚本修改次数。",
+    "descriptionFirstParagraph.comment": "Cinemachine package's first paragraph description",
+    "descriptionSecondParagraph": "这些模块的过程性特点使得 Cinemachine 强大而宽容。当您进行调整时 - 例如，更改动画、车辆速度、地形或场景中的其他 GameObjects - Cinemachine 会动态调整其行为以获得最佳镜头效果。例如，只要一个角色向左转而不是向右转，就无需重新编写摄像机脚本。",
+    "descriptionSecondParagraph.comment": "Cinemachine package's second paragraph description",
+    "descriptionThirdParagraph": "Cinemachine 可以实时工作在各种类型的游戏中，包括第一人称射击、第三人称、2D、横向卷轴、俯视视角和实时战略游戏。它支持您场景中需要的任意数量的镜头。其模块化系统使您能够组合复杂的行为。",
+    "descriptionThirdParagraph.comment": "Cinemachine package's third paragraph description",
+    "descriptionFourthParagraph": "Cinemachine 与其他 Unity 工具兼容良好，作为 Timeline、动画和后期处理资产的强大补充。您可以创建自己的扩展或将其与自定义摄像机脚本集成。",
+    "descriptionFourthParagraph.comment": "Cinemachine package's fourth paragraph description"
+  }
+}
