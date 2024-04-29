@@ -5,6 +5,10 @@
   height: 45px;
   background-color: #282c34;
   color: #ffffff;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-inline: 120px;
 }
 
 .AppBody {

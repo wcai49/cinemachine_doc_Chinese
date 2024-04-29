@@ -50,7 +50,6 @@ const NavigationMenu: React.FC<NavigationMenuProps> = ({ navigateClick }) => {
 
   return (
     <Menu
-      onClick={onClick}
       style={{ width: 256 }}
       mode="inline"
       items={fetchedMenuItems}

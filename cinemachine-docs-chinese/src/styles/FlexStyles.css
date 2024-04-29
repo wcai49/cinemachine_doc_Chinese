@@ -1,3 +1,4 @@
 .FlexOne {
   flex: 1;
+  margin-inline: 32px;
 }

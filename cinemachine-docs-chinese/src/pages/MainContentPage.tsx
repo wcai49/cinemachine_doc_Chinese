@@ -13,32 +13,20 @@ const MainContentPage: React.FC = () => {
   return (
     <div className="FlexOne">
       <div className="ContentPageTitle">
-        {getLocalizedString("CinemachinePackage.title", "zh")}
+        {getLocalizedString("CinemachinePackage.title")}
       </div>
       <Image src={require("../assets/images/CinemachineSplash.png")} />
       <div className="ContentPageParagraph">
-        {getLocalizedString(
-          "CinemachinePackage.descriptionFirstParagraph",
-          "zh"
-        )}
+        {getLocalizedString("CinemachinePackage.descriptionFirstParagraph")}
       </div>
       <div className="ContentPageParagraph">
-        {getLocalizedString(
-          "CinemachinePackage.descriptionSecondParagraph",
-          "zh"
-        )}
+        {getLocalizedString("CinemachinePackage.descriptionSecondParagraph")}
       </div>
       <div className="ContentPageParagraph">
-        {getLocalizedString(
-          "CinemachinePackage.descriptionThirdParagraph",
-          "zh"
-        )}
+        {getLocalizedString("CinemachinePackage.descriptionThirdParagraph")}
       </div>
       <div className="ContentPageParagraph">
-        {getLocalizedString(
-          "CinemachinePackage.descriptionFourthParagraph",
-          "zh"
-        )}
+        {getLocalizedString("CinemachinePackage.descriptionFourthParagraph")}
       </div>
     </div>
   );

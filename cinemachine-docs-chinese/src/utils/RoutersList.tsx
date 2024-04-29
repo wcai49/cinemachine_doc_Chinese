@@ -8,8 +8,9 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import MainContentPage from "../pages/MainContentPage.tsx";
+import InstallationPage from "../pages/InstallationContentPage.tsx";
 
-function RoutersList() {
+const RoutersList: React.FC = () => {
   return (
     <Routes>
       <Route path="/" element={<MainContentPage />} />
@@ -17,8 +18,12 @@ function RoutersList() {
         path="/section1-Cinemachine-package"
         element={<MainContentPage />}
       />
+      <Route
+        path="/section2-Installation-and-upgrade"
+        element={<InstallationPage />}
+      />
     </Routes>
   );
-}
+};
 
 export default RoutersList;
