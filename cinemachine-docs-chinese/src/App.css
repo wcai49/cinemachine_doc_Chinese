@@ -1,4 +1,7 @@
 .App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .AppHeader {
@@ -14,4 +17,22 @@
 .AppBody {
   display: flex;
   padding-inline: 120px;
+  flex: 1;
+}
+/* Footer */
+.Footer {
+  height: 180px;
+  background-color: #282c34;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-block: 12px;
+  padding-inline: 260px;
+}
+
+.FooterText {
+  margin-block: 12px;
+  line-height: 20px;
 }
