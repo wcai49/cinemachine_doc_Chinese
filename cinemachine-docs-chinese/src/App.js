@@ -7,6 +7,7 @@
 
 import { useState } from "react";
 import NavigationMenu from "./components/Navigation/NavigationMenu.tsx";
+import Footer from "./components/Footer.tsx";
 import "./App.css";
 import "./styles/FlexStyles.css";
 import "./styles/ContentPagesStyles.css";
@@ -44,6 +45,9 @@ function App() {
       <div className="AppBody">
         <NavigationMenu navigateClick={(e) => navigateToPage(e)} />
         {RoutersList(language)}
+      </div>
+      <div className="AppFooter">
+        <Footer />
       </div>
     </div>
   );

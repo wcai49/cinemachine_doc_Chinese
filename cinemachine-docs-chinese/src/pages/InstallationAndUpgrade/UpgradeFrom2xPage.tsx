@@ -284,8 +284,6 @@ const UpgradeFrom2xPage: React.FC = () => {
             "UpgradingTheWholeProject.UpgradingTheWholeProjectParagraphOne"
           )}
         </div>
-
-        <hr />
       </div>
       <div>
         <div className="MarginMedium">

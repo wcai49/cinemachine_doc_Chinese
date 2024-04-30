@@ -22,3 +22,21 @@
   color: #333333;
   margin-block: 10px;
 }
+
+/* Footer */
+.Footer {
+  height: 180px;
+  background-color: #282c34;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-block: 20px;
+  padding-inline: 260px;
+}
+
+.FooterText {
+  margin-block: 12px;
+  line-height: 20px;
+}
