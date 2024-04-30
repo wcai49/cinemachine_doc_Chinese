@@ -1,28 +1,16 @@
 # Cinemachine_doc_Chinese
 
-这个项目是关于Unity官方认证的package：Cinemachine(V3.0.0)的技术文档中文翻译。
+## 简介 Introduction
+
+这个项目是关于Unity官方认证的package：Cinemachine(V3.1.0)的技术文档中文翻译。
 
 This project is about Unity's official verified package: cinemachine's documentation translated in Chinese.
 
-## 背景
+## 声明 Disclaimer
 
-本人作为Unity的业余爱好者，最近在研究Cinemachine相关的用法。最开始的时候，我尝试通过Youtube视频学习如何使用Cinemachine，我看了最经常关注的Youtuber例如Brackeys的视频之后，发现对于此类的功能，仅仅观看视频跟着做很难学到其精髓、原理，从而导致每次再遇到相同的问题时，还是需要翻找视频跟着做一遍。
+本网站的英文内容由Unity Technologies提供；中文翻译由中文Unity游戏开发者提供。欢迎所有开发者前往Github仓库地址参与项目，提供改进建议。
 
-因此，我查看了Unity官方关于Cinemachine的文档。发现目前只有英文、韩语、日语版本。为了照顾到更多的中文使用者更好地学习使用Cinemachine， 我决定花一些时间翻译这些文档，同时自我学习和补充相关的知识点。
-
-由于我只是一个程序员，并非英语专业，因此可能会有一些翻译得不好的地方，还请各位多多指出，希望有更好见解的同学一起完善这个文档。
-
-
-
-## 目录
-
-[About Cinemachine 【关于Cinemachine】](./About_Cinemachine/About_Cinemachine.md#关于cinemachine)
-
-[Using Cinemachine 【使用Cinemachine】](./Using_Cinemachine/Using_Cinemachine.md)
-
-[Upgrading from Cinemachine 2.x 【将Cinemachine从2.x版本升级（至当前版本）】](./Upgrading_Cinemachine/Upgrading_Cinemachine.md)
-
-[Known Issues 【已知的问题】](./Known_Issues/Known_Issues.md)
+The English content on this site is provided by Unity Technologies; The Chinese translation is provided by Chinese Unity game developers. The Github repository link welcomes all developers to participate in the project and provide improvement suggestions.
 
 ## 官方文档地址
 
