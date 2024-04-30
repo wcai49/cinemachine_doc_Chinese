@@ -58,9 +58,8 @@
   "UpgradingProjectFromCinemachine2X": {
     "UpgradingProjectFromCinemachine2XTitle": "从Cinemachine 2.X升级项目",
     "UpgradingProjectFromCinemachine2XParagraphOne": "Cinemachine 3.0是从CM 2.X到主要版本更改，API和数据格式已经发生了重大变化。针对CM 2.X API编写的脚本很可能无法在3.X上运行，除非进行手动干预。此外，项目中的CM对象数据本身也需要升级。",
-    "UpgradingProjectFromCinemachine2XParagraphTwo": "虽然有可能从CM 2.X升级现有项目，但您应该仔细考虑是否愿意付出努力。在许多情况下，最好还是继续使用CM 2.X，在CM 3.X并行支持一段时间后继续支持。如果您选择考虑升级项目，本指南将为您提供一些指示，使过程更加顺畅。"
-  },
-  "UpgradingYourProjectStepByStep": {
+    "UpgradingProjectFromCinemachine2XParagraphTwo": "虽然有可能从CM 2.X升级现有项目，但您应该仔细考虑是否愿意付出努力。在许多情况下，最好还是继续使用CM 2.X，在CM 3.X并行支持一段时间后继续支持。如果您选择考虑升级项目，本指南将为您提供一些指示，使过程更加顺畅。",
+
     "UpgradingYourProjectStepByStepTitle": "逐步升级您的项目",
     "UpgradingYourProjectStepByStepParagraphOne": "以下是从CM 2.X升级现有项目的步骤：",
     "UpgradingYourProjectStepByStepList": [
@@ -76,23 +75,20 @@
       "数据升级后，对象引用可能会中断。如果需要，您需要检查并修复它们。",
       "如果您使用层来将摄像机过滤到单独的分屏大脑中，那么该过滤将停止工作，直到您升级为CinemachineCameras并将过滤切换到通道为止。"
     ],
-    "UpgradingYourProjectStepByStepParagraphTwo": "注意：如果在任何阶段出现此类错误，请重新启动Unity："
-  },
-  "WhatHasChangedInTheAPI": {
+    "UpgradingYourProjectStepByStepParagraphTwo": "注意：如果在任何阶段出现此类错误，请重新启动Unity：",
+
     "WhatHasChangedInTheAPITitle": "API中的变化",
     "WhatHasChangedInTheAPIParagraphOne": "一些组件被新组件替换，其他组件被重命名。字段名称已更改。命名空间已更改。对于这些问题中的大多数，您将在控制台中看到错误或弃用警告，这将指示您需要关注的代码区域。",
-    "WhatHasChangedInTheAPIParagraphTwo": "需要注意的一点是：用于替换CinemachineVirtualCamera和CinemachineFreeLook的新CinemachineCamera类继承自CinemachineVirtualCameraBase。如果可能的话，您可以替换您的脚本引用以尽可能使用此基类，那么在升级数据时，现有对象引用将被保留，因为旧类和新类都继承自同一基类。"
-  },
-  "NewNamespaces": {
+    "WhatHasChangedInTheAPIParagraphTwo": "需要注意的一点是：用于替换CinemachineVirtualCamera和CinemachineFreeLook的新CinemachineCamera类继承自CinemachineVirtualCameraBase。如果可能的话，您可以替换您的脚本引用以尽可能使用此基类，那么在升级数据时，现有对象引用将被保留，因为旧类和新类都继承自同一基类。",
+
     "NewNamespacesTitle": "新命名空间",
     "NewNamespacesParagraphOne": "命名空间已更改，以更符合Unity标准。",
     "NewNamespacesList": [
       "Cinemachine现在是Unity.Cinemachine",
       "Cinemachine.Editor现在是Unity.Cinemachine.Editor",
       "Cinemachine.Utility已被合并到Unity.Cinemachine。"
-    ]
-  },
-  "NewComponentsWithClearerNames": {
+    ],
+
     "NewComponentsWithClearerNamesTitle": "具有更清晰名称的新组件",
     "NewComponentsWithClearerNamesParagraphOne": "旧组件已被新组件替换。这些不是重命名，而是新的组件类型。旧组件仍然存在，但已弃用。如果您的脚本引用了其中任何组件，则在完成数据升级后，它们将需要更新。",
     "NewComponentsWithClearerNamesList": [
@@ -111,61 +107,49 @@
       "CinemachineConfiner被CinemachineConfiner2D和CinemachineConfiner3D替换",
       "Cinemachine3rdPersonFollow被CinemachineThirdPersonFollow替换。",
       "CinemachineSameAsFollowTarget被CinemachineRotateWithFollowTarget替换。"
-    ]
-  },
-  "RenamedComponents": {
+    ],
+
     "RenamedComponentsTitle": "重命名组件",
     "RenamedComponentsList": [
       "Cinemachine3rdPersonAim已更名为CinemachineThirdPersonAim。",
       "CinemachineBlendListCamera已更名为Cinemachine Sequencer Camera。"
-    ]
-  },
-  "RenamedFields": {
+    ],
+
     "RenamedFieldsTitle": "重命名字段",
     "RenamedFieldsParagraphOne": "从旧的\"m_FieldName\"约定已更改为遵循Unity的最新命名约定。因此，在所有地方都已删除了\"m_\"前缀。如果您的脚本由于此原因而无法编译，则首要解决方法是从您的脚本引用的字段名称中删除\"m_\"。大多数情况下，这将足够。偶尔，某些字段名称更改更为重大。找到适当的替换应该相当容易。",
-    "RenamedFieldsParagraphTwo": "SimpleFollowWithWorldUp绑定模式已重命名为LazyFollow。"
-  },
-  "CleanerObjectStructureNoHiddenGameObjects": {
+    "RenamedFieldsParagraphTwo": "SimpleFollowWithWorldUp绑定模式已重命名为LazyFollow。",
+
     "CleanerObjectStructureNoHiddenGameObjectsTitle": "更干净的对象结构，没有隐藏的GameObject",
     "CleanerObjectStructureNoHiddenGameObjectsParagraphOne": "Cinemachine 2.x在vcam的隐藏GameObject子级上实现了CM管道，命名为\"cm\"。这在CineMachine 3.0中已被移除，CM管道组件（如OrbitalFollow或RotationComposer）现在直接作为组件实现在CinemachineCamera GameObject上。您可以像访问任何其他组件一样访问它们：不再需要GetCinemcachineComponent()，只需使用GetComponent()。",
-    "CleanerObjectStructureNoHiddenGameObjectsParagraphTwo": "您现在将在层次结构中看到您遗留的CM vcam的cm子对象，因为CM3已将它们取消隐藏。这并不意味着您可以随意更改这些对象 - 它们之前被隐藏是有原因的。我们建议您通过将父对象升级为其CM3等效对象来摆脱它们。"
-  },
-  "NewInputHandling": {
+    "CleanerObjectStructureNoHiddenGameObjectsParagraphTwo": "您现在将在层次结构中看到您遗留的CM vcam的cm子对象，因为CM3已将它们取消隐藏。这并不意味着您可以随意更改这些对象 - 它们之前被隐藏是有原因的。我们建议您通过将父对象升级为其CM3等效对象来摆脱它们。",
+
     "NewInputHandlingTitle": "新输入处理",
-    "NewInputHandlingParagraphOne": "用户输入已与Cinemachine组件解耦：它们不再直接读取用户输入，而是期望由外部组件驱动。提供了CinemachineInputAxisController来执行此作业，但您也可以选择通过继承InputAxisControllerBase来实现自己的输入控制器。"
-  },
-  "NewEventsArchitecture": {
+    "NewInputHandlingParagraphOne": "用户输入已与Cinemachine组件解耦：它们不再直接读取用户输入，而是期望由外部组件驱动。提供了CinemachineInputAxisController来执行此作业，但您也可以选择通过继承InputAxisControllerBase来实现自己的输入控制器。",
+
     "NewEventsArchitectureTitle": "新事件架构",
     "NewEventsArchitectureParagraphOne": "尽管CM2.X在CinemachineVirtualCamera和CinemachineBrain中具有事件，但CM3仅通过CinemachineCore触发全局事件。脚本可以向这些事件添加监听器，并根据它们采取行动。监听器将接收到所有摄像机和所有Brains的事件。",
-    "NewEventsArchitectureParagraphTwo": "现在支持特定于摄像机和Brain的事件，通过两个新行为实现：Cinemachine Brain Events和Cinemachine Camera Events。这些监视全局事件，并触发与其附加的对象相关的更专业的事件。"
-  },
-  "NewSplineImplementation": {
+    "NewEventsArchitectureParagraphTwo": "现在支持特定于摄像机和Brain的事件，通过两个新行为实现：Cinemachine Brain Events和Cinemachine Camera Events。这些监视全局事件，并触发与其附加的对象相关的更专业的事件。",
+
     "NewSplineImplementationTitle": "新样条实现",
-    "NewSplineImplementationParagraphOne": "Cinemachine的路径现在使用Unity的原生Splines实现，提供了等效的功能。Cinemachine Upgrader将自动将您的CM路径转换为Splines。CM路径实现仍然存在，但现已弃用。"
-  },
-  "DecoupledFromUnityLayers": {
+    "NewSplineImplementationParagraphOne": "Cinemachine的路径现在使用Unity的原生Splines实现，提供了等效的功能。Cinemachine Upgrader将自动将您的CM路径转换为Splines。CM路径实现仍然存在，但现已弃用。",
+
     "DecoupledFromUnityLayersTitle": "与Unity层解耦",
-    "DecoupledFromUnityLayersParagraphOne": "在CM2中，CinemachineBrain仅会处理分配给与相关摄像机的culling mask中包含的层的CinemachineCameras。这种机制在诸如分屏之类的情况下非常有用，以使特定的CinemachineCameras分配给特定的Brains。在CM3中，这已被Cinemachine Channels取代。这些是仅Cinemachine使用的专用层，因此不会不必要地浪费Unity层。CinemachineCameras被分配到一个Cinemachine Channel，并且CinemachineBrain有一个通道掩码。通常情况下，使用\"Default\"通道，并且只需要在需要通道分离的特定情况下更改。"
-  },
-  "LensModeOverride": {
+    "DecoupledFromUnityLayersParagraphOne": "在CM2中，CinemachineBrain仅会处理分配给与相关摄像机的culling mask中包含的层的CinemachineCameras。这种机制在诸如分屏之类的情况下非常有用，以使特定的CinemachineCameras分配给特定的Brains。在CM3中，这已被Cinemachine Channels取代。这些是仅Cinemachine使用的专用层，因此不会不必要地浪费Unity层。CinemachineCameras被分配到一个Cinemachine Channel，并且CinemachineBrain有一个通道掩码。通常情况下，使用\"Default\"通道，并且只需要在需要通道分离的特定情况下更改。",
+
     "LensModeOverrideTitle": "镜头模式覆盖",
-    "LensModeOverrideParagraphOne": "如果您的项目正在使用镜头模式覆盖的虚拟摄像机（例如，在物理和透视和正交摄像机之间切换），那么在您启用模式覆盖并在CinemachineBrain中分配默认镜头模式之前，这将停止工作。"
-  },
-  "UpgradingTheProjectData": {
+    "LensModeOverrideParagraphOne": "如果您的项目正在使用镜头模式覆盖的虚拟摄像机（例如，在物理和透视和正交摄像机之间切换），那么在您启用模式覆盖并在CinemachineBrain中分配默认镜头模式之前，这将停止工作。",
+
     "UpgradingTheProjectDataTitle": "升级项目数据",
     "UpgradingTheProjectDataParagraphOne": "一旦脚本使用新的API，您就可以升级项目数据，将传统的CM对象转换为其CM3对应项。Cinemachine附带了一个数据升级工具来促进此操作。这不是一个简单的操作，因为除了场景中的vcam对象之外，还需要升级可能正在引用它们的预制件和动画资产。",
-    "UpgradingTheProjectDataParagraphTwo": "您可以从任何CM VirtualCamera或FreeLook检查器中启动Cinemachine Upgrader升级工具："
-  },
-  "UpgradingASingleObject": {
+    "UpgradingTheProjectDataParagraphTwo": "您可以从任何CM VirtualCamera或FreeLook检查器中启动Cinemachine Upgrader升级工具：",
+
     "UpgradingASingleObjectTitle": "升级单个对象 Object",
     "UpgradingASingleObjectParagraphOne": "如果您只想升级当前正在检查的Cinemachine对象，则只要它不是预制件实例，您就可以这样做。在这种情况下，它将仅升级已检查的对象，将它们替换为CM3等效项。支持撤消，因此您可以尝试一下，然后改变主意。",
-    "UpgradingASingleObjectParagraphTwo": "请注意，此对象的任何脚本引用都将丢失（因为类将更改），任何写入到此相机内部字段的动画轨道也将丢失（因为类和字段名称已更改）。引用此对象的时间轴将失去其绑定。如果您有脚本引用或动画轨道或如果此摄像机是预制件或预制件实例的一部分，则需要使用\"升级整个项目\"选项，该选项将扫描项目中的引用并进行适当的更新。"
-  },
-  "UpgradingASingleScene": {
+    "UpgradingASingleObjectParagraphTwo": "请注意，此对象的任何脚本引用都将丢失（因为类将更改），任何写入到此相机内部字段的动画轨道也将丢失（因为类和字段名称已更改）。引用此对象的时间轴将失去其绑定。如果您有脚本引用或动画轨道或如果此摄像机是预制件或预制件实例的一部分，则需要使用\"升级整个项目\"选项，该选项将扫描项目中的引用并进行适当的更新。",
+
     "UpgradingASingleSceneTitle": "升级单个场景 Scene",
-    "UpgradingASingleSceneParagraphOne": "您还可以选择更新当前场景中的所有CM对象。同样，这不会更新场景外的任何资产，因此对于除最简单的场景之外的任何场景都不适用。此操作也支持撤消。"
-  },
-  "UpgradingTheWholeProject": {
+    "UpgradingASingleSceneParagraphOne": "您还可以选择更新当前场景中的所有CM对象。同样，这不会更新场景外的任何资产，因此对于除最简单的场景之外的任何场景都不适用。此操作也支持撤消。",
+
     "UpgradingTheWholeProjectTitle": "升级整个项目",
     "UpgradingTheWholeProjectParagraphOne": "“升级整个项目”选项将升级所有场景和所有预制件中的所有对象。有逻辑来处理动画轨道、脚本引用和预制件实例。这是一个重要的操作，项目中的每个场景和预制件都将被打开和保存多次。不支持撤消，因此请务必先进行完整备份。"
   }

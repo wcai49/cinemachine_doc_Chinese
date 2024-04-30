@@ -37,21 +37,21 @@ const UpgradeFrom2xPage: React.FC = () => {
         {/* Upgrading your project step by step */}
         <div
           className="ContentPageSubtitle"
-          id="UpgradingYourProjectStepByStep.UpgradingYourProjectStepByStepTitle"
+          id="UpgradingProjectFromCinemachine2X.UpgradingYourProjectStepByStepTitle"
         >
           {getLocalizedString(
-            "UpgradingYourProjectStepByStep.UpgradingYourProjectStepByStepTitle"
+            "UpgradingProjectFromCinemachine2X.UpgradingYourProjectStepByStepTitle"
           )}
         </div>
         <div className="ContentPageParagraph">
           {getLocalizedString(
-            "UpgradingYourProjectStepByStep.UpgradingYourProjectStepByStepParagraphOne"
+            "UpgradingProjectFromCinemachine2X.UpgradingYourProjectStepByStepParagraphOne"
           )}
         </div>
         <div className="ContentPageParagraph">
           <ol>
             {getLocalizedStringArray(
-              "UpgradingYourProjectStepByStep.UpgradingYourProjectStepByStepList"
+              "UpgradingProjectFromCinemachine2X.UpgradingYourProjectStepByStepList"
             ).map((step, index) => (
               <li key={index}>{step}</li>
             ))}
@@ -59,7 +59,7 @@ const UpgradeFrom2xPage: React.FC = () => {
         </div>
         <div className="ContentPageParagraph">
           {getLocalizedString(
-            "UpgradingYourProjectStepByStep.UpgradingYourProjectStepByStepParagraphTwo"
+            "UpgradingProjectFromCinemachine2X.UpgradingYourProjectStepByStepParagraphTwo"
           )}
         </div>
         <Image src={require("../../assets/images/UpgradingFrom2x.png")} />
@@ -67,52 +67,56 @@ const UpgradeFrom2xPage: React.FC = () => {
         {/* What has Changed in the API */}
         <div
           className="ContentPageSubtitle"
-          id="WhatHasChangedInTheAPI.WhatHasChangedInTheAPITitle"
+          id="UpgradingProjectFromCinemachine2X.WhatHasChangedInTheAPITitle"
         >
           {getLocalizedString(
-            "WhatHasChangedInTheAPI.WhatHasChangedInTheAPITitle"
+            "UpgradingProjectFromCinemachine2X.WhatHasChangedInTheAPITitle"
           )}
         </div>
         <div className="ContentPageParagraph">
           {getLocalizedString(
-            "WhatHasChangedInTheAPI.WhatHasChangedInTheAPIParagraphOne"
+            "UpgradingProjectFromCinemachine2X.WhatHasChangedInTheAPIParagraphOne"
           )}
         </div>
         <div className="ContentPageParagraph">
           {getLocalizedString(
-            "WhatHasChangedInTheAPI.WhatHasChangedInTheAPIParagraphTwo"
+            "UpgradingProjectFromCinemachine2X.WhatHasChangedInTheAPIParagraphTwo"
           )}
         </div>
 
         {/* New Namespaces */}
         <div className="ContentPageSection">
-          {getLocalizedString("NewNamespaces.NewNamespacesTitle")}
+          {getLocalizedString(
+            "UpgradingProjectFromCinemachine2X.NewNamespacesTitle"
+          )}
         </div>
         <div className="ContentPageParagraph">
-          {getLocalizedString("NewNamespaces.NewNamespacesParagraphOne")}
+          {getLocalizedString(
+            "UpgradingProjectFromCinemachine2X.NewNamespacesParagraphOne"
+          )}
         </div>
         <ul className="ContentPageParagraph">
-          {getLocalizedStringArray("NewNamespaces.NewNamespacesList").map(
-            (item, index) => (
-              <li key={index}>{item}</li>
-            )
-          )}
+          {getLocalizedStringArray(
+            "UpgradingProjectFromCinemachine2X.NewNamespacesList"
+          ).map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
         </ul>
 
         {/* New Components with Clearer Names */}
         <div className="ContentPageSection">
           {getLocalizedString(
-            "NewComponentsWithClearerNames.NewComponentsWithClearerNamesTitle"
+            "UpgradingProjectFromCinemachine2X.NewComponentsWithClearerNamesTitle"
           )}
         </div>
         <div className="ContentPageParagraph">
           {getLocalizedString(
-            "NewComponentsWithClearerNames.NewComponentsWithClearerNamesParagraphOne"
+            "UpgradingProjectFromCinemachine2X.NewComponentsWithClearerNamesParagraphOne"
           )}
         </div>
         <ul className="ContentPageParagraph">
           {getLocalizedStringArray(
-            "NewComponentsWithClearerNames.NewComponentsWithClearerNamesList"
+            "UpgradingProjectFromCinemachine2X.NewComponentsWithClearerNamesList"
           ).map((item, index) => (
             <li key={index}>{item}</li>
           ))}
@@ -120,11 +124,13 @@ const UpgradeFrom2xPage: React.FC = () => {
 
         {/* Renamed Components */}
         <div className="ContentPageSection">
-          {getLocalizedString("RenamedComponents.RenamedComponentsTitle")}
+          {getLocalizedString(
+            "UpgradingProjectFromCinemachine2X.RenamedComponentsTitle"
+          )}
         </div>
         <ul className="ContentPageParagraph">
           {getLocalizedStringArray(
-            "RenamedComponents.RenamedComponentsList"
+            "UpgradingProjectFromCinemachine2X.RenamedComponentsList"
           ).map((item, index) => (
             <li key={index}>{item}</li>
           ))}
@@ -132,78 +138,88 @@ const UpgradeFrom2xPage: React.FC = () => {
 
         {/* Renamed Fields */}
         <div className="ContentPageSection">
-          {getLocalizedString("RenamedFields.RenamedFieldsTitle")}
+          {getLocalizedString(
+            "UpgradingProjectFromCinemachine2X.RenamedFieldsTitle"
+          )}
         </div>
         <div className="ContentPageParagraph">
-          {getLocalizedString("RenamedFields.RenamedFieldsParagraphOne")}
+          {getLocalizedString(
+            "UpgradingProjectFromCinemachine2X.RenamedFieldsParagraphOne"
+          )}
         </div>
         <div className="ContentPageParagraph">
-          {getLocalizedString("RenamedFields.RenamedFieldsParagraphTwo")}
+          {getLocalizedString(
+            "UpgradingProjectFromCinemachine2X.RenamedFieldsParagraphTwo"
+          )}
         </div>
 
         {/* Cleaner Object Structure, No Hidden GameObjects */}
         <div className="ContentPageSection">
           {getLocalizedString(
-            "CleanerObjectStructureNoHiddenGameObjects.CleanerObjectStructureNoHiddenGameObjectsTitle"
+            "UpgradingProjectFromCinemachine2X.CleanerObjectStructureNoHiddenGameObjectsTitle"
           )}
         </div>
         <div className="ContentPageParagraph">
           {getLocalizedString(
-            "CleanerObjectStructureNoHiddenGameObjects.CleanerObjectStructureNoHiddenGameObjectsParagraphOne"
+            "UpgradingProjectFromCinemachine2X.CleanerObjectStructureNoHiddenGameObjectsParagraphOne"
           )}
         </div>
         <div className="ContentPageParagraph">
           {getLocalizedString(
-            "CleanerObjectStructureNoHiddenGameObjects.CleanerObjectStructureNoHiddenGameObjectsParagraphTwo"
+            "UpgradingProjectFromCinemachine2X.CleanerObjectStructureNoHiddenGameObjectsParagraphTwo"
           )}
         </div>
 
         {/*  New Input Handling*/}
         <div className="ContentPageSection">
-          {getLocalizedString("NewInputHandling.NewInputHandlingTitle")}
+          {getLocalizedString(
+            "UpgradingProjectFromCinemachine2X.NewInputHandlingTitle"
+          )}
         </div>
         <div className="ContentPageParagraph">
-          {getLocalizedString("NewInputHandling.NewInputHandlingParagraphOne")}
+          {getLocalizedString(
+            "UpgradingProjectFromCinemachine2X.NewInputHandlingParagraphOne"
+          )}
         </div>
 
         {/* New Events Architecture */}
         <div className="ContentPageSection">
           {getLocalizedString(
-            "NewEventsArchitecture.NewEventsArchitectureTitle"
+            "UpgradingProjectFromCinemachine2X.NewEventsArchitectureTitle"
           )}
         </div>
         <div className="ContentPageParagraph">
           {getLocalizedString(
-            "NewEventsArchitecture.NewEventsArchitectureParagraphOne"
+            "UpgradingProjectFromCinemachine2X.NewEventsArchitectureParagraphOne"
           )}
         </div>
         <div className="ContentPageParagraph">
           {getLocalizedString(
-            "NewEventsArchitecture.NewEventsArchitectureParagraphTwo"
+            "UpgradingProjectFromCinemachine2X.NewEventsArchitectureParagraphTwo"
           )}
         </div>
 
         {/* New Spline Implementation */}
         <div className="ContentPageSection">
           {getLocalizedString(
-            "NewSplineImplementation.NewSplineImplementationTitle"
+            "UpgradingProjectFromCinemachine2X.NewSplineImplementationTitle"
           )}
         </div>
         <div className="ContentPageParagraph">
           {getLocalizedString(
-            "NewSplineImplementation.NewSplineImplementationParagraphOne"
+            "UpgradingProjectFromCinemachine2X.NewSplineImplementationParagraphOne"
           )}
         </div>
 
         {/* Decoupled from Unity Layers */}
         <div className="ContentPageSection">
           {getLocalizedString(
-            "DecoupledFromUnityLayers.DecoupledFromUnityLayersTitle"
+            "UpgradingProjectFromCinemachine2X.DecoupledFromUnityLayersTitle"
           )}
         </div>
         <div className="ContentPageParagraph">
           {getLocalizedString(
-            "DecoupledFromUnityLayers.DecoupledFromUnityLayersParagraphOne"
+            "UpgradingProjectFromCinemachine2X.DecoupledFromUnityLayersParagraphOne"
           )}
         </div>
 
@@ -213,10 +229,14 @@ const UpgradeFrom2xPage: React.FC = () => {
 
         {/* Lens Mode Override */}
         <div className="ContentPageSection">
-          {getLocalizedString("LensModeOverride.LensModeOverrideTitle")}
+          {getLocalizedString(
+            "UpgradingProjectFromCinemachine2X.LensModeOverrideTitle"
+          )}
         </div>
         <div className="ContentPageParagraph">
-          {getLocalizedString("LensModeOverride.LensModeOverrideParagraphOne")}
+          {getLocalizedString(
+            "UpgradingProjectFromCinemachine2X.LensModeOverrideParagraphOne"
+          )}
         </div>
 
         <Image src={require("../../assets/images/UpgradingFrom2x3.png")} />
@@ -224,20 +244,20 @@ const UpgradeFrom2xPage: React.FC = () => {
         {/* Upgrading the Project Data */}
         <div
           className="ContentPageSubtitle"
-          id="UpgradingTheProjectData.UpgradingTheProjectDataTitle"
+          id="UpgradingProjectFromCinemachine2X.UpgradingTheProjectDataTitle"
         >
           {getLocalizedString(
-            "UpgradingTheProjectData.UpgradingTheProjectDataTitle"
+            "UpgradingProjectFromCinemachine2X.UpgradingTheProjectDataTitle"
           )}
         </div>
         <div className="ContentPageParagraph">
           {getLocalizedString(
-            "UpgradingTheProjectData.UpgradingTheProjectDataParagraphOne"
+            "UpgradingProjectFromCinemachine2X.UpgradingTheProjectDataParagraphOne"
           )}
         </div>
         <div className="ContentPageParagraph">
           {getLocalizedString(
-            "UpgradingTheProjectData.UpgradingTheProjectDataParagraphTwo"
+            "UpgradingProjectFromCinemachine2X.UpgradingTheProjectDataParagraphTwo"
           )}
         </div>
         <Image src={require("../../assets/images/UpgradingFrom2x4.png")} />
@@ -247,41 +267,41 @@ const UpgradeFrom2xPage: React.FC = () => {
         {/* Upgrading a Single Object */}
         <div className="ContentPageSection">
           {getLocalizedString(
-            "UpgradingASingleObject.UpgradingASingleObjectTitle"
+            "UpgradingProjectFromCinemachine2X.UpgradingASingleObjectTitle"
           )}
         </div>
         <div className="ContentPageParagraph">
           {getLocalizedString(
-            "UpgradingASingleObject.UpgradingASingleObjectParagraphOne"
+            "UpgradingProjectFromCinemachine2X.UpgradingASingleObjectParagraphOne"
           )}
         </div>
         <div className="ContentPageParagraph">
           {getLocalizedString(
-            "UpgradingASingleObject.UpgradingASingleObjectParagraphTwo"
+            "UpgradingProjectFromCinemachine2X.UpgradingASingleObjectParagraphTwo"
           )}
         </div>
 
         {/* Upgrading a Single Scene */}
         <div className="ContentPageSection">
           {getLocalizedString(
-            "UpgradingASingleScene.UpgradingASingleSceneTitle"
+            "UpgradingProjectFromCinemachine2X.UpgradingASingleSceneTitle"
           )}
         </div>
         <div className="ContentPageParagraph">
           {getLocalizedString(
-            "UpgradingASingleScene.UpgradingASingleSceneParagraphOne"
+            "UpgradingProjectFromCinemachine2X.UpgradingASingleSceneParagraphOne"
           )}
         </div>
 
         {/* Upgrading the Whole Project */}
         <div className="ContentPageSection">
           {getLocalizedString(
-            "UpgradingTheWholeProject.UpgradingTheWholeProjectTitle"
+            "UpgradingProjectFromCinemachine2X.UpgradingTheWholeProjectTitle"
           )}
         </div>
         <div className="ContentPageParagraph">
           {getLocalizedString(
-            "UpgradingTheWholeProject.UpgradingTheWholeProjectParagraphOne"
+            "UpgradingProjectFromCinemachine2X.UpgradingTheWholeProjectParagraphOne"
           )}
         </div>
       </div>
@@ -292,9 +312,9 @@ const UpgradeFrom2xPage: React.FC = () => {
         <Anchor
           className="MarginMedium"
           items={getAnchorItems([
-            "UpgradingYourProjectStepByStep.UpgradingYourProjectStepByStepTitle",
-            "WhatHasChangedInTheAPI.WhatHasChangedInTheAPITitle",
-            "UpgradingTheProjectData.UpgradingTheProjectDataTitle",
+            "UpgradingProjectFromCinemachine2X.UpgradingYourProjectStepByStepTitle",
+            "UpgradingProjectFromCinemachine2X.WhatHasChangedInTheAPITitle",
+            "UpgradingProjectFromCinemachine2X.UpgradingTheProjectDataTitle",
           ])}
         />
       </div>
