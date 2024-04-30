@@ -10,6 +10,7 @@ import NavigationMenu from "./components/Navigation/NavigationMenu.tsx";
 import "./App.css";
 import "./styles/FlexStyles.css";
 import "./styles/ContentPagesStyles.css";
+import "./styles/MarginsPaddings.css";
 import { useNavigate } from "react-router-dom";
 import RoutersList from "./utils/RoutersList.tsx";
 import { Select } from "antd";

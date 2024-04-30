@@ -2,3 +2,8 @@
   flex: 1;
   margin-inline: 32px;
 }
+
+.FlexRow {
+  display: flex;
+  flex-direction: row;
+}

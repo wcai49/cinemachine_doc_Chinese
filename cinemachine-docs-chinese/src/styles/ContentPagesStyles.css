@@ -4,6 +4,19 @@
   margin-block-start: 25px;
   margin-block-end: 10px;
 }
+.ContentPageSubtitle {
+  font-size: 28px;
+  color: #333333;
+  margin-block-start: 25px;
+  margin-block-end: 10px;
+}
+
+.ContentPageSection {
+  font-size: 24px;
+  color: #333333;
+  margin-block-start: 25px;
+  margin-block-end: 10px;
+}
 .ContentPageParagraph {
   font-size: 14px;
   color: #333333;

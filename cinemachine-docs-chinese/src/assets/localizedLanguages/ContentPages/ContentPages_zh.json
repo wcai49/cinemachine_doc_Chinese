@@ -1,15 +1,18 @@
 {
+  "Common": {
+    "InThisArticle": "本文内容"
+  },
   "CinemachinePackage": {
     "title": "Cinemachine 组件",
     "title.comment": "Cinemachine package's title",
-    "descriptionFirstParagraph": "Cinemachine 是一套用于控制 Unity 摄像机的模块组件。Cinemachine 解决了跟踪目标跟踪、组合、协调、和切换效果而产生的复杂数学和逻辑问题。它旨在显著减少开发过程中耗费时间的手动操作和脚本修改次数。",
-    "descriptionFirstParagraph.comment": "Cinemachine package's first paragraph description",
-    "descriptionSecondParagraph": "这些模块的过程性特点使得 Cinemachine 强大而宽容。当您进行调整时 - 例如，更改动画、车辆速度、地形或场景中的其他 GameObjects - Cinemachine 会动态调整其行为以获得最佳镜头效果。例如，只要一个角色向左转而不是向右转，就无需重新编写摄像机脚本。",
-    "descriptionSecondParagraph.comment": "Cinemachine package's second paragraph description",
-    "descriptionThirdParagraph": "Cinemachine 可以实时工作在各种类型的游戏中，包括第一人称射击、第三人称、2D、横向卷轴、俯视视角和实时战略游戏。它支持您场景中需要的任意数量的镜头。其模块化系统使您能够组合复杂的行为。",
-    "descriptionThirdParagraph.comment": "Cinemachine package's third paragraph description",
-    "descriptionFourthParagraph": "Cinemachine 与其他 Unity 工具兼容良好，作为 Timeline、动画和后期处理资产的强大补充。您可以创建自己的扩展或将其与自定义摄像机脚本集成。",
-    "descriptionFourthParagraph.comment": "Cinemachine package's fourth paragraph description"
+    "descriptionParagraphOne": "Cinemachine 是一套用于控制 Unity 摄像机的模块组件。Cinemachine 解决了跟踪目标跟踪、组合、协调、和切换效果而产生的复杂数学和逻辑问题。它旨在显著减少开发过程中耗费时间的手动操作和脚本修改次数。",
+    "descriptionParagraphOne.comment": "Cinemachine package's first paragraph description",
+    "descriptionParagraphTwo": "这些模块的过程性特点使得 Cinemachine 强大而宽容。当您进行调整时 - 例如，更改动画、车辆速度、地形或场景中的其他 GameObjects - Cinemachine 会动态调整其行为以获得最佳镜头效果。例如，只要一个角色向左转而不是向右转，就无需重新编写摄像机脚本。",
+    "descriptionParagraphTwo.comment": "Cinemachine package's second paragraph description",
+    "descriptionParagraphThree": "Cinemachine 可以实时工作在各种类型的游戏中，包括第一人称射击、第三人称、2D、横向卷轴、俯视视角和实时战略游戏。它支持您场景中需要的任意数量的镜头。其模块化系统使您能够组合复杂的行为。",
+    "descriptionParagraphThree.comment": "Cinemachine package's third paragraph description",
+    "descriptionParagraphFour": "Cinemachine 与其他 Unity 工具兼容良好，作为 Timeline、动画和后期处理资产的强大补充。您可以创建自己的扩展或将其与自定义摄像机脚本集成。",
+    "descriptionParagraphFour.comment": "Cinemachine package's fourth paragraph description"
   },
   "InstallationAndUpgrade": {
     "title": "安装和升级",
@@ -50,5 +53,120 @@
       "安装Cinemachine 2.X包。"
     ],
     "upgradingFromOldSteps.comment": "Upgrading from old Asset stores steps"
+  },
+
+  "UpgradingProjectFromCinemachine2X": {
+    "UpgradingProjectFromCinemachine2XTitle": "从Cinemachine 2.X升级项目",
+    "UpgradingProjectFromCinemachine2XParagraphOne": "Cinemachine 3.0是从CM 2.X到主要版本更改，API和数据格式已经发生了重大变化。针对CM 2.X API编写的脚本很可能无法在3.X上运行，除非进行手动干预。此外，项目中的CM对象数据本身也需要升级。",
+    "UpgradingProjectFromCinemachine2XParagraphTwo": "虽然有可能从CM 2.X升级现有项目，但您应该仔细考虑是否愿意付出努力。在许多情况下，最好还是继续使用CM 2.X，在CM 3.X并行支持一段时间后继续支持。如果您选择考虑升级项目，本指南将为您提供一些指示，使过程更加顺畅。"
+  },
+  "UpgradingYourProjectStepByStep": {
+    "UpgradingYourProjectStepByStepTitle": "逐步升级您的项目",
+    "UpgradingYourProjectStepByStepParagraphOne": "以下是从CM 2.X升级现有项目的步骤：",
+    "UpgradingYourProjectStepByStepList": [
+      "备份您的项目。不要跳过此步骤。",
+      "使用包管理器将您的项目升级到CM3。如果您有使用Cinemachine API的自定义脚本，它们可能会中断。通过执行以下操作使它们重新编译：",
+      "1 更新使用Cinemachine声明。命名空间已更改为Unity.Cinemachine。",
+      "2 更新对重命名组件的任何引用。",
+      "3 更新损坏的CM字段名称。大多数情况下，这只意味着删除m_前缀。在其他情况下，可能需要做更多工作，但通过查看每种情况中的代码，应该可以清楚地了解要采取的适当操作。",
+      "4 此时，您的项目应该基本上像以前一样运行，使用废弃的类。",
+      "用于替换CinemachineVirtualCamera和CinemachineFreeLook的新CinemachineCamera类继承自CinemachineVirtualCameraBase。在可能的情况下，请替换您的脚本引用以使用此基类而不是派生类型。如果这样做，CM升级工具将能够保留现有对象引用，因为旧类和新类都继承自同一基类。",
+      "通过运行Cinemachine Upgrader来升级项目数据。您可以从任何CM VirtualCamera或FreeLook检查器中启动Cinemachine Upgrader工具。",
+      "因为CM组件类型已更改，您将不得不手动查看您的脚本，并更新任何特定引用以适应新类型。控制台日志是您的好帮手：\"废弃\"警告将指出需要注意的地方。",
+      "数据升级后，对象引用可能会中断。如果需要，您需要检查并修复它们。",
+      "如果您使用层来将摄像机过滤到单独的分屏大脑中，那么该过滤将停止工作，直到您升级为CinemachineCameras并将过滤切换到通道为止。"
+    ],
+    "UpgradingYourProjectStepByStepParagraphTwo": "注意：如果在任何阶段出现此类错误，请重新启动Unity："
+  },
+  "WhatHasChangedInTheAPI": {
+    "WhatHasChangedInTheAPITitle": "API中的变化",
+    "WhatHasChangedInTheAPIParagraphOne": "一些组件被新组件替换，其他组件被重命名。字段名称已更改。命名空间已更改。对于这些问题中的大多数，您将在控制台中看到错误或弃用警告，这将指示您需要关注的代码区域。",
+    "WhatHasChangedInTheAPIParagraphTwo": "需要注意的一点是：用于替换CinemachineVirtualCamera和CinemachineFreeLook的新CinemachineCamera类继承自CinemachineVirtualCameraBase。如果可能的话，您可以替换您的脚本引用以尽可能使用此基类，那么在升级数据时，现有对象引用将被保留，因为旧类和新类都继承自同一基类。"
+  },
+  "NewNamespaces": {
+    "NewNamespacesTitle": "新命名空间",
+    "NewNamespacesParagraphOne": "命名空间已更改，以更符合Unity标准。",
+    "NewNamespacesList": [
+      "Cinemachine现在是Unity.Cinemachine",
+      "Cinemachine.Editor现在是Unity.Cinemachine.Editor",
+      "Cinemachine.Utility已被合并到Unity.Cinemachine。"
+    ]
+  },
+  "NewComponentsWithClearerNames": {
+    "NewComponentsWithClearerNamesTitle": "具有更清晰名称的新组件",
+    "NewComponentsWithClearerNamesParagraphOne": "旧组件已被新组件替换。这些不是重命名，而是新的组件类型。旧组件仍然存在，但已弃用。如果您的脚本引用了其中任何组件，则在完成数据升级后，它们将需要更新。",
+    "NewComponentsWithClearerNamesList": [
+      "CinemachineVirtualCamera被CinemachineCamera替换。",
+      "CinemachineFreeLook被CinemachineCamera替换。",
+      "CinemachinePath和CinemachineSmoothPath被Unity的新原生样条实现提供的Spline Container替换。",
+      "CinemachineDollyCart被CinemachineSplineCart替换。",
+      "CinemachineTransposer被CinemachineFollow替换。",
+      "CinemachineOrbitalTransposer被CinemachineOrbitalFollow替换",
+      "CinemachineFramingTransposer被CinemachinePositionComposer替换。",
+      "CinemachineComposer被CinemachineRotationComposer替换。",
+      "CinemachinePOV被CinemachinePanTilt替换。",
+      "CinemachineTrackedDolly被CinemachineSplineDolly替换。",
+      "CinemachineGroupComposer被与CinemachineRotationComposer配合使用的CinemachineGroupFraming扩展替换。",
+      "CinemachineCollider被CinemachineDeoccluder替换",
+      "CinemachineConfiner被CinemachineConfiner2D和CinemachineConfiner3D替换",
+      "Cinemachine3rdPersonFollow被CinemachineThirdPersonFollow替换。",
+      "CinemachineSameAsFollowTarget被CinemachineRotateWithFollowTarget替换。"
+    ]
+  },
+  "RenamedComponents": {
+    "RenamedComponentsTitle": "重命名组件",
+    "RenamedComponentsList": [
+      "Cinemachine3rdPersonAim已更名为CinemachineThirdPersonAim。",
+      "CinemachineBlendListCamera已更名为Cinemachine Sequencer Camera。"
+    ]
+  },
+  "RenamedFields": {
+    "RenamedFieldsTitle": "重命名字段",
+    "RenamedFieldsParagraphOne": "从旧的\"m_FieldName\"约定已更改为遵循Unity的最新命名约定。因此，在所有地方都已删除了\"m_\"前缀。如果您的脚本由于此原因而无法编译，则首要解决方法是从您的脚本引用的字段名称中删除\"m_\"。大多数情况下，这将足够。偶尔，某些字段名称更改更为重大。找到适当的替换应该相当容易。",
+    "RenamedFieldsParagraphTwo": "SimpleFollowWithWorldUp绑定模式已重命名为LazyFollow。"
+  },
+  "CleanerObjectStructureNoHiddenGameObjects": {
+    "CleanerObjectStructureNoHiddenGameObjectsTitle": "更干净的对象结构，没有隐藏的GameObject",
+    "CleanerObjectStructureNoHiddenGameObjectsParagraphOne": "Cinemachine 2.x在vcam的隐藏GameObject子级上实现了CM管道，命名为\"cm\"。这在CineMachine 3.0中已被移除，CM管道组件（如OrbitalFollow或RotationComposer）现在直接作为组件实现在CinemachineCamera GameObject上。您可以像访问任何其他组件一样访问它们：不再需要GetCinemcachineComponent()，只需使用GetComponent()。",
+    "CleanerObjectStructureNoHiddenGameObjectsParagraphTwo": "您现在将在层次结构中看到您遗留的CM vcam的cm子对象，因为CM3已将它们取消隐藏。这并不意味着您可以随意更改这些对象 - 它们之前被隐藏是有原因的。我们建议您通过将父对象升级为其CM3等效对象来摆脱它们。"
+  },
+  "NewInputHandling": {
+    "NewInputHandlingTitle": "新输入处理",
+    "NewInputHandlingParagraphOne": "用户输入已与Cinemachine组件解耦：它们不再直接读取用户输入，而是期望由外部组件驱动。提供了CinemachineInputAxisController来执行此作业，但您也可以选择通过继承InputAxisControllerBase来实现自己的输入控制器。"
+  },
+  "NewEventsArchitecture": {
+    "NewEventsArchitectureTitle": "新事件架构",
+    "NewEventsArchitectureParagraphOne": "尽管CM2.X在CinemachineVirtualCamera和CinemachineBrain中具有事件，但CM3仅通过CinemachineCore触发全局事件。脚本可以向这些事件添加监听器，并根据它们采取行动。监听器将接收到所有摄像机和所有Brains的事件。",
+    "NewEventsArchitectureParagraphTwo": "现在支持特定于摄像机和Brain的事件，通过两个新行为实现：Cinemachine Brain Events和Cinemachine Camera Events。这些监视全局事件，并触发与其附加的对象相关的更专业的事件。"
+  },
+  "NewSplineImplementation": {
+    "NewSplineImplementationTitle": "新样条实现",
+    "NewSplineImplementationParagraphOne": "Cinemachine的路径现在使用Unity的原生Splines实现，提供了等效的功能。Cinemachine Upgrader将自动将您的CM路径转换为Splines。CM路径实现仍然存在，但现已弃用。"
+  },
+  "DecoupledFromUnityLayers": {
+    "DecoupledFromUnityLayersTitle": "与Unity层解耦",
+    "DecoupledFromUnityLayersParagraphOne": "在CM2中，CinemachineBrain仅会处理分配给与相关摄像机的culling mask中包含的层的CinemachineCameras。这种机制在诸如分屏之类的情况下非常有用，以使特定的CinemachineCameras分配给特定的Brains。在CM3中，这已被Cinemachine Channels取代。这些是仅Cinemachine使用的专用层，因此不会不必要地浪费Unity层。CinemachineCameras被分配到一个Cinemachine Channel，并且CinemachineBrain有一个通道掩码。通常情况下，使用\"Default\"通道，并且只需要在需要通道分离的特定情况下更改。"
+  },
+  "LensModeOverride": {
+    "LensModeOverrideTitle": "镜头模式覆盖",
+    "LensModeOverrideParagraphOne": "如果您的项目正在使用镜头模式覆盖的虚拟摄像机（例如，在物理和透视和正交摄像机之间切换），那么在您启用模式覆盖并在CinemachineBrain中分配默认镜头模式之前，这将停止工作。"
+  },
+  "UpgradingTheProjectData": {
+    "UpgradingTheProjectDataTitle": "升级项目数据",
+    "UpgradingTheProjectDataParagraphOne": "一旦脚本使用新的API，您就可以升级项目数据，将传统的CM对象转换为其CM3对应项。Cinemachine附带了一个数据升级工具来促进此操作。这不是一个简单的操作，因为除了场景中的vcam对象之外，还需要升级可能正在引用它们的预制件和动画资产。",
+    "UpgradingTheProjectDataParagraphTwo": "您可以从任何CM VirtualCamera或FreeLook检查器中启动Cinemachine Upgrader升级工具："
+  },
+  "UpgradingASingleObject": {
+    "UpgradingASingleObjectTitle": "升级单个对象 Object",
+    "UpgradingASingleObjectParagraphOne": "如果您只想升级当前正在检查的Cinemachine对象，则只要它不是预制件实例，您就可以这样做。在这种情况下，它将仅升级已检查的对象，将它们替换为CM3等效项。支持撤消，因此您可以尝试一下，然后改变主意。",
+    "UpgradingASingleObjectParagraphTwo": "请注意，此对象的任何脚本引用都将丢失（因为类将更改），任何写入到此相机内部字段的动画轨道也将丢失（因为类和字段名称已更改）。引用此对象的时间轴将失去其绑定。如果您有脚本引用或动画轨道或如果此摄像机是预制件或预制件实例的一部分，则需要使用\"升级整个项目\"选项，该选项将扫描项目中的引用并进行适当的更新。"
+  },
+  "UpgradingASingleScene": {
+    "UpgradingASingleSceneTitle": "升级单个场景 Scene",
+    "UpgradingASingleSceneParagraphOne": "您还可以选择更新当前场景中的所有CM对象。同样，这不会更新场景外的任何资产，因此对于除最简单的场景之外的任何场景都不适用。此操作也支持撤消。"
+  },
+  "UpgradingTheWholeProject": {
+    "UpgradingTheWholeProjectTitle": "升级整个项目",
+    "UpgradingTheWholeProjectParagraphOne": "“升级整个项目”选项将升级所有场景和所有预制件中的所有对象。有逻辑来处理动画轨道、脚本引用和预制件实例。这是一个重要的操作，项目中的每个场景和预制件都将被打开和保存多次。不支持撤消，因此请务必先进行完整备份。"
   }
 }

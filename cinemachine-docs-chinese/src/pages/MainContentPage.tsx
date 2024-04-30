@@ -7,26 +7,36 @@
 
 import React from "react";
 import { getLocalizedString } from "../utils/getLocalizedString.ts";
-import { Image } from "antd";
+import { Anchor, Image } from "antd";
+import { getAnchorItems } from "../utils/AnchorUtils.ts";
 
 const MainContentPage: React.FC = () => {
   return (
-    <div className="FlexOne">
-      <div className="ContentPageTitle">
-        {getLocalizedString("CinemachinePackage.title")}
+    <div className="FlexRow">
+      <div className="FlexOne">
+        <div className="ContentPageTitle">
+          {getLocalizedString("CinemachinePackage.title")}
+        </div>
+        <Image src={require("../assets/images/CinemachineSplash.png")} />
+        <div className="ContentPageParagraph">
+          {getLocalizedString("CinemachinePackage.descriptionParagraphOne")}
+        </div>
+        <div className="ContentPageParagraph">
+          {getLocalizedString("CinemachinePackage.descriptionParagraphTwo")}
+        </div>
+        <div className="ContentPageParagraph">
+          {getLocalizedString("CinemachinePackage.descriptioParagraphThree")}
+        </div>
+        <div className="ContentPageParagraph">
+          {getLocalizedString("CinemachinePackage.descriptionParagraphFour")}
+        </div>
       </div>
-      <Image src={require("../assets/images/CinemachineSplash.png")} />
-      <div className="ContentPageParagraph">
-        {getLocalizedString("CinemachinePackage.descriptionFirstParagraph")}
-      </div>
-      <div className="ContentPageParagraph">
-        {getLocalizedString("CinemachinePackage.descriptionSecondParagraph")}
-      </div>
-      <div className="ContentPageParagraph">
-        {getLocalizedString("CinemachinePackage.descriptionThirdParagraph")}
-      </div>
-      <div className="ContentPageParagraph">
-        {getLocalizedString("CinemachinePackage.descriptionFourthParagraph")}
+
+      <div>
+        <div className="MarginMedium">
+          {getLocalizedString("Common.InThisArticle")}
+        </div>
+        <Anchor className="MarginMedium" items={getAnchorItems([])} />
       </div>
     </div>
   );

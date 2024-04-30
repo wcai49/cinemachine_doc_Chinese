@@ -8,7 +8,8 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import MainContentPage from "../pages/MainContentPage.tsx";
-import InstallationPage from "../pages/InstallationContentPage.tsx";
+import InstallationPage from "../pages/InstallationAndUpgrade/InstallationContentPage.tsx";
+import UpgradeFrom2xPage from "../pages/InstallationAndUpgrade/UpgradeFrom2xPage.tsx";
 
 const RoutersList: React.FC = () => {
   return (
@@ -21,6 +22,10 @@ const RoutersList: React.FC = () => {
       <Route
         path="/section2-Installation-and-upgrade"
         element={<InstallationPage />}
+      />
+      <Route
+        path="/section2-1-Upgrading-from-Cinemachine-2.x"
+        element={<UpgradeFrom2xPage />}
       />
     </Routes>
   );
