@@ -1,6 +1,8 @@
 {
   "Common": {
-    "InThisArticle": "本文内容"
+    "InThisArticle": "本文内容",
+    "Section": "章节",
+    "Description": "描述"
   },
   "CinemachinePackage": {
     "title": "Cinemachine 组件",
@@ -152,5 +154,41 @@
 
     "UpgradingTheWholeProjectTitle": "升级整个项目",
     "UpgradingTheWholeProjectParagraphOne": "“升级整个项目”选项将升级所有场景和所有预制件中的所有对象。有逻辑来处理动画轨道、脚本引用和预制件实例。这是一个重要的操作，项目中的每个场景和预制件都将被打开和保存多次。不支持撤消，因此请务必先进行完整备份。"
+  },
+
+  "GetStarted": {
+    "title": "开始使用Cinemachine",
+    "paragraphOne": "获取必要的信息，了解Cinemachine的工作原理，并按照说明设置最小功能层，以在项目中开始使用Cinemachine。",
+    "sections": [
+      "Cinemachine核心概念",
+      "设置基本的Cinemachine环境",
+      "设置多个Cinemachine摄像机和过渡",
+      "向Cinemachine摄像机添加程序化行为",
+      "在Cinemachine摄像机中设置时间线",
+      "使用方便的工具和快捷方式"
+    ],
+    "descriptions": [
+      "了解Cinemachine的基本要素和核心功能。",
+      "设置Unity项目，以包含最低所需元素，以建立功能性的Cinemachine环境。",
+      "设置具有多个Cinemachine摄像机的Cinemachine环境，并管理它们之间的过渡。",
+      "向Cinemachine摄像机添加程序化行为，使其跟随目标、抖动等。",
+      "在Cinemachine环境中设置时间线，编排Cinemachine摄像机，生成可预测的镜头序列。",
+      "使用界面工具和快捷方式，并针对您的需求定位正确的Cinemachine元素进行设置，以简化配置体验。"
+    ]
+  },
+  "TrackingScenario3D": {
+    "title": "3D跟踪场景",
+    "paragraphOne": "利用Cinemachine跟随和观察您的3D游戏中的活动角色",
+    "list": [
+      "跟踪和框定角色",
+      "跟踪和框定群组",
+      "创建自由视角相机",
+      "创建第三人称相机"
+    ]
+  },
+  "ComingSoom": {
+    "title": "敬请期待",
+    "paragraphOne": "当前页面还没有完成翻译和更新！如果您希望它尽快完成，请邮件提醒我们。",
+    "paragraphTwo": "您也可以贡献自己的力量，帮助Unity中文开发者社区完成这个页面，并通过PR提交您的翻译。"
   }
 }

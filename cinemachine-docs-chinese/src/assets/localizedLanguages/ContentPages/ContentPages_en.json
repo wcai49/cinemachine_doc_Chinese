@@ -148,5 +148,40 @@
 
     "UpgradingTheWholeProjectTitle": "Upgrading the Whole Project",
     "UpgradingTheWholeProjectParagraphOne": "The \"Upgrade Entire Project\" option will upgrade all the objects in all the scenes and all the prefabs. There is logic to handle animation tracks, script references, and prefab instances. It's a major operation and every scene and prefab in the project will be opened and saved multiple times. Undo is not supported, so be sure to make a complete backup first."
+  },
+  "GetStarted": {
+    "title": "Get started with Cinemachine",
+    "paragraphOne": "Get the essential information to understand how Cinemachine works and follow instructions to set up the minimum functional layers to start using Cinemachine in your project.",
+    "sections:": [
+      "Cinemachine core concepts",
+      "Set up a basic Cinemachine environment",
+      "Set up multiple Cinemachine Cameras and transitions",
+      "Add procedural behavior to a Cinemachine Camera",
+      "Set up Timeline with Cinemachine Cameras",
+      "Use convenient tools and shortcuts"
+    ],
+    "descriptions": [
+      "Learn about the Cinemachine base elements and core functionality.",
+      "Set up your Unity project with the minimum required elements to make a functional Cinemachine environment.",
+      "Set up a Cinemachine environment with multiple Cinemachine Cameras and manage the transitions between them.",
+      "Add procedural behavior to a Cinemachine Camera to make it follow a target, shake, and more.",
+      "Set up Timeline in a Cinemachine environment to choreograph Cinemachine Cameras and produce a predictable shot sequence.",
+      "Use interface tools and shortcuts and target the proper Cinemachine elements to set up according to your needs and ease your configuration experience."
+    ]
+  },
+  "TrackingScenario3D": {
+    "title": "3D tracking scenarios",
+    "paragraphOne": "Use Cinemachine to follow and look at the active characters of your 3D games.",
+    "list:": [
+      "Follow and frame a character",
+      "Follow and frame a group",
+      "Create a FreeLook Camera",
+      "Create a Third Person Camera"
+    ]
+  },
+  "ComingSoom": {
+    "title": "Coming soon!",
+    "paragraphOne": "The current page is not yet fully translated and updated! If you would like it to be completed as soon as possible, please email us.",
+    "paragraphTwo": "You can also contribute to the Unity Chinese Developer Community to complete this page and submit your translation via PR."
   }
 }
