@@ -179,6 +179,36 @@
       "Create a Third Person Camera"
     ]
   },
+  "TopDownGamesAnd2DPage": {
+    "title": "2D and top-down games",
+    "paragraphOne": "Use and configure Cinemachine to meet your expectations according to specific requirements of 2D graphics and top-down games.",
+    "list": ["Cinemachine and 2D graphics", "Cinemachine and top-down games"]
+  },
+  "ConstrainCameraToPath": {
+    "title": "Constrain a camera to a path",
+    "paragraphOne": "Use a Spline to constrain the movement of a camera along a predefined and customizable path.",
+    "paragraphTwo": "A Spline path is a path formed by a Spline in a scene. Use a Spline to specify a fixed course to position or animate a CinemachineCamera. Use the Spline Dolly behaviour to make your CinemachineCamera follow a Spline path.",
+    "paragraphThree": "To create a Cinemachine Camera with a dolly path:",
+    "pargraphThreeList": [
+      "In the Unity menu, choose GameObject > Cinemachine > Dolly Camera with Spline. A new Cinemachine Camera and spline appear in the Hierarchy.",
+      "In the Hierarchy window, select the new dolly spline GameObject.",
+      "In the Inspector or in the Scene View, add and adjust waypoints."
+    ],
+    "paragraphFour": "Any Unity spline can be used as a path in Cinemachine. Just drag it into the Spline Dolly Spline property field, and immediately the CinemachineCamera will be confined to the spline.",
+    "paragraphFive": "By default, Unity Splines contain no rotation data. Camera rotation will be inferred from the spline tangent at any point, combined with the world Up vector. To add rotation about the tangent, you can use the Cinemachine Spline Roll behaviour. This allows you to specify Roll values for any point along the spline. Roll values are used to rotate the camera about the spline tangent at that point, giving you more control over the camera's final rotation.",
+    "paragraphSix": "If a Cinemachine Spline Roll behaviour is added to the spline, all cameras and dolly carts that use the spline will see it. Alternatively, you can add the Cinemachine Spline Roll behaviour to the Cinemachine Camera itself, in which case the roll will only apply to it.    "
+  },
+  "ApplyNoiseSimulationPage": {
+    "title": "Apply noise to simulate camera shake",
+    "paragraphOne": "To apply a noise behavior to a Cinemachine Camera:",
+    "paragraphOneList": [
+      "In the Hierarchy, select your Cinemachine Camera.",
+      "In the Inspector, in the Cinemachine Camera component, select Noise and then select Basic Multi Channel Perlin. This adds a noise behavior to the Cinemachine Camera.",
+      "In the Basic Multi Channel Perlin component, under Noise Profile, choose an existing noise profile asset or create your own profile.",
+      "Use Amplitude Gain and Frequency Gain to fine-tune the noise."
+    ],
+    "paragraphTwo": "Noise is meant to be used for things such as hand-held camera effects, where the noise is continuous. For sudden shakes (e.g. in response to events like explosions), we recommend the use of Impulse Impulse rather than Noise."
+  },
   "ComingSoom": {
     "title": "Coming soon!",
     "paragraphOne": "The current page is not yet fully translated and updated! If you would like it to be completed as soon as possible, please email us.",

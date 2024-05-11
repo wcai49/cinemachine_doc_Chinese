@@ -9,7 +9,7 @@
   background-color: #282c34;
   color: #ffffff;
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   align-items: center;
   padding-inline: 120px;
 }

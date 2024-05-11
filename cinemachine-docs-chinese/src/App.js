@@ -32,6 +32,7 @@ function App() {
   return (
     <div className="App">
       <div className="AppHeader">
+        <div className="AppTitle">Cinemachine 3.1.0</div>
         <Select
           defaultValue="zh"
           onChange={handleLanguageChange}

@@ -186,6 +186,37 @@
       "创建第三人称相机"
     ]
   },
+  "TopDownGamesAnd2DPage": {
+    "title": "2D和俯视视角游戏",
+    "paragraphOne": "使用和配置Cinemachine以满足2D游戏和俯视视角游戏的特定要求。",
+    "list": ["Cinemachine和2D图像", "Cinemachine和俯视视角游戏"]
+  },
+  "ConstrainCameraToPath": {
+    "title": "使相机沿路径移动",
+    "paragraphOne": "利用样条线约束相机沿着预定义且可自定义的路径移动。",
+    "paragraphTwo": "样条线路径由场景中的样条线形成。使用样条线指定固定路线来定位或动画CinemachineCamera。使用样条线推车行为让您的CinemachineCamera沿着样条线路径移动。",
+    "paragraphThree": "创建带有推车路径的Cinemachine相机：",
+    "pargraphThreeList": [
+      "在Unity菜单中，选择GameObject > Cinemachine > Dolly Camera with Spline。层次结构中将出现一个新的Cinemachine相机和样条线。",
+      "在层次结构窗口中，选择新的推车样条线GameObject。",
+      "在检视器或场景视图中添加和调整路径点。"
+    ],
+    "paragraphFour": "任何Unity样条线都可用作Cinemachine中的路径。只需将其拖放到Spline Dolly Spline属性字段中，即可使CinemachineCamera限制在样条线上。",
+    "paragraphFive": "默认情况下，Unity样条线不包含旋转数据。相机的旋转将根据任意点的样条线切线和世界Up向量进行推断。要在切线周围添加旋转，您可以使用Cinemachine样条线滚动行为。这允许您为样条线上的任何点指定滚动值。滚动值用于使相机绕该点的样条线切线旋转，从而更好地控制相机的最终旋转。",
+    "paragraphSix": "如果向样条线添加了Cinemachine样条线滚动行为，则所有使用该样条线的相机和推车都会看到它。或者，您可以将Cinemachine样条线滚动行为添加到Cinemachine相机本身，这样滚动值将仅适用于它。"
+  },
+
+  "ApplyNoiseSimulationPage": {
+    "title": "应用噪声模拟相机抖动",
+    "paragraphOne": "要将噪声行为应用于Cinemachine相机：",
+    "paragraphOneList": [
+      "在层次结构窗口中，选择您的Cinemachine相机。",
+      "在检视器窗口中，在Cinemachine相机组件中，选择Noise，然后选择Basic Multi Channel Perlin。这将向Cinemachine相机添加一个噪声行为。",
+      "在Basic Multi Channel Perlin组件下的Noise Profile中，选择现有的噪声配置文件资源或创建自己的配置文件。",
+      "使用Amplitude Gain和Frequency Gain来微调噪声。"
+    ],
+    "paragraphTwo": "噪声通常用于诸如手持相机效果等需要连续噪声的情况。对于突然的抖动（例如响应爆炸等事件），我们建议使用Impulse而不是Noise。"
+  },
   "ComingSoom": {
     "title": "敬请期待",
     "paragraphOne": "当前页面还没有完成翻译和更新！如果您希望它尽快完成，请邮件提醒我们。",
