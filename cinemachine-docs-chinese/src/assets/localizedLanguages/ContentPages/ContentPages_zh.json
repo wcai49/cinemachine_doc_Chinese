@@ -217,6 +217,27 @@
     ],
     "paragraphTwo": "噪声通常用于诸如手持相机效果等需要连续噪声的情况。对于突然的抖动（例如响应爆炸等事件），我们建议使用Impulse而不是Noise。"
   },
+  "ManageGroupedCameras": {
+    "title": "管理分组相机",
+    "paragraphOne": "管理相机监督多个Cinemachine相机，但在Cinemachine Brain和时间轴的视角下，它们作为单个Cinemachine相机。",
+    "paragraphTwo": "Cinemachine包括以下管理相机：",
+    "paragraphTwoList": [
+      "序列相机：执行其子Cinemachine相机的混合或切换序列。",
+      "清晰镜头相机：选择最佳视角的子Cinemachine相机。",
+      "状态驱动相机：根据动画状态的变化选择子Cinemachine相机。",
+      "混合相机：通过使用最多八个子Cinemachine相机的加权平均值创建连续混合。"
+    ],
+    "paragraphThree": "由于管理相机的行为类似于普通的Cinemachine相机，因此您可以将它们嵌套。换句话说，您可以创建任意复杂的相机架构，将常规Cinemachine相机和管理相机结合在一起。",
+    "subtitleOne": "制作您自己的自定义管理相机",
+    "paragraphFour": "您还可以制作自己的管理相机，根据您提供的任意算法选择当前活动的子相机。例如，如果您正在制作一个2D平台游戏，并希望一个相机架构根据角色是向右移动还是向左移动，或者跳跃还是下落而对自身进行不同的定位，那么自定义CameraManager类可能是一个不错的选择。",
+    "paragraphFive": "为此，请创建一个新类，继承CinemachineCameraManagerBase。该基类实现了一组Cinemachine相机子级和混合器。",
+    "paragraphSix": "接下来，实现抽象的ChooseCurrentCamera方法。当管理器处于活动状态时，每帧都会调用此方法，并且应返回本帧应该处于活动状态的子相机。您的自定义类可以以任何方式做出此决定。在示例中，它将查看玩家状态以确定面对方向和跳跃/下落状态，并选择适当的子相机。",
+    "paragraphSeven": "如果新的期望相机与上一帧不同，则CinemachineCameraManagerBase将根据您在其DefaultBlend和CustomBlends字段中设置的内容启动混合。",
+    "paragraphEight": "添加了您喜欢的每个玩家状态的子相机，并将它们连接到您的管理器实例后，您将拥有一个根据玩家状态调整自身的Cinemachine架构。该架构本身对于系统的其他部分来说看起来就像一个普通的Cinemachine相机，因此可以在Cinemachine相机可以的任何地方使用 - 包括嵌套在其他架构中。",
+    "paragraphNine": "请注意，Cinemachine附带了状态驱动相机，它实现了此功能，前提是相关的玩家状态已编码在动画控制器状态机中。如果状态不是从动画控制器中读取，则需要自己实现管理器。",
+    "subtitleTwo": "托管的相机需要成为管理器的GameObject子级",
+    "paragraphTen": "这主要是为了防止嵌套管理器可能出现的问题，导致递归循环。强制托管相机成为子级使递归变得不可能。"
+  },
   "ComingSoom": {
     "title": "敬请期待",
     "paragraphOne": "当前页面还没有完成翻译和更新！如果您希望它尽快完成，请邮件提醒我们。",

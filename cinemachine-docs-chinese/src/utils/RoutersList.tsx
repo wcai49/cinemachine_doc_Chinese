@@ -16,6 +16,7 @@ import TrackingScenario3DPage from "../pages/3DTrackingScenarios/TrackingScenari
 import TopDownGamesAnd2DPage from "../pages/2DAndTopDown/TopDownGamesAnd2DPage.tsx";
 import ConstrainCameraToPathPage from "../pages/ConstrainCameraToPath/ConstrainCameraToPathPage.tsx";
 import ApplyNoiseSimulationPage from "../pages/ApplyNoiseSimulation/ApplyNoiseSimulationPage.tsx";
+import ManageGroupedCamerasPage from "../pages/ManageGroupedCameras/ManageGroupedCamerasPage.tsx";
 
 const RoutersList: React.FC = () => {
   return (
@@ -62,6 +63,11 @@ const RoutersList: React.FC = () => {
         element={<ApplyNoiseSimulationPage />}
       />
 
+      {/* Section8 */}
+      <Route
+        path="section8-Manage-grouped-cameras"
+        element={<ManageGroupedCamerasPage />}
+      />
       {/* ComingSoon page for unknown path */}
       <Route path="*" element={<ComingSoonPage />} />
     </Routes>
