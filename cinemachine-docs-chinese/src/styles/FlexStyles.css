@@ -7,3 +7,8 @@
   display: flex;
   flex-direction: row;
 }
+
+.FlexCol {
+  display: flex;
+  flex-direction: column;
+}

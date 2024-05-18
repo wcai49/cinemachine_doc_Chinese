@@ -34,14 +34,10 @@ const KnownIssuesPage: React.FC = () => {
           value={code}
           theme={vscodeDark}
           extensions={[javascript({ jsx: true })]}
-          width="800px"
         />
       </div>
-      <div>
-        <div className="MarginMedium">
-          {getLocalizedString("Common.InThisArticle")}
-        </div>
-
+      <div className="FlexCol">
+        {getLocalizedString("Common.InThisArticle")}
         <Anchor
           style={{ width: "190px" }}
           items={getAnchorItems(["KnownIssues.subtitleOne"])}

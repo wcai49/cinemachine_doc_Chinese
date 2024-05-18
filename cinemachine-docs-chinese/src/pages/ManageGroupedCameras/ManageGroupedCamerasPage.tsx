@@ -68,19 +68,18 @@ const ManageGroupedCamerasPage: React.FC = () => {
           {getLocalizedString("ManageGroupedCameras.paragraphTen")}
         </div>
       </div>
-      <div>
-        <div className="MarginMedium">
-          {getLocalizedString("Common.InThisArticle")}
-        </div>
-        <Anchor
-          style={{ width: "190px" }}
-          items={getAnchorItems([
-            "ManageGroupedCameras.title",
-            "ManageGroupedCameras.subtitleOne",
-            "ManageGroupedCameras.subtitleTwo",
-          ])}
-        />
+
+      <div className="MarginMedium">
+        {getLocalizedString("Common.InThisArticle")}
       </div>
+      <Anchor
+        style={{ width: "190px" }}
+        items={getAnchorItems([
+          "ManageGroupedCameras.title",
+          "ManageGroupedCameras.subtitleOne",
+          "ManageGroupedCameras.subtitleTwo",
+        ])}
+      />
     </div>
   );
 };

@@ -33,7 +33,6 @@ const UseInputSystemPage: React.FC = () => {
             value={code}
             theme={vscodeDark}
             extensions={[javascript({ jsx: true })]}
-            width="800px"
           />
         </div>
         <div className="ContentPageParagraph">
@@ -44,10 +43,7 @@ const UseInputSystemPage: React.FC = () => {
         <div className="MarginMedium">
           {getLocalizedString("Common.InThisArticle")}
         </div>
-        <Anchor
-          style={{ width: "190px" }}
-          items={getAnchorItems(["UseInputSystem.subtitleOne"])}
-        />
+        <Anchor items={getAnchorItems(["UseInputSystem.subtitleOne"])} />
       </div>
     </div>
   );
