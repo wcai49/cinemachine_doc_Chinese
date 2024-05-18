@@ -310,7 +310,7 @@ const UpgradeFrom2xPage: React.FC = () => {
           {getLocalizedString("Common.InThisArticle")}
         </div>
         <Anchor
-          className="MarginMedium"
+          style={{ width: "190px" }}
           items={getAnchorItems([
             "UpgradingProjectFromCinemachine2X.UpgradingYourProjectStepByStepTitle",
             "UpgradingProjectFromCinemachine2X.WhatHasChangedInTheAPITitle",

@@ -107,7 +107,7 @@ const InstallationContentPage: React.FC = () => {
           {getLocalizedString("Common.InThisArticle")}
         </div>
         <Anchor
-          className="MarginMedium"
+          style={{ width: "190px" }}
           items={getAnchorItems([
             "InstallationAndUpgrade.title",
             "InstallationAndUpgrade.requirementsTitle",

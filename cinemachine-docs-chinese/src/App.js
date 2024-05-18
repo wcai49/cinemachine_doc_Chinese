@@ -12,6 +12,7 @@ import "./App.css";
 import "./styles/FlexStyles.css";
 import "./styles/ContentPagesStyles.css";
 import "./styles/MarginsPaddings.css";
+import "./styles/TextStyles.css";
 import { useNavigate } from "react-router-dom";
 import RoutersList from "./utils/RoutersList.tsx";
 import { Select } from "antd";

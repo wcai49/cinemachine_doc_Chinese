@@ -11,12 +11,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: 120px;
+  padding-inline: 60px;
 }
 
 .AppBody {
   display: flex;
-  padding-inline: 120px;
+  padding-inline: 20px;
   flex: 1;
 }
 /* Footer */

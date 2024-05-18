@@ -132,15 +132,15 @@
     "key": "section10-Cinemachine-Events"
   },
   {
-    "label": "Cinemachine冲击",
+    "label": "Cinemachine脉冲",
     "key": "section11-Cinemachine-Impulse",
     "subItems": [
       {
-        "label": "Cinemachine冲击源",
+        "label": "Cinemachine脉冲源",
         "key": "section11-1-Cinemachine-Impulse-Sources"
       },
       {
-        "label": "过滤冲击",
+        "label": "过滤脉冲",
         "key": "section11-2-Filtering-impulses"
       }
     ]
@@ -150,7 +150,7 @@
     "key": "section12-Split-screen-and-multiple-Unity-Cameras"
   },
   {
-    "label": "使用输入系统与Cinemachine",
+    "label": "Cinemachine与输入系统兼容",
     "key": "section13-Use-Input-System-with-Cinemachine"
   },
   {

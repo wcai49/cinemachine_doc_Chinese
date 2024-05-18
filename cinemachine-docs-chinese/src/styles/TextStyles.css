@@ -1,0 +1,7 @@
+.wrapText {
+  text-wrap: wrap;
+}
+
+.nowrapText {
+  text-wrap: nowrap;
+}

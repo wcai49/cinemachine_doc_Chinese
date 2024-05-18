@@ -36,7 +36,7 @@ const MainContentPage: React.FC = () => {
         <div className="MarginMedium">
           {getLocalizedString("Common.InThisArticle")}
         </div>
-        <Anchor className="MarginMedium" items={getAnchorItems([])} />
+        <Anchor style={{ width: "190px" }} items={getAnchorItems([])} />
       </div>
     </div>
   );

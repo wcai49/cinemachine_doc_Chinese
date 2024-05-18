@@ -17,6 +17,12 @@ import TopDownGamesAnd2DPage from "../pages/2DAndTopDown/TopDownGamesAnd2DPage.t
 import ConstrainCameraToPathPage from "../pages/ConstrainCameraToPath/ConstrainCameraToPathPage.tsx";
 import ApplyNoiseSimulationPage from "../pages/ApplyNoiseSimulation/ApplyNoiseSimulationPage.tsx";
 import ManageGroupedCamerasPage from "../pages/ManageGroupedCameras/ManageGroupedCamerasPage.tsx";
+import AvoidCollisionsAndEvaluateShotsPage from "../pages/AvoidCollisions/AvoidCollisionsAndEvaluateShots.tsx";
+import CinemachineEventsPage from "../pages/CinemachineEvents/CinemachineEventsPage.tsx";
+import CinemachineImpulsePage from "../pages/CinemachineImpulse/CinemachineImpulsePage.tsx";
+import SplitScreenMultipleCamerasPage from "../pages/SplitScreen/SplitScreenMultipleCamerasPage.tsx";
+import UseInputSystemPage from "../pages/UseInputSystem/UseInputSystemPage.tsx";
+import KnownIssuesPage from "../pages/KnownIssues/KnownIssuesPage.tsx";
 
 const RoutersList: React.FC = () => {
   return (
@@ -68,6 +74,39 @@ const RoutersList: React.FC = () => {
         path="section8-Manage-grouped-cameras"
         element={<ManageGroupedCamerasPage />}
       />
+
+      {/* Section9 */}
+      <Route
+        path="section9-Avoid-collisions-and-evaluate-shots"
+        element={<AvoidCollisionsAndEvaluateShotsPage />}
+      />
+
+      {/* Section10 */}
+      <Route
+        path="section10-Cinemachine-Events"
+        element={<CinemachineEventsPage />}
+      />
+
+      {/* Section11 */}
+      <Route
+        path="section11-Cinemachine-Impulse"
+        element={<CinemachineImpulsePage />}
+      />
+
+      {/* Section12 */}
+      <Route
+        path="section12-Split-screen-and-multiple-Unity-Cameras"
+        element={<SplitScreenMultipleCamerasPage />}
+      />
+
+      {/* Section13 */}
+      <Route
+        path="section13-Use-Input-System-with-Cinemachine"
+        element={<UseInputSystemPage />}
+      />
+
+      {/* Section16 */}
+      <Route path="section16-Known-Issues" element={<KnownIssuesPage />} />
       {/* ComingSoon page for unknown path */}
       <Route path="*" element={<ComingSoonPage />} />
     </Routes>

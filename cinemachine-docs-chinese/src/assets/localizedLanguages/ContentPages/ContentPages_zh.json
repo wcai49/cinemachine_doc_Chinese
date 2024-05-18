@@ -238,6 +238,63 @@
     "subtitleTwo": "托管的相机需要成为管理器的GameObject子级",
     "paragraphTen": "这主要是为了防止嵌套管理器可能出现的问题，导致递归循环。强制托管相机成为子级使递归变得不可能。"
   },
+  "AvoidCollisionsAndEvaluateShots": {
+    "title": "避免碰撞和评估镜头",
+    "paragraphOne": "当角色和物体在复杂的场景中移动时，场景中的障碍物有时会阻挡相机和其目标之间的视线。同样，您可能需要将相机移动到场景中另一个游戏对象已经占据的位置。Cinemachine提供了处理这些情况的扩展：",
+    "paragraphOneList": [
+      "Cinemachine 解碰撞器 (Decollider)",
+      "Cinemachine 解遮挡器 (Deoccluder)",
+      "Cinemachine 限制器 3D (Confiner 3D)",
+      "Cinemachine 限制器 2D (Confiner 2D)"
+    ]
+  },
+  "CinemachineEvents": {
+    "title": "Cinemachine 事件",
+    "paragraphOne": "每当相机被激活或停用时，以及在开始和结束混合时，Cinemachine都会生成事件。此外，当进行相机切换时（即在没有混合的情况下更改活动的Cinemachine相机），也会生成事件。",
+    "paragraphTwo": "当Cinemachine发送事件时，它会通过CinemachineCore全局发送。脚本可以添加监听器来监听这些事件并根据它们采取行动。监听器将接收所有相机的事件。",
+    "paragraphThree": "事件在管理混合的每个上下文中生成。这包括处理最高级别混合的CinemachineBrain，也适用于管理其子相机之间混合的Cinemachine管理相机。",
+    "paragraphFour": "有时需要仅为特定相机发送事件，以便脚本可以根据该特定相机的活动收到通知，而无需提供代码来过滤事件。Cinemachine提供以下行为来执行此过滤逻辑。",
+    "paragraphFourList": [
+      "通过向特定CinemachineCamera或ManagerCamera添加Cinemachine相机事件行为，可以捕捉与激活或停用该相机相关的事件。",
+      "通过向ManagerCamera添加Cinemachine相机管理器事件行为，可以捕捉由其生成的事件。",
+      "通过向特定CinemachineBrain添加Cinemachine脑事件行为，可以捕捉由其生成的事件。"
+    ]
+  },
+  "CinemachineImpulse": {
+    "title": "Cinemachine 脉冲（Impulse）",
+    "paragraphOne": "Cinemachine 脉冲会根据游戏事件生成和管理相机震动。例如，当一个游戏对象与另一个碰撞时，或者场景中某物爆炸时，可以使用脉冲使Cinemachine相机震动。",
+    "paragraphTwo": "脉冲由两部分组成：",
+    "paragraphThree": "1. 脉冲源：一个发射信号的组件，该信号从空间中的一个点发出并向外传播，类似于声波或冲击波。该发射由游戏中的事件触发。",
+    "paragraphFour": "信号包括一个方向和一条曲线，指定信号强度随时间变化的函数。这些共同定义了沿指定轴线的震动，持续指定的时间。这种震动从起点向外传播，当到达脉冲监听器的位置时，该监听器可以对此作出反应。",
+    "paragraphFive": "2. 脉冲监听器：一个Cinemachine扩展，允许Cinemachine相机“听到”脉冲，并通过震动作出反应。",
+    "paragraphSix": "可以将其理解为单个“脉冲”。脉冲是脉冲源发射信号的单次发生。场景中的碰撞和事件触发脉冲，脉冲源生成脉冲，脉冲监听器对脉冲作出反应。",
+    "subtitleOne": "开始使用脉冲",
+    "paragraphSeven": "在场景中设置和使用脉冲，请执行以下操作：",
+    "paragraphSevenList": [
+      "将Cinemachine脉冲源或Cinemachine碰撞脉冲源组件添加到一个或多个您希望触发相机震动的游戏对象上。",
+      "将Cinemachine脉冲监听器扩展添加到一个或多个Cinemachine相机上，使它们能够检测并对脉冲作出反应。"
+    ]
+  },
+  "SplitScreenMultipleCameras": {
+    "title": "分屏和多个Unity相机",
+    "paragraphOne": "根据设计，Cinemachine相机并不会直接链接到Cinemachine大脑。相反，场景中的活动Cinemachine相机会由大脑动态发现，这样它们就可以通过预制件实例化或场景加载来存在。默认情况下，如果场景中存在多个Cinemachine大脑，它们都会找到相同的Cinemachine相机，并因此显示相同的内容。要将特定的Cinemachine相机分配给特定的大脑，使用Cinemachine频道。这与Unity层的工作方式相同。",
+    "paragraphTwo": "首先，将您的Cinemachine相机设置为输出到所需的频道：",
+    "paragraphThree": "接下来，将该频道添加到Cinemachine大脑的频道掩码中。掩码中可以同时存在多个频道。Cinemachine大脑将仅使用那些输出到掩码中存在的频道的Cinemachine相机。所有其他Cinemachine相机将被忽略。"
+  },
+  "UseInputSystem": {
+    "title": "Cinemachine与输入系统兼容",
+    "paragraphOne": "对于更复杂的输入配置，例如支持多个设备，您需要从输入系统包提供的PlayerInput组件接收输入。以下部分假设您已经知道如何设置此组件。有关更多信息，请参阅输入系统文档和示例。",
+    "subtitleOne": "读取PlayerInput",
+    "paragraphTwo": "要从设置为InvokeCSharpEvents的PlayerInput中读取值，您需要创建一个自定义InputAxisController，该控制器订阅onActionTriggered事件。下面的示例显示了如何接收并相应地连接这些输入。将此脚本添加到您的CinemachineCamera中，并分配PlayerInput字段。",
+    "paragraphThree": "如果需要动态实例化相机，请参阅Cinemachine多相机文档和示例以获取更多信息。"
+  },
+  "KnownIssues": {
+    "title": "已知问题",
+    "subtitleOne": "累积缓冲投影矩阵",
+    "paragraphOne": "如果累积的“抗锯齿”选项已启用，并且场景中包含Cinemachine相机切换，则在切换后相机的视场将不正确。",
+    "paragraphTwo": "解决方法：在每一帧之后重置投影矩阵，在CinemachineBrain修改相机之后。"
+  },
+
   "ComingSoom": {
     "title": "敬请期待",
     "paragraphOne": "当前页面还没有完成翻译和更新！如果您希望它尽快完成，请邮件提醒我们。",
