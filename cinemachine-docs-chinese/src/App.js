@@ -13,14 +13,17 @@ import "./styles/FlexStyles.css";
 import "./styles/ContentPagesStyles.css";
 import "./styles/MarginsPaddings.css";
 import "./styles/TextStyles.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import RoutersList from "./utils/RoutersList.tsx";
 import { Select } from "antd";
 import { updateCurrentLanguage } from "./utils/getLocalizedString.ts";
+import Feedback from "./components/Feedback.tsx";
 
 function App() {
   const navigate = useNavigate();
   const [language, setLanguage] = useState("zh");
+  const location = useLocation();
+  const [path, setPath] = useState(location.pathname.substring(1));
 
   const handleLanguageChange = (newLanguage) => {
     setLanguage(newLanguage);
@@ -28,6 +31,7 @@ function App() {
   };
   const navigateToPage = (path) => {
     navigate(path);
+    setPath(path);
   };
 
   return (
@@ -45,8 +49,14 @@ function App() {
         />
       </div>
       <div className="AppBody">
-        <NavigationMenu navigateClick={(e) => navigateToPage(e)} />
-        {RoutersList(language)}
+        <NavigationMenu
+          navigateClick={(e) => navigateToPage(e)}
+          currentPath={path}
+        />
+        <div className="FlexCol">
+          <div className="FlexOne">{RoutersList()}</div>
+          <Feedback />
+        </div>
       </div>
       <div className="AppFooter">
         <Footer />

@@ -299,5 +299,12 @@
     "title": "敬请期待",
     "paragraphOne": "当前页面还没有完成翻译和更新！如果您希望它尽快完成，请邮件提醒我们。",
     "paragraphTwo": "您也可以贡献自己的力量，帮助Unity中文开发者社区完成这个页面，并通过PR提交您的翻译。"
+  },
+  "Feedback": {
+    "title": "对当前页面不满意？请给我们及时反馈！",
+    "buttonOne": "尽快翻译当前页面",
+    "buttonTwo": "该页面翻译有问题",
+    "buttonThree": "该页面功能缺失",
+    "sendFeedback": "提交"
   }
 }

@@ -5,7 +5,7 @@
  * Description: NavigationMenu component for the application
  */
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Menu, MenuProps } from "antd";
 import { getItem } from "./NavigationUtils.ts";
 import { PlusOutlined } from "@ant-design/icons";
@@ -13,12 +13,23 @@ import menuItems from "../../assets/localizedLanguages/MenuItems/MenuItems_zh.js
 
 interface NavigationMenuProps {
   navigateClick: (route: string) => void;
+  currentPath: string;
 }
 
-const NavigationMenu: React.FC<NavigationMenuProps> = ({ navigateClick }) => {
+const NavigationMenu: React.FC<NavigationMenuProps> = ({
+  navigateClick,
+  currentPath,
+}) => {
   const [selectedKey, setSelectedKey] = useState(
     "section1-Cinemachine-package"
   );
+
+  useEffect(() => {
+    console.log("currentPath", currentPath);
+    console.log("selectedKey", selectedKey);
+
+    setSelectedKey(currentPath);
+  }, [currentPath, selectedKey]);
 
   const onClick = (e) => {
     const path = e.key ? e.key.toString() : e;
