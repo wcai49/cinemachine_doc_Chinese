@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/cinemachine_doc_Chinese/static/css/main.5e7466fe.css",
+    "main.js": "/cinemachine_doc_Chinese/static/js/main.d48602ce.js",
+    "static/js/453.17a9f8c6.chunk.js": "/cinemachine_doc_Chinese/static/js/453.17a9f8c6.chunk.js",
+    "static/media/CinemachineSplash.png": "/cinemachine_doc_Chinese/static/media/CinemachineSplash.892e5732819151f0de97.png",
+    "static/media/InstallationImage.png": "/cinemachine_doc_Chinese/static/media/InstallationImage.0f7f460da61dec64de18.png",
+    "static/media/CinemachinePathScene.png": "/cinemachine_doc_Chinese/static/media/CinemachinePathScene.5eb1f1455eb75509e5c4.png",
+    "static/media/UpgradingFrom2x5.png": "/cinemachine_doc_Chinese/static/media/UpgradingFrom2x5.75d9b415183cedfbe162.png",
+    "static/media/UpgradingFrom2x.png": "/cinemachine_doc_Chinese/static/media/UpgradingFrom2x.5e8f5e84dda87717c2b7.png",
+    "static/media/UpgradingFrom2x3.png": "/cinemachine_doc_Chinese/static/media/UpgradingFrom2x3.b57ecb293d7fac7bc98e.png",
+    "static/media/CinemachineChannels-brain.png": "/cinemachine_doc_Chinese/static/media/CinemachineChannels-brain.0c8171dc0328cfc6d515.png",
+    "static/media/UpgradingFrom2x2.png": "/cinemachine_doc_Chinese/static/media/UpgradingFrom2x2.0c8171dc0328cfc6d515.png",
+    "static/media/CinemachineChannels-camera.png": "/cinemachine_doc_Chinese/static/media/CinemachineChannels-camera.7472d63e1e6cd3e8f1fe.png",
+    "static/media/UpgradingFrom2x1.png": "/cinemachine_doc_Chinese/static/media/UpgradingFrom2x1.7472d63e1e6cd3e8f1fe.png",
+    "static/media/UpgradingFrom2x4.png": "/cinemachine_doc_Chinese/static/media/UpgradingFrom2x4.c468d10b6573f05c9fb2.png",
+    "index.html": "/cinemachine_doc_Chinese/index.html",
+    "main.5e7466fe.css.map": "/cinemachine_doc_Chinese/static/css/main.5e7466fe.css.map",
+    "main.d48602ce.js.map": "/cinemachine_doc_Chinese/static/js/main.d48602ce.js.map",
+    "453.17a9f8c6.chunk.js.map": "/cinemachine_doc_Chinese/static/js/453.17a9f8c6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5e7466fe.css",
+    "static/js/main.d48602ce.js"
+  ]
+}
