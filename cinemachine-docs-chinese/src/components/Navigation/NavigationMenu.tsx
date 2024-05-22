@@ -25,9 +25,6 @@ const NavigationMenu: React.FC<NavigationMenuProps> = ({
   );
 
   useEffect(() => {
-    console.log("currentPath", currentPath);
-    console.log("selectedKey", selectedKey);
-
     setSelectedKey(currentPath);
   }, [currentPath, selectedKey]);
 
