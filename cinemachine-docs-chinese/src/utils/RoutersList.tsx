@@ -28,6 +28,7 @@ const RoutersList: React.FC = () => {
   return (
     <Routes>
       <Route path="/" element={<MainContentPage />} />
+      <Route path="/cinemachine_doc_Chinese" element={<MainContentPage />} />
       <Route
         path="/section1-Cinemachine-package"
         element={<MainContentPage />}
