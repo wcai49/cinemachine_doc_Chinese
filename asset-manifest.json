@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cinemachine_doc_Chinese/static/css/main.5e7466fe.css",
-    "main.js": "/cinemachine_doc_Chinese/static/js/main.fa20c311.js",
+    "main.js": "/cinemachine_doc_Chinese/static/js/main.d675123e.js",
     "static/js/453.17a9f8c6.chunk.js": "/cinemachine_doc_Chinese/static/js/453.17a9f8c6.chunk.js",
     "static/media/CinemachineSplash.png": "/cinemachine_doc_Chinese/static/media/CinemachineSplash.892e5732819151f0de97.png",
     "static/media/InstallationImage.png": "/cinemachine_doc_Chinese/static/media/InstallationImage.0f7f460da61dec64de18.png",
@@ -16,11 +16,11 @@
     "static/media/UpgradingFrom2x4.png": "/cinemachine_doc_Chinese/static/media/UpgradingFrom2x4.c468d10b6573f05c9fb2.png",
     "index.html": "/cinemachine_doc_Chinese/index.html",
     "main.5e7466fe.css.map": "/cinemachine_doc_Chinese/static/css/main.5e7466fe.css.map",
-    "main.fa20c311.js.map": "/cinemachine_doc_Chinese/static/js/main.fa20c311.js.map",
+    "main.d675123e.js.map": "/cinemachine_doc_Chinese/static/js/main.d675123e.js.map",
     "453.17a9f8c6.chunk.js.map": "/cinemachine_doc_Chinese/static/js/453.17a9f8c6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5e7466fe.css",
-    "static/js/main.fa20c311.js"
+    "static/js/main.d675123e.js"
   ]
 }
