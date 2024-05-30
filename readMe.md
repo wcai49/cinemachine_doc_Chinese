@@ -6,6 +6,23 @@
 
 This project is about Unity's official verified package: cinemachine's documentation translated in Chinese.
 
+## 更新计划表 Release Schedule
+
+| Section/Page       | Status          | Expected Release Time  |
+|--------------------|-----------------|--------------------|
+| 了解Cinemachine概念 | In Progress     | June 5th, 2024     |
+| Cinemachine基本元素 | In Progress     | June 5th, 2024     |
+| 相机控制与过度       | In Progress     | June 5th, 2024     |
+| 程序化运动          | In Progress     | June 5th, 2024     |
+| Cinemachine与时间轴 | In Progress     | June 5th, 2024     |
+
+## 状态更新表 Status check
+
+| Bugs       | Status          | Expected Fixing Time  |
+|--------------------|-----------------|--------------------|
+| 目前暂无通过Forms提交的Bug反馈 | N/A     | N/A     |
+
+
 ## 声明 Disclaimer
 
 本网站的英文内容由Unity Technologies提供；中文翻译由中文Unity游戏开发者提供。欢迎所有开发者前往Github仓库地址参与项目，提供改进建议。
