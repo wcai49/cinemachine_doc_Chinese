@@ -176,6 +176,22 @@
       "使用界面工具和快捷方式，并针对您的需求定位正确的Cinemachine元素进行设置，以简化配置体验。"
     ]
   },
+  "DiscoverConcepts": {
+    "title": "探索Cinemachine概念",
+    "paragraphOne": "了解Cinemachine的基本元素和核心功能。",
+    "sections": [
+      "Cinemachine基本元素",
+      "相机控制与切换",
+      "程序化运动",
+      "Cinemachine与时间轴"
+    ],
+    "descriptions": [
+      "构建一个功能性Cinemachine环境所需的基本元素：Unity相机、Cinemachine脑、Cinemachine相机。",
+      "Cinemachine相机轮流控制Unity相机并通过混合或剪切进行切换的条件和机制。",
+      "程序化行为和扩展如何使Cinemachine相机动态移动、摇晃、跟踪目标、构图、响应用户输入、沿预定义路径移动、对外部冲击信号做出反应、产生后期处理效果等。",
+      "当您需要通过编排相机制作可预测的镜头序列时，Cinemachine相机如何与时间轴配合工作。"
+    ]
+  },
   "TrackingScenario3D": {
     "title": "3D跟踪场景",
     "paragraphOne": "利用Cinemachine跟随和观察您的3D游戏中的活动角色",

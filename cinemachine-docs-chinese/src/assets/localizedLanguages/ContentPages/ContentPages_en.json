@@ -169,6 +169,22 @@
       "Use interface tools and shortcuts and target the proper Cinemachine elements to set up according to your needs and ease your configuration experience."
     ]
   },
+  "DiscoverConcepts": {
+    "title": "Discover Cinemachine concepts",
+    "paragraphOne": "Learn about the Cinemachine base elements and core functionality.",
+    "sections": [
+      "Cinemachine essential elements",
+      "Camera control and transitions",
+      "Procedural motion",
+      "Cinemachine and Timeline"
+    ],
+    "descriptions": [
+      "What are the essential elements that to make a functional Cinemachine environment: Unity Camera, Cinemachine Brain, and Cinemachine Cameras.",
+      "What are the conditions and mechanisms that make Cinemachine Cameras take turns controlling the Unity Camera and transition between each other by blend or cut.",
+      "How procedural behaviors and extensions can make a Cinemachine Camera dynamically move, shake, track targets, compose its own shots, respond to user inputs, move along a predefined path, react to external impulse signals, produce post-processing effects, and more.",
+      "How Cinemachine Cameras work with Timeline when you need to produce a predictable shot sequence with choreographed cameras."
+    ]
+  },
   "TrackingScenario3D": {
     "title": "3D tracking scenarios",
     "paragraphOne": "Use Cinemachine to follow and look at the active characters of your 3D games.",

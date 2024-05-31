@@ -1,28 +1,28 @@
 /**
- * GetStartedContentPage.tsx
+ * DiscoverConceptsPage.tsx
  * Author: Wenlei Cai
- * Date: 2024-04-30
- * Description: GetStarted page
+ * Date: 2024-05-31
+ * Description: DiscoverConceptsPage under GetStarted page
  */
 
 import React from "react";
+import { Table } from "antd";
+
 import {
   getLocalizedString,
   getLocalizedStringArray,
-} from "../../utils/getLocalizedString.ts";
-import { Table } from "antd";
+} from "../../../utils/getLocalizedString.ts";
 
 const keys = [
-  "section3-1-Discover-Cinemachine-concepts",
-  "section3-2-Set-up-a-basic-Cinemachine-environment",
-  "section3-3-Set-up-multiple-Cinemachine-Cameras-and-transitions",
-  "section3-4-Add-procedural-behavior-to-a-Cinemachine-Camera",
-  "section3-5-Set-up-Timeline-with-Cinemachine-Cameras",
-  "section3-6-Use-convenient-tools-and-shortcuts",
+  "section3-1-1-Cinemachine-essential-elements",
+  "section3-1-2-Camera-control-and-transitions",
+  "section3-1-3-Procedural-motion",
+  "section3-1-4-Cinemachine-and-Timeline",
 ];
-const GetStartedContentPage: React.FC = () => {
-  const sections = getLocalizedStringArray("GetStarted.sections");
-  const descriptions = getLocalizedStringArray("GetStarted.descriptions");
+
+const DiscoverConceptsPage: React.FC = () => {
+  const sections = getLocalizedStringArray("DiscoverConcepts.sections");
+  const descriptions = getLocalizedStringArray("DiscoverConcepts.descriptions");
 
   const dataSource = sections.map((section, index) => {
     return {
@@ -48,19 +48,19 @@ const GetStartedContentPage: React.FC = () => {
   return (
     <div className="FlexOne">
       <div className="ContentPageTitle">
-        {getLocalizedString("GetStarted.title")}
+        {getLocalizedString("DiscoverConcepts.title")}
       </div>
       <div className="ContentPageParagraph">
-        {getLocalizedString("GetStarted.paragraphOne")}
+        {getLocalizedString("DiscoverConcepts.paragraphOne")}
       </div>
       <Table
         dataSource={dataSource}
         columns={columns}
         pagination={false}
         bordered={true}
-      ></Table>
+      />
     </div>
   );
 };
 
-export default GetStartedContentPage;
+export default DiscoverConceptsPage;

@@ -23,6 +23,7 @@ import CinemachineImpulsePage from "../pages/CinemachineImpulse/CinemachineImpul
 import SplitScreenMultipleCamerasPage from "../pages/SplitScreen/SplitScreenMultipleCamerasPage.tsx";
 import UseInputSystemPage from "../pages/UseInputSystem/UseInputSystemPage.tsx";
 import KnownIssuesPage from "../pages/KnownIssues/KnownIssuesPage.tsx";
+import DiscoverConceptsPage from "../pages/GetStarted/DiscoverConcepts/DiscoverConceptsPage.tsx";
 
 const RoutersList: React.FC = () => {
   return (
@@ -45,6 +46,11 @@ const RoutersList: React.FC = () => {
 
       {/* Section3 */}
       <Route path="/section3-Get-started" element={<GetStartedContentPage />} />
+
+      <Route
+        path="section3-1-Discover-Cinemachine-concepts"
+        element={<DiscoverConceptsPage />}
+      />
 
       {/* Section4 */}
       <Route
