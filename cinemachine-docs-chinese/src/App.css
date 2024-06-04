@@ -21,6 +21,7 @@
   display: flex;
   padding-inline: 20px;
   flex: 1;
+  margin-inline: 200px;
 }
 /* Footer */
 .Footer {

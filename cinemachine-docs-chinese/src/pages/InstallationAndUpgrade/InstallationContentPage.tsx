@@ -113,7 +113,7 @@ const InstallationContentPage: React.FC = () => {
         </div>
         <Anchor
           offsetTop={45}
-          style={{ width: "190px" }}
+          style={{ width: "300px" }}
           items={getAnchorItems(
             [
               "InstallationAndUpgrade.title",
