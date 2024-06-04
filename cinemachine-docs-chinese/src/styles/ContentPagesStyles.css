@@ -29,3 +29,16 @@
   padding-left: 30px;
   width: 80%;
 }
+.NoteContainer {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  padding: 15px;
+  border-radius: 4px;
+  width: 720px;
+}
+.NoteTitle {
+  font-size: 18px;
+  font-weight: bold;
+  margin-block-end: 5px;
+}

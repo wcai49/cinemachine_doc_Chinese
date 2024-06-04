@@ -1,6 +1,10 @@
 {
   "Common": {
-    "InThisArticle": "IN THIS ARTICLE"
+    "InThisArticle": "IN THIS ARTICLE",
+    "State": "State",
+    "Section": "Section",
+    "Description": "Description",
+    "Note": "Note"
   },
 
   "CinemachinePackage": {
@@ -168,6 +172,202 @@
       "Set up Timeline in a Cinemachine environment to choreograph Cinemachine Cameras and produce a predictable shot sequence.",
       "Use interface tools and shortcuts and target the proper Cinemachine elements to set up according to your needs and ease your configuration experience."
     ]
+  },
+  "DiscoverConcepts": {
+    "title": "Discover Cinemachine concepts",
+    "paragraphOne": "Learn about the Cinemachine base elements and core functionality.",
+    "sections": [
+      "Cinemachine essential elements",
+      "Camera control and transitions",
+      "Procedural motion",
+      "Cinemachine and Timeline"
+    ],
+    "descriptions": [
+      "What are the essential elements that to make a functional Cinemachine environment: Unity Camera, Cinemachine Brain, and Cinemachine Cameras.",
+      "What are the conditions and mechanisms that make Cinemachine Cameras take turns controlling the Unity Camera and transition between each other by blend or cut.",
+      "How procedural behaviors and extensions can make a Cinemachine Camera dynamically move, shake, track targets, compose its own shots, respond to user inputs, move along a predefined path, react to external impulse signals, produce post-processing effects, and more.",
+      "How Cinemachine Cameras work with Timeline when you need to produce a predictable shot sequence with choreographed cameras."
+    ]
+  },
+  "EssentialElements": {
+    "title": "Cinemachine essential elements",
+    "paragraphOne": "Learn about the essential elements that make a functional Cinemachine environment.",
+    "subtitleOne": "Overview",
+    "paragraphTwo": "A functional Cinemachine setup involves three main types of elements:",
+    "listOne": [
+      "A single Unity Camera which captures the images across the Scene,",
+      "A Cinemachine Brain which enables the Cinemachine functionality in the Unity Camera, and",
+      "One or multiple Cinemachine Cameras which take turns controlling the Unity Camera according to their status."
+    ],
+    "paragraphThree": "Cinemachine setup example: the Unity Camera with its Cinemachine Brain component and three Cinemachine Cameras.",
+    "subtitleTwo": "Unity Camera",
+    "paragraphFour": "The Unity Camera is a GameObject that includes a Camera component, as opposed to Cinemachine Cameras, which includes other types of components to control the Unity Camera.",
+    "paragraphFive": "A Cinemachine setup must include only one Unity Camera, which is then the only GameObject that captures the images from your Scene while the Cinemachine Cameras control it.",
+    "subtitleThree": "Cinemachine Brain",
+    "paragraphSix": "To work with Cinemachine, the Unity Camera GameObject must include a Cinemachine Brain component. This component is mainly responsible to:",
+    "listTwo": [
+      "Monitor all active Cinemachine Cameras in the Scene.",
+      "Determine which Cinemachine Camera controls the Unity Camera.",
+      "Handle the transition when another Cinemachine Camera takes control of the Unity Camera."
+    ],
+    "noteOne": "When you use Timeline to get a choreographed sequence of Cinemachine Camera shots, Timeline overrides the Cinemachine Brain for Cinemachine Camera priority and transition management.",
+    "subtitleFour": "Cinemachine Cameras",
+    "paragraphSeven": "The Cinemachine Cameras (formerly named Virtual Cameras) are GameObjects that act as camera placeholders ready to take control of the Unity Camera according to their status.",
+    "paragraphEight": "When a Cinemachine Cameras takes control of the Unity Camera, it dynamically overrides its properties and behavior, which affects:",
+    "listThree": [
+      "Where the Unity Camera is positioned in the Scene.",
+      "What the Unity Camera aims at.",
+      "How the Unity Camera behaves through time."
+    ],
+    "subtitleFive": "Cinemachine Camera GameObjects",
+    "paragraphNine": "Cinemachine Camera GameObjects are separate from the Unity Camera GameObject.",
+    "listFour": [
+      "They behave independently, and must not be nested within each other.",
+      "They don't include a Camera component, as opposed to the Unity Camera GameObject.",
+      "They must include a Cinemachine Camera component.",
+      "They can include additional Cinemachine components to manage procedural motion and add extended functionality."
+    ],
+    "paragraphTen": "Hierarchy example: a Scene containing a Unity Camera with Cinemachine Brain and multiple Cinemachine Cameras.",
+    "subtitleSix": "Single or multiple Cinemachine Cameras",
+    "paragraphEleven": "You can create as many Cinemachine Cameras as required for your project, but you can also get a fully functional setup with a single Cinemachine Camera, depending on your needs. For example:",
+    "listFive": [
+      "If you want the Unity Camera to follow a single character, you can use a single Cinemachine Camera and set it up with a follow behavior that corresponds to your needs. In the end, this Cinemachine Camera will be the only one to control the Unity Camera.",
+      "If your project requires multiple shots over multiple places, you should create one Cinemachine Camera per shot, with or without specific procedural behavior. In that case, you have to understand how Unity handles Cinemachine Camera activations and transitions."
+    ],
+    "subtitleSeven": "Processing power consumption",
+    "paragraphTwelve": "Cinemachine encourages you to create many Cinemachine Cameras. The Cinemachine Camera is designed to consume little processing power. If your Scene is performance-sensitive, deactivate all but the essential Cinemachine Cameras at any given moment for best performance.",
+    "subtitleEight": "Additional resources",
+    "paragraphThirteen": "Set up a basic Cinemachine environment"
+  },
+  "ControlAndTransations": {
+    "title": "Camera control and transitions",
+    "paragraphOne": "Learn about the conditions and mechanisms that make Cinemachine Cameras take turns controlling the Unity Camera and transition between each other by blend or cut.",
+    "subtitleOne": "Cinemachine Camera states",
+    "paragraphTwo": "At any time, each Cinemachine Camera may be in one of three different states, but only one is Live and controls the Unity Camera at a time, except when a blend occurs.",
+    "states": ["Live", "Standby", "Disabled"],
+    "descriptions": [
+      "The Cinemachine Camera actively controls a Unity Camera that has a Cinemachine Brain. When a blend occurs from one Cinemachine Camera to the next, both Cinemachine Cameras are live. When the blend is complete, there is only one live Cinemachine Camera.",
+      "The Cinemachine Camera doesn’t control the Unity camera. However, it still follows and aims at its targets, and updates. A Cinemachine Camera in this state has its GameObject activated and a priority that is the same as or lower than the live Cinemachine Camera.",
+      "The Cinemachine Camera doesn’t control the Unity camera and doesn’t actively follow or aim at its targets. A Cinemachine Camera in this state doesn’t consume processing power. To disable a Cinemachine Camera, deactivate its GameObject. The Cinemachine Camera is present but disabled in the Scene. However, even though the GameObject is deactivated, the Cinemachine Camera can still control the Unity camera if the Cinemachine Camera is participating in a blend, or if Timeline invokes it."
+    ],
+    "subtitleTwo": "Live Cinemachine Camera selection",
+    "paragraphThree": "The conditions that make a Cinemachine Camera the live one depend on the context in which you're using Cinemachine. By default, the Cinemachine Brain is responsible for handling the live Cinemachine Camera selection.",
+    "listOne": [
+      "The Brain chooses the active Cinemachine Camera component with the highest Priority and makes it Live.",
+      "If multiple active CinemchineCameras share the same highest priority, then the ost recently activated of them will be chosen.",
+      "Deactivated or lower-priority CinemachineCameras can be Live if they are part of a blend, until the blend is finished.",
+      "If a Timeline is active with Cinemachine tracks, it overrides the Brain's priority system and drives the Live cameras and blends explicitly, regardless of their Priority and active state."
+    ],
+    "subtitleThree": "Realtime dynamic events",
+    "paragraphFour": "You can respond to dynamic game events in real time by manipulating Cinemachine Camera priorities or by activating and deactivating their GameObjects. This is particularly useful for live gameplay, where action isn’t always predictable.",
+    "subtitleFour": "Timeline",
+    "paragraphFive": "Use Cinemachine with Timeline to choreograph Cinemachine Cameras and manage shots in predictable situations, like cutscenes.",
+    "paragraphSix": "When you use Timeline with Cinemachine Cameras, Timeline overrides the Cinemachine Brain priority system, meaning that the Priority and active state of the Cinemachine Cameras is ignored when a Cinemachine Camera Clip is active. The live Cinemachine Camera selection is based on the activation of specific Cinemachine Camera clips that give you precise, to-the-frame camera control.",
+    "subtitleFive": "Cinemachine Camera transitions",
+    "paragraphSeven": "You can manage transitions between Cinemachine Cameras each time a new one becomes live.",
+    "paragraphEight": "The ways to set up Cinemachine Camera transitions are different depending on the context you're using Cinemachine in:",
+    "listTwo": [
+      "By default, you handle transition rules in the Cinemachine Brain component.",
+      "When you're using Timeline for shot sequencing, you handle transitions directly in the Timeline Cinemachine track."
+    ],
+    "subtitleSix": "Blends",
+    "paragraphNine": "Blends allow you to create sophisticated camera motion by combining relatively simple shots and blending between them in response to real-time game events or in a choreographed way via a timeline.",
+    "paragraphTen": "A Cinemachine blend is not a fade, wipe, or dissolve. Rather, Cinemachine performs a smooth animation of the position, rotation, and other settings of the Unity Camera from one Cinemachine Camera to the next, taking care to preserve the view of the target object, and to respect the Up direction.",
+    "paragraphEleven": "Blend: The two Cinemachine Cameras simultaneously control the Unity Camera during the blend, smoothly exchanging full control over a predetermined time.",
+    "subtitleSeven": "Cuts",
+    "paragraphTwelve": "By definition, a cut is an abrupt transition from a shot to another. In Cinemachine, a cut between two Cinemachine Cameras corresponds to a blend that occurs instantly, without smooth transition between Cinemachine Camera properties.",
+    "paragraphThirteen": "Cut example: two Cinemachine Cameras taking turns controlling the Unity Camera instantly.",
+    "subtitleEight": "Additional resources",
+    "paragraphFourteen": "Set up multiple Cinemachine Cameras and transitions"
+  },
+  "ProceduralMotion": {
+    "title": "Procedural Motion",
+    "paragraphOne": "On its own, a Cinemachine Camera is a passive GameObject that acts as a camera placeholder that you can, for example:",
+    "listOne": [
+      "Place in a fixed location with a static aim.",
+      "Parent to another GameObject to make it move and rotate along with it.",
+      "Manipulate via a custom script to move and rotate it and control its lens."
+    ],
+    "paragraphTwo": "However, for more sophisticated results, you can add procedural behaviors and extensions to any Cinemachine Camera to make it dynamically move, shake, track targets, compose its own shots, respond to user inputs, move along a predefined path, react to external impulse signals, produce post-processing effects, and more.",
+    "subtitleOne": "Procedural behaviors and extensions",
+    "paragraphThree": "The Cinemachine Camera component allows you to select a variety of behaviors and extensions to drive the Cinemachine Camera's position, rotation, and lens.",
+    "subtitleOneOne": "Position and Rotation Control",
+    "paragraphFour": "Select and configure Position Control and Rotation Control behaviors to make the Cinemachine Camera move and aim the Unity Camera according to some constraints or criteria.",
+    "paragraphFive": "Most of the available behaviors are designed to track or look at a target GameObject. Additionally, some behaviors support user input to orbit or rotate the camera.",
+    "paragraphSix": "With these behaviors, you can:",
+    "listTwo": [
+      "Follow a target with a fixed offset, in orbital configuration, or as a third or first person.",
+      "Compose shots with adaptive camera position and rotation, or centered hard look, to keep the target in the camera frame.",
+      "Apply the target's position and rotation to the camera instead of having the target in the camera frame.",
+      "Move the camera along a predefined Spline to simulate a dolly camera path.",
+      "Rotate the camera around configurable pan and tilt axes."
+    ],
+    "subtitleOneTwo": "Noise",
+    "paragraphSeven": "Select and configure a Noise behavior to make the Cinemachine Camera shake and simulate real-world physical camera qualities for cinematic effect.",
+    "paragraphEight": "At each frame update, Cinemachine adds noise separately from the movement of the camera to follow a target. Noise does not influence the camera’s position in future frames. This separation ensures that properties like damping behave as expected.",
+    "subtitleOneThree": "Extensions",
+    "paragraphNine": "Add an Extension to augment the behavior of a Cinemachine Camera for more specific or advanced needs.",
+    "paragraphTen": "For example, the Deoccluder extension moves a camera out of the way of GameObjects that obstruct the camera’s view of its target.",
+    "paragraphEleven": "Here is the list of all available Cinemachine Camera Extensions:",
+    "listThree": [
+      "Cinemachine Auto Focus",
+      "Cinemachine Confiner 3D",
+      "Cinemachine Confiner 2D",
+      "Cinemachine Decollider",
+      "Cinemachine Deoccluder",
+      "Cinemachine Follow Zoom",
+      "Cinemachine FreeLook Modifier",
+      "Cinemachine Group Framing",
+      "Cinemachine Pixel Perfect",
+      "Cinemachine Post Processing",
+      "Cinemachine Recomposer",
+      "Cinemachine Shot Quality Evaluator",
+      "Cinemachine Storyboard",
+      "Cinemachine Third Person Aim",
+      "Cinemachine Volume Settings"
+    ],
+    "subtitleTwo": "Target GameObject tracking",
+    "paragraphTwelve": "Target GameObject tracking is a key element in defining procedural motion. Offsets and screen compositions are specified in relation to these targets, so as the targets move around in the world, the cameras adjust themselves to keep the shot.",
+    "subtitleTwoOne": "Tracking Target and Look At Target properties",
+    "paragraphThirteen": "By default, a Cinemachine Camera has a single Tracking Target property, which serves two purposes:",
+    "listFour": [
+      "It specifies a Transform for the Cinemachine Camera to move with when you define a position control behavior that requires it.",
+      "It specifies the LookAt target, which is the Transform to aim at when you define a rotation control behavior that requires it."
+    ],
+    "noteOne": "If you need to use two different Transforms for these purposes, select Use Separate LookAt Target option via the button at the right of the Tracking Target field.",
+    "subtitleTwoTwo": "Target tracking and blends",
+    "paragraphFourteen": "The target is also relevant when Cinemachine performs blends between shots. Cinemachine attempts to maintain the shot's desired screen position for the target, and if the target changes between shots, Cinemachine performs an interpolation between the targets' positions.",
+    "paragraphFifteen": "If no target is specified for a camera blend, then Cinemachine can only interpolate the position and rotation independently, which often results in the object of interest moving around on the screen in undesirable ways. If Cinemachine knows what is the object of interest, it can correct that problem.",
+    "subtitleThree": "Behavior and extension selection",
+    "paragraphSixteen": "When you select behaviors or add extensions from the Cinemachine Camera component, Unity automatically adds extra components to the Cinemachine Camera GameObject. To modify the Cinemachine Camera behavior, you must then edit the properties of these additional components.",
+    "noteTwo": "You can get the same result by adding these components manually as any other GameObject component.",
+    "paragraphSeventeen": "If no procedural components are present, the Cinemachine Camera controls the Unity Camera position and rotation by its Transform.",
+    "subtitleThreeOne": "Custom behaviors and extensions",
+    "paragraphEighteen": "You can write custom scripts inheriting the CinemachineComponentBase or CinemachineExtension class to implement your own custom moving behaviors or extensions. When you create such a behavior or extension, it becomes automatically available for selection among the existing ones.",
+    "subtitleFour": "Additional resources",
+    "paragraphNineteen": "Add procedural behavior to a Cinemachine Camera"
+  },
+  "CinemachineAndTimeline": {
+    "title": "Cinemachine and Timeline",
+    "paragraphOne": "Use Timeline to activate, deactivate, and blend between CinemachineCameras when you need to produce a predictable shot sequence with choreographed cameras.",
+    "paragraphTwo": "Tip: For simple shot sequences, you can also use a Cinemachine Sequencer Camera instead of Timeline.",
+    "subtitleOne": "Live Cinemachine Camera selection",
+    "paragraphThree": "When Timeline drives Cinemachine, it overrides the priority-based decisions made by the Cinemachine Brain. When the Timeline finishes, or at least when Timeline is not currently driving Cinemachine, the control returns to the Cinemachine Brain.",
+    "subtitleTwo": "Cinemachine Track and Shot Clips",
+    "paragraphFour": "Timeline controls Cinemachine Cameras via Cinemachine Shot Clips in a Cinemachine Track. Each shot clip points to a CinemachineCamera to activate and then deactivate. Use a sequence of shot clips to specify the order and duration of each shot.",
+    "subtitleThree": "Cinemachine Camera transitions",
+    "paragraphFive": "To cut between two CinemachineCameras, place the clips next to each other.",
+    "paragraphSix": "To blend between two CinemachineCameras, overlap the clips.",
+    "paragraphSeven": "Example: Cinemachine Shot Clips in Timeline, with a cut between Shots A-B and a blend between Shots B-C.",
+    "subtitleFour": "Multiple Cinemachine Tracks",
+    "paragraphEight": "You can have multiple Cinemachine Tracks in the same Timeline. The tracks lower down in the Timeline override any tracks higher up.",
+    "paragraphNine": "By having a shot on a lower track become active while a higher-up CinemachineShot clip is active, you can interrupt the shot with another one.",
+    "paragraphTen": "It's also possible to have multiple Timelines with Cinemachine tracks. In this case, the Timeline that was most recently activated overrides the others, with control reverting to the previous Timeline in places where the overriding Timeline has no Cinemachine Camera Clips active.",
+    "subtitleFive": "Blend with other Cinemachine Tracks and the Brain",
+    "paragraphEleven": "You can blend a Cinemachine Shot Clip with another one that is in a separate Cinemachine Track, or even with the Cinemachine Camera currently identified as the Live one by the Cinemachine Brain.",
+    "paragraphTwelve": "For this, change the Ease In Duration and Ease Out Duration time values of the the clip in the Inspector.",
+    "subtitleSix": "Additional resources",
+    "paragraphThirteen": "Set up Timeline with Cinemachine Cameras"
   },
   "TrackingScenario3D": {
     "title": "3D tracking scenarios",

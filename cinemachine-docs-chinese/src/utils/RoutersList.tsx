@@ -23,6 +23,11 @@ import CinemachineImpulsePage from "../pages/CinemachineImpulse/CinemachineImpul
 import SplitScreenMultipleCamerasPage from "../pages/SplitScreen/SplitScreenMultipleCamerasPage.tsx";
 import UseInputSystemPage from "../pages/UseInputSystem/UseInputSystemPage.tsx";
 import KnownIssuesPage from "../pages/KnownIssues/KnownIssuesPage.tsx";
+import DiscoverConceptsPage from "../pages/GetStarted/DiscoverConcepts/DiscoverConceptsPage.tsx";
+import EssentialElementsPage from "../pages/GetStarted/DiscoverConcepts/EssentialElements/EssentialElementsPage.tsx";
+import ControlAndTransationsPage from "../pages/GetStarted/DiscoverConcepts/ControlAndTransations/ControlAndTransationsPage.tsx";
+import CinemachineTimelinePage from "../pages/GetStarted/DiscoverConcepts/Timeline/CinemachineTimelinePage.tsx";
+import ProceduralMotionPage from "../pages/GetStarted/DiscoverConcepts/ProceduralMotion/ProceduralMotionPage.tsx";
 
 const RoutersList: React.FC = () => {
   return (
@@ -45,6 +50,29 @@ const RoutersList: React.FC = () => {
 
       {/* Section3 */}
       <Route path="/section3-Get-started" element={<GetStartedContentPage />} />
+
+      <Route
+        path="section3-1-Discover-Cinemachine-concepts"
+        element={<DiscoverConceptsPage />}
+      />
+
+      <Route
+        path="section3-1-1-Cinemachine-essential-elements"
+        element={<EssentialElementsPage />}
+      />
+
+      <Route
+        path="section3-1-2-Camera-control-and-transitions"
+        element={<ControlAndTransationsPage />}
+      />
+      <Route
+        path="section3-1-3-Procedural-motion"
+        element={<ProceduralMotionPage />}
+      />
+      <Route
+        path="section3-1-4-Cinemachine-and-Timeline"
+        element={<CinemachineTimelinePage />}
+      />
 
       {/* Section4 */}
       <Route
