@@ -31,4 +31,4 @@ The English content on this site is provided by Unity Technologies; The Chinese 
 
 ## 官方文档地址
 
-这里是官方的英文文档地址： https://docs.unity3d.com/Packages/com.unity.cinemachine@3.0/manual/index.html 。
+这里是官方的英文文档地址： [https://docs.unity3d.com/Packages/com.unity.cinemachine@3.0/manual/index.html 。](https://docs.unity3d.com/Packages/com.unity.cinemachine@3.1/manual/index.html)
