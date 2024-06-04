@@ -22,10 +22,9 @@ This project is about Unity's official verified package: cinemachine's documenta
 
 ## 状态更新表 Status check
 
-| Bugs       | Status          | Expected Fixing Time  |
-|--------------------|-----------------|--------------------|
-| 目前暂无通过Forms提交的Bug反馈 | N/A     | N/A     |
-
+| Bugs       | Status          | Expected Fixing Time  |  Comment |
+|--------------------|-----------------|--------------------|-----------------|
+| 希望在翻译完所有页面之前，先将英文页面都上传完成 | won't fix     | N/A     | 具体原因可关注B站直播消息，将在直播时解答 |
 
 ## 声明 Disclaimer
 
