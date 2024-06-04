@@ -10,11 +10,15 @@ This project is about Unity's official verified package: cinemachine's documenta
 
 | Section/Page       | Status          | Expected Release Time  |
 |--------------------|-----------------|--------------------|
-| 了解Cinemachine概念 | In Progress     | June 5th, 2024     |
-| Cinemachine基本元素 | In Progress     | June 5th, 2024     |
-| 相机控制与过度       | In Progress     | June 5th, 2024     |
-| 程序化运动          | In Progress     | June 5th, 2024     |
-| Cinemachine与时间轴 | In Progress     | June 5th, 2024     |
+| 了解Cinemachine概念 | Deployed     | June 5th, 2024     |
+| Cinemachine基本元素 | Deployed     | June 5th, 2024     |
+| 相机控制与过度       | Deployed     | June 5th, 2024     |
+| 程序化运动          | Deployed     | June 5th, 2024     |
+| Cinemachine与时间轴 | Deployed     | June 5th, 2024     |
+| 设置基本cinemachine环境 | Not started     | June 12th, 2024     |
+| 设置多个cinemachien摄像机 | Not started     | June 12th, 2024     |
+| 向cinemachine摄像机添加程序化行为| Not started     | June 12th, 2024     |
+| 使用cinemachine摄像机设置时间轴 | Not started     | June 12th, 2024     |
 
 ## 状态更新表 Status check
 
