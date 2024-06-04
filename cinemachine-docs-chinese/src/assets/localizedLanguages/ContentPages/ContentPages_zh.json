@@ -2,7 +2,8 @@
   "Common": {
     "InThisArticle": "本文内容",
     "Section": "章节",
-    "Description": "描述"
+    "Description": "描述",
+    "Note": "注意"
   },
   "CinemachinePackage": {
     "title": "Cinemachine 组件",
@@ -191,6 +192,56 @@
       "程序化行为和扩展如何使Cinemachine相机动态移动、摇晃、跟踪目标、构图、响应用户输入、沿预定义路径移动、对外部冲击信号做出反应、产生后期处理效果等。",
       "当您需要通过编排相机制作可预测的镜头序列时，Cinemachine相机如何与时间轴配合工作。"
     ]
+  },
+  "EssentialElements": {
+    "title": "Cinemachine 基本元素",
+    "paragraphOne": "了解构建一个功能性 Cinemachine 环境所需的基本元素。",
+    "subtitleOne": "概述",
+    "paragraphTwo": "一个功能性的 Cinemachine 设置涉及三种主要类型的元素：",
+    "listOne": [
+      "单个 Unity 相机，用于捕捉场景中的图像，",
+      "一个 Cinemachine 大脑，用于在 Unity 相机中启用 Cinemachine 功能，",
+      "一个或多个 Cinemachine 相机，它们根据其状态轮流控制 Unity 相机。"
+    ],
+    "paragraphThree": "Cinemachine 设置示例：包含 Cinemachine 大脑组件和三个 Cinemachine 相机的 Unity 相机。",
+    "subtitleTwo": "Unity 相机",
+    "paragraphFour": "Unity 相机是包含相机组件的游戏对象，与包含其他类型组件以控制 Unity 相机的 Cinemachine 相机不同。",
+    "paragraphFive": "一个 Cinemachine 设置必须仅包含一个 Unity 相机，它是唯一一个从场景中捕捉图像的游戏对象，而 Cinemachine 相机控制它。",
+    "subtitleThree": "Cinemachine 大脑",
+    "paragraphSix": "要使用 Cinemachine，Unity 相机游戏对象必须包含一个 Cinemachine 大脑组件。该组件主要负责：",
+    "listTwo": [
+      "监控场景中所有活动的 Cinemachine 相机。",
+      "确定哪个 Cinemachine 相机控制 Unity 相机。",
+      "处理另一个 Cinemachine 相机接管 Unity 相机控制时的过渡。"
+    ],
+    "noteOne": "当您使用时间轴获取编排的 Cinemachine 相机镜头序列时，时间轴会覆盖 Cinemachine 大脑的优先级和过渡管理。",
+    "subtitleFour": "Cinemachine 相机",
+    "paragraphSeven": "Cinemachine 相机（以前称为虚拟相机）是充当相机占位符的游戏对象，根据其状态准备接管 Unity 相机的控制。",
+    "paragraphEight": "当一个 Cinemachine 相机接管 Unity 相机时，它会动态覆盖其属性和行为，影响：",
+    "listThree": [
+      "Unity 相机在场景中的位置。",
+      "Unity 相机的目标。",
+      "Unity 相机随着时间的行为。"
+    ],
+    "subtitleFive": "Cinemachine 相机游戏对象",
+    "paragraphNine": "Cinemachine 相机游戏对象与 Unity 相机游戏对象是独立的。",
+    "listFour": [
+      "它们独立运行，不能相互嵌套。",
+      "它们不包含相机组件，与 Unity 相机游戏对象不同。",
+      "它们必须包含 Cinemachine 相机组件。",
+      "它们可以包含额外的 Cinemachine 组件以管理程序化运动并添加扩展功能。"
+    ],
+    "paragraphTen": "层次结构示例：包含一个带有 Cinemachine 大脑和多个 Cinemachine 相机的 Unity 相机的场景。",
+    "subtitleSix": "单个或多个 Cinemachine 相机",
+    "paragraphEleven": "您可以根据项目需求创建尽可能多的 Cinemachine 相机，但也可以使用单个 Cinemachine 相机来获得一个完全功能的设置。例如：",
+    "listFive": [
+      "如果您希望 Unity 相机跟随单个角色，可以使用单个 Cinemachine 相机并根据需要设置跟随行为。最终，这个 Cinemachine 相机将是唯一控制 Unity 相机的相机。",
+      "如果您的项目需要多个地点的多个镜头，应为每个镜头创建一个 Cinemachine 相机，无论是否具有特定的程序化行为。在这种情况下，您需要了解 Unity 如何处理 Cinemachine 相机的激活和过渡。"
+    ],
+    "subtitleSeven": "处理能力消耗",
+    "paragraphTwelve": "Cinemachine 鼓励您创建多个 Cinemachine 相机。Cinemachine 相机设计为消耗较少的处理能力。如果您的场景对性能敏感，请在任何时候仅激活必要的 Cinemachine 相机以获得最佳性能。",
+    "subtitleEight": "附加资源",
+    "paragraphThirteen": "设置基本的 Cinemachine 环境"
   },
   "TrackingScenario3D": {
     "title": "3D跟踪场景",

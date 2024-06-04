@@ -7,14 +7,14 @@
 
 import { getLocalizedString } from "./getLocalizedString.ts";
 
-export function getAnchorItems(items: string[]) {
+export function getAnchorItems(items: string[], currentHref?: string) {
   let anchorItems: { key; href; title; children? }[] = [];
 
   items.forEach((item) => {
     anchorItems.push({
       key: item,
       title: getLocalizedString(item),
-      href: `#${item}`,
+      href: `#${currentHref}#${item}`,
     });
   });
 

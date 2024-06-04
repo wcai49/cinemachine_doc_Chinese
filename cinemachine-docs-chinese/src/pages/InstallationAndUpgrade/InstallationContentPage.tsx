@@ -12,12 +12,17 @@ import {
 } from "../../utils/getLocalizedString.ts";
 import { Anchor, Image } from "antd";
 import { getAnchorItems } from "../../utils/AnchorUtils.ts";
+import { useLocation } from "react-router-dom";
 
 const InstallationContentPage: React.FC = () => {
+  const location = useLocation();
   return (
     <div className="FlexRow">
       <div className="FlexOne">
-        <div className="ContentPageTitle" id="InstallationAndUpgrade.title">
+        <div
+          id={`${location.pathname}#InstallationAndUpgrade.title`}
+          className="ContentPageTitle"
+        >
           {getLocalizedString("InstallationAndUpgrade.title")}
         </div>
         <div className="ContentPageParagraph">
@@ -34,7 +39,7 @@ const InstallationContentPage: React.FC = () => {
 
         <div
           className="ContentPageSubtitle"
-          id="InstallationAndUpgrade.requirementsTitle"
+          id={`${location.pathname}#InstallationAndUpgrade.requirementsTitle`}
         >
           {getLocalizedString("InstallationAndUpgrade.requirementsTitle")}
         </div>
@@ -61,7 +66,7 @@ const InstallationContentPage: React.FC = () => {
 
         <div
           className="ContentPageSubtitle"
-          id="InstallationAndUpgrade.upgradingTitle"
+          id={`${location.pathname}#InstallationAndUpgrade.upgradingTitle`}
         >
           {getLocalizedString("InstallationAndUpgrade.upgradingTitle")}
         </div>
@@ -77,7 +82,7 @@ const InstallationContentPage: React.FC = () => {
 
         <div
           className="ContentPageSubtitle"
-          id="InstallationAndUpgrade.upgradingFromOldTitle"
+          id={`${location.pathname}#InstallationAndUpgrade.upgradingFromOldTitle`}
         >
           {getLocalizedString("InstallationAndUpgrade.upgradingFromOldTitle")}
         </div>
@@ -107,13 +112,17 @@ const InstallationContentPage: React.FC = () => {
           {getLocalizedString("Common.InThisArticle")}
         </div>
         <Anchor
+          offsetTop={45}
           style={{ width: "190px" }}
-          items={getAnchorItems([
-            "InstallationAndUpgrade.title",
-            "InstallationAndUpgrade.requirementsTitle",
-            "InstallationAndUpgrade.upgradingTitle",
-            "InstallationAndUpgrade.upgradingFromOldTitle",
-          ])}
+          items={getAnchorItems(
+            [
+              "InstallationAndUpgrade.title",
+              "InstallationAndUpgrade.requirementsTitle",
+              "InstallationAndUpgrade.upgradingTitle",
+              "InstallationAndUpgrade.upgradingFromOldTitle",
+            ],
+            location.pathname
+          )}
         />
       </div>
     </div>

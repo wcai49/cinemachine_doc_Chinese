@@ -24,6 +24,7 @@ import SplitScreenMultipleCamerasPage from "../pages/SplitScreen/SplitScreenMult
 import UseInputSystemPage from "../pages/UseInputSystem/UseInputSystemPage.tsx";
 import KnownIssuesPage from "../pages/KnownIssues/KnownIssuesPage.tsx";
 import DiscoverConceptsPage from "../pages/GetStarted/DiscoverConcepts/DiscoverConceptsPage.tsx";
+import EssentialElementsPage from "../pages/GetStarted/DiscoverConcepts/EssentialElements/EssentialElementsPage.tsx";
 
 const RoutersList: React.FC = () => {
   return (
@@ -50,6 +51,11 @@ const RoutersList: React.FC = () => {
       <Route
         path="section3-1-Discover-Cinemachine-concepts"
         element={<DiscoverConceptsPage />}
+      />
+
+      <Route
+        path="section3-1-1-Cinemachine-essential-elements"
+        element={<EssentialElementsPage />}
       />
 
       {/* Section4 */}

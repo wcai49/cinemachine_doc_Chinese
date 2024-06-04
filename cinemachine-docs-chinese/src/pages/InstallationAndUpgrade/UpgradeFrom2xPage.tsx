@@ -12,13 +12,15 @@ import {
 } from "../../utils/getLocalizedString.ts";
 import { Image, Anchor } from "antd";
 import { getAnchorItems } from "../../utils/AnchorUtils.ts";
+import { useLocation } from "react-router-dom";
 
 const UpgradeFrom2xPage: React.FC = () => {
+  const location = useLocation();
   return (
     <div className="FlexRow">
       <div className="FlexOne">
         {/* Upgrading a Project from Cinemachine 2.X */}
-        <div className="ContentPageTitle" id="InThisArticle">
+        <div className="ContentPageTitle">
           {getLocalizedString(
             "UpgradingProjectFromCinemachine2X.UpgradingProjectFromCinemachine2XTitle"
           )}
@@ -37,7 +39,7 @@ const UpgradeFrom2xPage: React.FC = () => {
         {/* Upgrading your project step by step */}
         <div
           className="ContentPageSubtitle"
-          id="UpgradingProjectFromCinemachine2X.UpgradingYourProjectStepByStepTitle"
+          id={`${location.pathname}#UpgradingProjectFromCinemachine2X.UpgradingYourProjectStepByStepTitle`}
         >
           {getLocalizedString(
             "UpgradingProjectFromCinemachine2X.UpgradingYourProjectStepByStepTitle"
@@ -67,7 +69,7 @@ const UpgradeFrom2xPage: React.FC = () => {
         {/* What has Changed in the API */}
         <div
           className="ContentPageSubtitle"
-          id="UpgradingProjectFromCinemachine2X.WhatHasChangedInTheAPITitle"
+          id={`${location.pathname}#UpgradingProjectFromCinemachine2X.WhatHasChangedInTheAPITitle`}
         >
           {getLocalizedString(
             "UpgradingProjectFromCinemachine2X.WhatHasChangedInTheAPITitle"
@@ -244,7 +246,7 @@ const UpgradeFrom2xPage: React.FC = () => {
         {/* Upgrading the Project Data */}
         <div
           className="ContentPageSubtitle"
-          id="UpgradingProjectFromCinemachine2X.UpgradingTheProjectDataTitle"
+          id={`${location.pathname}#UpgradingProjectFromCinemachine2X.UpgradingTheProjectDataTitle`}
         >
           {getLocalizedString(
             "UpgradingProjectFromCinemachine2X.UpgradingTheProjectDataTitle"
@@ -310,12 +312,16 @@ const UpgradeFrom2xPage: React.FC = () => {
           {getLocalizedString("Common.InThisArticle")}
         </div>
         <Anchor
+          offsetTop={45}
           style={{ width: "190px" }}
-          items={getAnchorItems([
-            "UpgradingProjectFromCinemachine2X.UpgradingYourProjectStepByStepTitle",
-            "UpgradingProjectFromCinemachine2X.WhatHasChangedInTheAPITitle",
-            "UpgradingProjectFromCinemachine2X.UpgradingTheProjectDataTitle",
-          ])}
+          items={getAnchorItems(
+            [
+              "UpgradingProjectFromCinemachine2X.UpgradingYourProjectStepByStepTitle",
+              "UpgradingProjectFromCinemachine2X.WhatHasChangedInTheAPITitle",
+              "UpgradingProjectFromCinemachine2X.UpgradingTheProjectDataTitle",
+            ],
+            location.pathname
+          )}
         />
       </div>
     </div>

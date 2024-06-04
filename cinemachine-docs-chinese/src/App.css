@@ -12,6 +12,9 @@
   justify-content: space-between;
   align-items: center;
   padding-inline: 60px;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
 }
 
 .AppBody {
