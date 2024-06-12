@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cinemachine_doc_Chinese/static/css/main.c9a5cab9.css",
-    "main.js": "/cinemachine_doc_Chinese/static/js/main.6d3291fc.js",
+    "main.css": "/cinemachine_doc_Chinese/static/css/main.1b533184.css",
+    "main.js": "/cinemachine_doc_Chinese/static/js/main.d3a86f67.js",
     "static/js/453.17a9f8c6.chunk.js": "/cinemachine_doc_Chinese/static/js/453.17a9f8c6.chunk.js",
     "static/media/CinemachineSplash.png": "/cinemachine_doc_Chinese/static/media/CinemachineSplash.892e5732819151f0de97.png",
     "static/media/InstallationImage.png": "/cinemachine_doc_Chinese/static/media/InstallationImage.0f7f460da61dec64de18.png",
@@ -9,7 +9,9 @@
     "static/media/essentialElementsImage1.png": "/cinemachine_doc_Chinese/static/media/essentialElementsImage1.50280c8298231fcaa954.png",
     "static/media/control-transition-image1.png": "/cinemachine_doc_Chinese/static/media/control-transition-image1.9bccbce2f8d8f70ac05d.png",
     "static/media/control-transition-image2.png": "/cinemachine_doc_Chinese/static/media/control-transition-image2.18b673dde151e2983fc6.png",
+    "static/media/setup-timeline-camera-cut-image3.png": "/cinemachine_doc_Chinese/static/media/setup-timeline-camera-cut-image3.2485d065856df36a4f77.png",
     "static/media/UpgradingFrom2x5.png": "/cinemachine_doc_Chinese/static/media/UpgradingFrom2x5.75d9b415183cedfbe162.png",
+    "static/media/setup-timeline-camera-cut-image2.png": "/cinemachine_doc_Chinese/static/media/setup-timeline-camera-cut-image2.848329831e7cc3110435.png",
     "static/media/essentialElementsImage2.png": "/cinemachine_doc_Chinese/static/media/essentialElementsImage2.6d492bfc743455ffcc73.png",
     "static/media/UpgradingFrom2x.png": "/cinemachine_doc_Chinese/static/media/UpgradingFrom2x.5e8f5e84dda87717c2b7.png",
     "static/media/UpgradingFrom2x3.png": "/cinemachine_doc_Chinese/static/media/UpgradingFrom2x3.b57ecb293d7fac7bc98e.png",
@@ -18,15 +20,16 @@
     "static/media/CinemachineChannels-camera.png": "/cinemachine_doc_Chinese/static/media/CinemachineChannels-camera.7472d63e1e6cd3e8f1fe.png",
     "static/media/UpgradingFrom2x1.png": "/cinemachine_doc_Chinese/static/media/UpgradingFrom2x1.7472d63e1e6cd3e8f1fe.png",
     "static/media/CinemachineTimelineImage1.png": "/cinemachine_doc_Chinese/static/media/CinemachineTimelineImage1.1928be9dc159b2806cab.png",
+    "static/media/setup-timeline-camera-cut-image1.png": "/cinemachine_doc_Chinese/static/media/setup-timeline-camera-cut-image1.9b687af9a7aa7e4768a8.png",
     "static/media/CinemachineTimelineImage2.png": "/cinemachine_doc_Chinese/static/media/CinemachineTimelineImage2.39fed2d1d726c9f62e51.png",
     "static/media/UpgradingFrom2x4.png": "/cinemachine_doc_Chinese/static/media/UpgradingFrom2x4.c468d10b6573f05c9fb2.png",
     "index.html": "/cinemachine_doc_Chinese/index.html",
-    "main.c9a5cab9.css.map": "/cinemachine_doc_Chinese/static/css/main.c9a5cab9.css.map",
-    "main.6d3291fc.js.map": "/cinemachine_doc_Chinese/static/js/main.6d3291fc.js.map",
+    "main.1b533184.css.map": "/cinemachine_doc_Chinese/static/css/main.1b533184.css.map",
+    "main.d3a86f67.js.map": "/cinemachine_doc_Chinese/static/js/main.d3a86f67.js.map",
     "453.17a9f8c6.chunk.js.map": "/cinemachine_doc_Chinese/static/js/453.17a9f8c6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c9a5cab9.css",
-    "static/js/main.6d3291fc.js"
+    "static/css/main.1b533184.css",
+    "static/js/main.d3a86f67.js"
   ]
 }
