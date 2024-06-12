@@ -4,7 +4,8 @@
     "State": "State",
     "Section": "Section",
     "Description": "Description",
-    "Note": "Note"
+    "Note": "Note",
+    "Warning": "Warning"
   },
 
   "CinemachinePackage": {
@@ -369,6 +370,156 @@
     "subtitleSix": "Additional resources",
     "paragraphThirteen": "Set up Timeline with Cinemachine Cameras"
   },
+
+  "SetupEnvironment": {
+    "title": "Set up a basic Cinemachine environment",
+    "paragraphOne": "Set up your Unity project with the minimum required elements to make a functional Cinemachine environment:",
+    "listOne": [
+      "Create a passive Cinemachine Camera – with no specific behavior by definition,",
+      "Ensure the Cinemachine Brain is present in the Unity Camera, and",
+      "Adjust the Cinemachine Camera properties and see how it affects the Unity Camera."
+    ],
+    "noteOne": "Your Scene must include only one Unity Camera – a GameObject with a Camera component.",
+    "subtitleOne": "Add a Cinemachine Camera",
+    "paragraphTwo": "In the Scene view, navigate the Scene to get the point of view you want to frame with the Cinemachine Camera.",
+    "paragraphThree": "In the Unity menu, select GameObject > Cinemachine > Cinemachine Camera. Unity adds a new GameObject with:",
+    "listTwo": [
+      "A Cinemachine Camera component and",
+      "A Transform that matches the latest position and orientation of the Scene view camera."
+    ],
+    "subtitleTwo": "Verify the Cinemachine Brain presence",
+    "paragraphFour": "When you create a first Cinemachine Camera in a Scene, Unity automatically adds a Cinemachine Brain to the Unity Camera, unless the Unity Camera already includes one. To verify it:",
+    "paragraphFive": "In the Hierarchy, select your Unity Camera – the GameObject that includes the Camera component.",
+    "paragraphSix": "In the Inspector, verify that the GameObject includes a Cinemachine Brain component.",
+    "noteTwo": "You can manually add the Cinemachine Brain component as any other component to the Unity Camera GameObject if needed, but remember that only one Unity Camera in the Scene must have a Cinemachine Brain.",
+    "noteThree": "Once the Cinemachine Brain is present, the Unity Camera's transform and lens settings are locked and cannot be changed directly in the Camera inspector. You can only change these properties of the camera by changing the corresponding properties of the CinemachineCamera.",
+    "subtitleThree": "Adjust the Cinemachine Camera properties",
+    "paragraphSeven": "Open the Game view. It shows the Scene through the lens of the Unity Camera according to the current settings of the Cinemachine Camera.",
+    "paragraphEight": "In the Hierarchy, select the Cinemachine Camera GameObject.",
+    "paragraphNine": "In the Inspector, adjust the properties to precisely frame your shot according to your needs:",
+    "listThree": [
+      "In the Transform, adjust the Position and Rotation.",
+      "In the Cinemachine Camera component, adjust the Lens properties."
+    ],
+    "noteFour": "This Cinemachine Camera is the only one and latest you created, and as such, that you enabled. As a result, notice that the Unity Camera automatically inherits from the changes you perform on this Cinemachine Camera.",
+    "subtitleFour": "Next steps",
+    "paragraphTen": "Here are potential tasks you might want to do now:",
+    "listFour": [
+      "Create multiple Cinemachine Cameras and manage transitions between them.",
+      "Create a Cinemachine Camera with procedural behavior: example for a camera that follows a character.",
+      "Manage a choreographed sequence of Cinemachine Camera shots with Timeline."
+    ]
+  },
+  "SetupMultipleCam": {
+    "title": "Set up multiple Cinemachine Cameras and transitions",
+    "paragraphOne": "Set up a Cinemachine environment with multiple Cinemachine Cameras and manage camera control and transitions:",
+    "listOne": [
+      "Create multiple Cinemachine Cameras with different properties,",
+      "Manage Cinemachine Camera transitions in the Cinemachine Brain, and",
+      "Test the Live camera activation mechanism and transitions in Play mode."
+    ],
+    "noteOne": "Your Scene must include only one Unity Camera – a GameObject with a Camera component.",
+    "subtitleOne": "Add Cinemachine Cameras",
+    "paragraphTwo": "In the Scene view, navigate the Scene to get the point of view you want to frame with one Cinemachine Camera.",
+    "paragraphThree": "In the Unity menu, select GameObject > Cinemachine > Cinemachine Camera. Unity adds a new GameObject with a Cinemachine Camera component and a Transform that matches the latest position and orientation of the Scene view camera. At this point, you can also verify that the Unity Camera includes a Cinemachine Brain component.",
+    "paragraphFour": "Continue to navigate the Scene and create a few additional Cinemachine Cameras the same way but with different positions and rotations.",
+    "paragraphFive": "Name the Cinemachine Cameras in a way you can easily identify them in the future.",
+    "subtitleTwo": "Manage transitions between Cinemachine Cameras",
+    "paragraphSix": "In the Hierarchy, select your Unity Camera – the GameObject that includes the Camera component.",
+    "paragraphSeven": "In the Inspector, in the Cinemachine Brain component:",
+    "listTwo": [
+      "Select a Default Blend to use between all Cinemachine Cameras, OR",
+      "Create and target an asset that defines Custom Blends to use between specific pairs of Cinemachine Cameras."
+    ],
+    "subtitleThree": "Test the transitions in Play mode",
+    "paragraphEight": "Enter Play mode.",
+    "paragraphNine": "Change the active status of each Cinemachine Camera GameObject in turn to see how they blend between each other according to the way you've set up the Cinemachine Brain.",
+    "paragraphTen": "Exit Play mode.",
+    "subtitleFour": "Next steps",
+    "paragraphEleven": "Here are potential tasks you might want to do now:",
+    "listThree": [
+      "Create a Cinemachine Camera with procedural behavior: example for a camera that follows a character.",
+      "Manage a choreographed sequence of Cinemachine Camera shots with Timeline."
+    ]
+  },
+  "SetupProceduralBehavior": {
+    "title": "Add procedural behavior to a Cinemachine Camera",
+    "paragraphOne": "Set up a Cinemachine Camera with procedural behaviors:",
+    "listOne": [
+      "Add behaviors to control the camera position and rotation,",
+      "Specify a GameObject to track for automatic follow and aim,",
+      "Add default noise to simulate real-world physical camera shaking, and",
+      "See how to an Extension to get advanced camera behaviors."
+    ],
+    "noteOne": "This task requires some preparation:",
+    "listTwo": [
+      "You must have created at least one passive Cinemachine Camera, and",
+      "Your Scene must already include a GameObject you can target to follow it with the Cinemachine Camera."
+    ],
+    "subtitleOne": "Add Position Control and Rotation Control behaviors",
+    "paragraphTwo": "In the Hierarchy, select the Cinemachine Camera GameObject.",
+    "paragraphThree": "In the Inspector, in the Cinemachine Camera component, set the Position Control property to Follow. Unity adds a Cinemachine Follow component to the GameObject.",
+    "paragraphFour": "Still in the Cinemachine Camera component, set the Rotation Control property to Rotation Composer. Unity adds a Cinemachine Rotation Composer component to the GameObject.",
+    "noteTwo": "You get the same result when you create a Follow Camera directly from the Editor's menu: GameObject > Cinemachine > Targeted Cameras > Follow Camera. The goal here is to show how to add behavior to an existing Cinemachine Camera.",
+    "paragraphFive": "See the Cinemachine Camera component reference to get the list of available Position Control and Rotation Control behaviors and access their detailed descriptions.",
+    "warningOne": "A Cinemachine Camera GameObject can only have one Position Control behavior and one Rotation Control behavior selected at a time. If you edit the properties of a behavior component and then select another behavior from the Cinemachine Camera component, your edits are lost.",
+    "subtitleTwo": "Specify a GameObject to track",
+    "paragraphSix": "The behaviors selected in the previous step require a tracking target. To meet this requirement:",
+    "paragraphSeven": "In the Inspector, in the Cinemachine Camera component, set the Tracking Target property to specify the GameObject to track.",
+    "paragraphEight": "Move the targeted GameObject in the Scene to test the Cinemachine Camera behaviors. The Cinemachine Camera automatically positions the Cinemachine Camera relative to this GameObject at all times according to the Follow behavior, and rotates the camera to look at the GameObject according to the Rotation Composer behavior.",
+    "subtitleThree": "Add noise for camera shaking",
+    "paragraphNine": "To optionally add noise to simulate real-world physical camera shaking:",
+    "paragraphTen": "In the Inspector, in the Cinemachine Camera component, set the Noise property to Basic Multi Channel Perlin. Unity adds a Cinemachine Basic Multi Channel Perlin component to the GameObject.",
+    "paragraphEleven": "In the Cinemachine Basic Multi Channel Perlin component, click on the configuration button at the right of Noise Profile.",
+    "paragraphTwelve": "Under Presets, select an existing Noise Settings asset.",
+    "paragraphThirteen": "Enter Play mode to see the effect of the selected noise profile on the camera, then exit Play mode.",
+    "warningTwo": "If you edit the properties of the Cinemachine Basic Multi Channel Perlin component and then change the Noise selection from the Cinemachine Camera component, your edits are lost.",
+    "paragraphFourteen": "For further noise behavior adjustments, see the Cinemachine Basic Multi Channel Perlin component reference and Noise Settings asset reference.",
+    "subtitleFour": "Add a Cinemachine Camera Extension",
+    "paragraphFifteen": "To optionally add an Extension to the Cinemachine Camera when you need to get a specific or advanced behavior:",
+    "paragraphSixteen": "In the Inspector, in the Cinemachine Camera component, click on (select) at the right of Add Extension.",
+    "paragraphSeventeen": "Select an Extension in the list. Unity adds the corresponding Extension component to the GameObject.",
+    "noteThree": "You can add as many Extensions as needed to the same Cinemachine Camera GameObject. You can remove an Extension as any other GameObject component.",
+    "paragraphEighteen": "See the Reference to get the list of all available Cinemachine Camera Extensions and access their detailed descriptions.",
+    "subtitleFive": "Next steps",
+    "paragraphNineteen": "Here are potential tasks you might want to do now:",
+    "listThree": [
+      "Create multiple Cinemachine Cameras and manage transitions between them.",
+      "Manage a choreographed sequence of Cinemachine Camera shots with Timeline."
+    ]
+  },
+  "SetupTimeline": {
+    "title": "Set up Timeline with Cinemachine Cameras",
+    "paragraphOne": "Set up Timeline in a Cinemachine environment to choreograph Cinemachine Cameras and produce a predictable shot sequence:",
+    "listOne": [
+      "Prepare multiple Cinemachine Cameras to support the various shots,",
+      "Prepare a Timeline, create a Cinemachine Track, and add Cinemachine Shot Clips, and",
+      "Manage camera cuts and blends."
+    ],
+    "subtitleOne": "Prepare the Cinemachine Cameras",
+    "paragraphTwo": "In the Hierarchy, create a few static or procedural Cinemachine Cameras with different properties according to the shots you want to get.",
+    "paragraphThree": "Name the Cinemachine Cameras in a way you can easily identify them in the future.",
+    "subtitleTwo": "Prepare the Timeline",
+    "paragraphFour": "Create an empty GameObject in your Scene: from the Editor's menu, select GameObject > Create Empty.",
+    "paragraphFive": "Give this empty GameObject a descriptive name, for example, 'My Timeline'.",
+    "paragraphSix": "Open the Timeline window if it's not already open, and Create a Timeline Asset and instance for 'My Timeline' GameObject.",
+    "paragraphSeven": "Click the padlock button to lock the Timeline window and make it easier to add and adjust tracks.",
+    "paragraphEight": "If needed, add tracks that control the subjects of your Scene. For example, add an Animation track to animate your main character.",
+    "subtitleThree": "Create a Cinemachine Track with Cinemachine Shot Clips",
+    "paragraphNine": "From the Hierarchy, drag the Unity Camera GameObject that includes a Cinemachine Brain component onto the Timeline Editor, then select Create Cinemachine Track. Unity adds a Cinemachine Track targeting the Unity Camera in Timeline.",
+    "paragraphTen": "From the Hierarchy, drag a first Cinemachine Camera GameObject onto the added Cinemachine Track. Unity adds to the Cinemachine Track a Cinemachine Shot Clip targeting the Cinemachine Camera you selected.",
+    "paragraphEleven": "Repeat the previous step as many times as needed with other Cinemachine Cameras to get additional Cinemachine Shot Clips in the Cinemachine Track.",
+    "noteOne": "You can reuse the same Cinemachine Camera several times in separate Cinemachine Shot Clips placed at different times in the Cinemachine Track.",
+    "paragraphTwelve": "Adjust the order and duration of Cinemachine Shot Clips according to the desired shot sequence.",
+    "subtitleFour": "Create camera cuts",
+    "paragraphThirteen": "To produce a camera cut between two shots:",
+    "paragraphFourteen": "Place the two Cinemachine Shot Clips or edit their boundaries so that the clips stick to each other without overlapping.",
+    "subtitleFive": "Create camera blends",
+    "paragraphFifteen": "To make the Cinemachine Cameras blend their properties between two shots:",
+    "paragraphSixteen": "Move the two Cinemachine Shot Clips or edit their boundaries so that the clips overlap.",
+    "paragraphSeventeen": "The resulting overlap area defines the blend duration."
+  },
+
   "TrackingScenario3D": {
     "title": "3D tracking scenarios",
     "paragraphOne": "Use Cinemachine to follow and look at the active characters of your 3D games.",

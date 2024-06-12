@@ -36,8 +36,24 @@
   padding: 15px;
   border-radius: 4px;
   width: 720px;
+  margin-block: 12px;
 }
 .NoteTitle {
+  font-size: 18px;
+  font-weight: bold;
+  margin-block-end: 5px;
+}
+
+.WarningContainer {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+  padding: 15px;
+  border-radius: 4px;
+  width: 720px;
+  margin-block: 12px;
+}
+.WarningTitle {
   font-size: 18px;
   font-weight: bold;
   margin-block-end: 5px;

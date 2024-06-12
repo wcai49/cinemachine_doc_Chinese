@@ -11,9 +11,10 @@ import { InfoCircleOutlined } from "@ant-design/icons";
 
 interface NoteProps {
   notes: string[];
+  elements?: JSX.Element[];
 }
 
-const Note: React.FC<NoteProps> = ({ notes }) => {
+const Note: React.FC<NoteProps> = ({ notes, elements }) => {
   return (
     <div className="NoteContainer">
       <div className="NoteTitle">
@@ -27,6 +28,13 @@ const Note: React.FC<NoteProps> = ({ notes }) => {
             {note}
           </div>
         ))}
+
+        {elements &&
+          elements.map((element, index) => (
+            <div key={index} className="NoteItem">
+              {element}
+            </div>
+          ))}
       </div>
     </div>
   );

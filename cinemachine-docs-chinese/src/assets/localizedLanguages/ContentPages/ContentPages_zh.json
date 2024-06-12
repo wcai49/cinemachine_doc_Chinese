@@ -4,7 +4,8 @@
     "State": "状态",
     "Section": "章节",
     "Description": "描述",
-    "Note": "注意"
+    "Note": "注意",
+    "Warning": "警告"
   },
   "CinemachinePackage": {
     "title": "Cinemachine 组件",
@@ -374,6 +375,156 @@
     "subtitleSix": "其他资源",
     "paragraphThirteen": "设置带有 Cinemachine 摄像机的 Timeline"
   },
+
+  "SetupEnvironment": {
+    "title": "设置基础的 Cinemachine 环境",
+    "paragraphOne": "设置您的 Unity 项目，使其包含创建功能性 Cinemachine 环境所需的最低要素：",
+    "listOne": [
+      "创建一个被动的 Cinemachine 摄像机 – 本身没有特定行为，",
+      "确保 Unity 摄像机中存在 Cinemachine Brain，并且",
+      "调整 Cinemachine 摄像机属性，查看其如何影响 Unity 摄像机。"
+    ],
+    "noteOne": "您的场景中必须只有一个 Unity 摄像机 – 一个带有摄像机组件的 GameObject。",
+    "subtitleOne": "添加一个 Cinemachine 摄像机",
+    "paragraphTwo": "在场景视图中，导航到您想要用 Cinemachine 摄像机框住的视角。",
+    "paragraphThree": "在 Unity 菜单中，选择 GameObject > Cinemachine > Cinemachine Camera。Unity 会添加一个新的 GameObject，带有：",
+    "listTwo": [
+      "一个 Cinemachine 摄像机组件，和",
+      "一个与场景视图摄像机的最新位置和方向匹配的 Transform。"
+    ],
+    "subtitleTwo": "验证 Cinemachine Brain 的存在",
+    "paragraphFour": "当您在场景中创建第一个 Cinemachine 摄像机时，Unity 会自动将 Cinemachine Brain 添加到 Unity 摄像机中，除非 Unity 摄像机已经包含一个。要验证这一点：",
+    "paragraphFive": "在层级视图中，选择您的 Unity 摄像机 – 包含摄像机组件的 GameObject。",
+    "paragraphSix": "在检查器中，验证该 GameObject 包含一个 Cinemachine Brain 组件。",
+    "noteTwo": "如果需要，您可以像添加任何其他组件一样手动将 Cinemachine Brain 组件添加到 Unity 摄像机 GameObject，但请记住，场景中只能有一个 Unity 摄像机包含 Cinemachine Brain。",
+    "noteThree": "一旦 Cinemachine Brain 存在，Unity 摄像机的变换和镜头设置将被锁定，不能直接在摄像机检查器中更改。您只能通过更改 CinemachineCamera 的相应属性来更改这些摄像机属性。",
+    "subtitleThree": "调整 Cinemachine 摄像机属性",
+    "paragraphSeven": "打开游戏视图。它根据当前 Cinemachine 摄像机的设置，通过 Unity 摄像机的镜头显示场景。",
+    "paragraphEight": "在层级视图中，选择 Cinemachine 摄像机 GameObject。",
+    "paragraphNine": "在检查器中，调整属性以根据您的需求精确框住镜头：",
+    "listThree": [
+      "在变换中，调整位置和旋转。",
+      "在 Cinemachine 摄像机组件中，调整镜头属性。"
+    ],
+    "noteFour": "这是您创建的唯一且最新的 Cinemachine 摄像机，因此被启用。结果，Unity 摄像机会自动继承您对该 Cinemachine 摄像机进行的更改。",
+    "subtitleFour": "下一步",
+    "paragraphTen": "以下是您可能想要执行的潜在任务：",
+    "listFour": [
+      "创建多个 Cinemachine 摄像机并管理它们之间的过渡。",
+      "创建具有程序行为的 Cinemachine 摄像机：例如一个跟随角色的摄像机。",
+      "使用时间轴管理 Cinemachine 摄像机镜头的编排序列。"
+    ]
+  },
+  "SetupMultipleCam": {
+    "title": "设置多个 Cinemachine 相机和过渡",
+    "paragraphOne": "设置具有多个 Cinemachine 相机的 Cinemachine 环境，并管理相机控制和过渡：",
+    "listOne": [
+      "创建具有不同属性的多个 Cinemachine 相机，",
+      "在 Cinemachine Brain 中管理 Cinemachine 相机过渡，和",
+      "在播放模式下测试实时相机激活机制和过渡。"
+    ],
+    "noteOne": "您的场景必须仅包含一个 Unity 相机 - 一个具有相机组件的游戏对象。",
+    "subtitleOne": "添加 Cinemachine 相机",
+    "paragraphTwo": "在场景视图中，导航场景以获得您想要使用一个 Cinemachine 相机框定的视角。",
+    "paragraphThree": "在 Unity 菜单中，选择 GameObject > Cinemachine > Cinemachine Camera。 Unity 添加了一个带有 Cinemachine Camera 组件的新游戏对象，并且该对象的变换与场景视图相机的最新位置和方向匹配。此时，您还可以验证 Unity 相机是否包含 Cinemachine Brain 组件。",
+    "paragraphFour": "继续导航场景，并以相同的方式创建一些额外的 Cinemachine 相机，但位置和旋转不同。",
+    "paragraphFive": "以便于将来轻松识别它们的方式命名 Cinemachine 相机。",
+    "subtitleTwo": "管理 Cinemachine 相机之间的过渡",
+    "paragraphSix": "在层次结构中，选择您的 Unity 相机 - 包含相机组件的游戏对象。",
+    "paragraphSeven": "在检查器中，在 Cinemachine Brain 组件中：",
+    "listTwo": [
+      "选择在所有 Cinemachine 相机之间使用的默认混合，或",
+      "创建并定位一个定义在特定 Cinemachine 相机对之间使用的自定义混合的资产。"
+    ],
+    "subtitleThree": "在播放模式下测试过渡",
+    "paragraphEight": "进入播放模式。",
+    "paragraphNine": "依次更改每个 Cinemachine 相机游戏对象的活动状态，以查看它们根据您设置 Cinemachine Brain 的方式如何相互混合。",
+    "paragraphTen": "退出播放模式。",
+    "subtitleFour": "后续步骤",
+    "paragraphEleven": "以下是您现在可能想要执行的潜在任务：",
+    "listThree": [
+      "创建一个具有程序行为的 Cinemachine 相机：例如一个跟随角色的相机。",
+      "使用时间轴管理 Cinemachine 相机镜头的编排序列。"
+    ]
+  },
+  "SetupProceduralBehavior": {
+    "title": "为 Cinemachine 摄像机添加程序化行为",
+    "paragraphOne": "为 Cinemachine 摄像机设置程序化行为：",
+    "listOne": [
+      "添加行为以控制摄像机位置和旋转，",
+      "指定要跟踪的 GameObject 以实现自动跟随和瞄准，",
+      "添加默认噪音以模拟真实世界的物理摄像机抖动，",
+      "了解如何添加扩展以获得高级摄像机行为。"
+    ],
+    "noteOne": "此任务需要一些准备工作：",
+    "listTwo": [
+      "您必须至少创建一个被动的 Cinemachine 摄像机，并且",
+      "您的场景中必须已经包含一个可以用 Cinemachine 摄像机跟踪的 GameObject。"
+    ],
+    "subtitleOne": "添加位置控制和旋转控制行为",
+    "paragraphTwo": "在层级视图中，选择 Cinemachine 摄像机 GameObject。",
+    "paragraphThree": "在检查器中，在 Cinemachine 摄像机组件中，将 Position Control 属性设置为 Follow。Unity 会将 Cinemachine Follow 组件添加到 GameObject。",
+    "paragraphFour": "仍在 Cinemachine 摄像机组件中，将 Rotation Control 属性设置为 Rotation Composer。Unity 会将 Cinemachine Rotation Composer 组件添加到 GameObject。",
+    "noteTwo": "当您直接从编辑器菜单创建跟随摄像机时，您会得到相同的结果：GameObject > Cinemachine > Targeted Cameras > Follow Camera。这里的目标是展示如何向现有的 Cinemachine 摄像机添加行为。",
+    "paragraphFive": "请参阅 Cinemachine 摄像机组件参考，获取可用的位置控制和旋转控制行为列表，并访问其详细描述。",
+    "warningOne": "Cinemachine 摄像机 GameObject 一次只能选择一个位置控制行为和一个旋转控制行为。如果您编辑了行为组件的属性，然后从 Cinemachine 摄像机组件中选择了另一个行为，您的编辑将丢失。",
+    "subtitleTwo": "指定要跟踪的 GameObject",
+    "paragraphSix": "上一步中选择的行为需要一个跟踪目标。为满足此要求：",
+    "paragraphSeven": "在检查器中，在 Cinemachine 摄像机组件中，将 Tracking Target 属性设置为要跟踪的 GameObject。",
+    "paragraphEight": "在场景中移动目标 GameObject 以测试 Cinemachine 摄像机行为。Cinemachine 摄像机根据跟随行为自动将 Cinemachine 摄像机定位在该 GameObject 的相对位置，并根据旋转作曲家行为旋转摄像机以查看 GameObject。",
+    "subtitleThree": "添加摄像机抖动的噪音",
+    "paragraphNine": "可选地添加噪音以模拟真实世界的物理摄像机抖动：",
+    "paragraphTen": "在检查器中，在 Cinemachine 摄像机组件中，将 Noise 属性设置为 Basic Multi Channel Perlin。Unity 会将 Cinemachine Basic Multi Channel Perlin 组件添加到 GameObject。",
+    "paragraphEleven": "在 Cinemachine Basic Multi Channel Perlin 组件中，点击 Noise Profile 右侧的配置按钮。",
+    "paragraphTwelve": "在 Presets 下，选择一个现有的噪音设置资源。",
+    "paragraphThirteen": "进入播放模式以查看所选噪音配置文件对摄像机的影响，然后退出播放模式。",
+    "warningTwo": "如果您编辑了 Cinemachine Basic Multi Channel Perlin 组件的属性，然后从 Cinemachine 摄像机组件中更改了噪音选择，您的编辑将丢失。",
+    "paragraphFourteen": "有关进一步的噪音行为调整，请参阅 Cinemachine Basic Multi Channel Perlin 组件参考和噪音设置资源参考。",
+    "subtitleFour": "添加 Cinemachine 摄像机扩展",
+    "paragraphFifteen": "当您需要获得特定或高级行为时，可选择性地向 Cinemachine 摄像机添加扩展：",
+    "paragraphSixteen": "在检查器中，在 Cinemachine 摄像机组件中，点击 Add Extension 右侧的 (select)。",
+    "paragraphSeventeen": "在列表中选择一个扩展。Unity 会将相应的扩展组件添加到 GameObject。",
+    "noteThree": "您可以根据需要向同一个 Cinemachine 摄像机 GameObject 添加任意数量的扩展。您可以像删除任何其他 GameObject 组件一样删除扩展。",
+    "paragraphEighteen": "请参阅参考，获取所有可用的 Cinemachine 摄像机扩展列表，并访问其详细描述。",
+    "subtitleFive": "后续步骤",
+    "paragraphNineteen": "以下是您现在可能要做的一些任务：",
+    "listThree": [
+      "创建多个 Cinemachine 摄像机并管理它们之间的过渡。",
+      "使用时间轴管理 Cinemachine 摄像机镜头的编排序列。"
+    ]
+  },
+  "SetupTimeline": {
+    "title": "使用 Cinemachine 摄像机设置时间轴",
+    "paragraphOne": "在 Cinemachine 环境中设置时间轴以编排 Cinemachine 摄像机并产生可预测的镜头序列：",
+    "listOne": [
+      "准备多个 Cinemachine 摄像机以支持各种镜头，",
+      "准备时间轴，创建 Cinemachine 轨道，并添加 Cinemachine 镜头剪辑，以及",
+      "管理镜头切换和混合。"
+    ],
+    "subtitleOne": "准备 Cinemachine 摄像机",
+    "paragraphTwo": "在层次视图中，根据您想要获取的镜头创建一些具有不同属性的静态或程序化的 Cinemachine 摄像机。",
+    "paragraphThree": "以一种您将来可以轻松识别的方式命名 Cinemachine 摄像机。",
+    "subtitleTwo": "准备时间轴",
+    "paragraphFour": "在您的场景中创建一个空的 GameObject：从编辑器菜单中选择 GameObject > Create Empty。",
+    "paragraphFive": "给这个空的 GameObject 一个描述性的名称，例如，“我的时间轴”。",
+    "paragraphSix": "如果时间轴窗口尚未打开，请打开它，并为“我的时间轴”GameObject 创建一个时间轴资产和实例。",
+    "paragraphSeven": "点击锁定按钮以锁定时间轴窗口，使其更容易添加和调整轨道。",
+    "paragraphEight": "如果需要，添加控制场景对象的轨道。例如，添加一个动画轨道来为您的主角设置动画。",
+    "subtitleThree": "创建一个包含 Cinemachine 镜头剪辑的 Cinemachine 轨道",
+    "paragraphNine": "从层次视图中，将包含 Cinemachine Brain 组件的 Unity 摄像机 GameObject 拖动到时间轴编辑器，然后选择创建 Cinemachine 轨道。Unity 会在时间轴中添加一个针对 Unity 摄像机的 Cinemachine 轨道。",
+    "paragraphTen": "从层次视图中，将第一个 Cinemachine 摄像机 GameObject 拖动到添加的 Cinemachine 轨道上。Unity 会在 Cinemachine 轨道上添加一个针对您选择的 Cinemachine 摄像机的 Cinemachine 镜头剪辑。",
+    "paragraphEleven": "根据需要多次重复上一步，将其他 Cinemachine 摄像机添加到 Cinemachine 轨道上，以获取更多的 Cinemachine 镜头剪辑。",
+    "noteOne": "您可以在时间轴中将同一个 Cinemachine 摄像机多次重复使用，在不同时间点放置在不同的 Cinemachine 镜头剪辑中。",
+    "paragraphTwelve": "根据所需的镜头序列调整 Cinemachine 镜头剪辑的顺序和持续时间。",
+    "subtitleFour": "创建镜头切换",
+    "paragraphThirteen": "要在两个镜头之间进行镜头切换：",
+    "paragraphFourteen": "将两个 Cinemachine 镜头剪辑放置或编辑它们的边界，使剪辑彼此紧贴而不重叠。",
+    "subtitleFive": "创建镜头混合",
+    "paragraphFifteen": "要使 Cinemachine 摄像机在两个镜头之间混合它们的属性：",
+    "paragraphSixteen": "移动两个 Cinemachine 镜头剪辑或编辑它们的边界，使剪辑重叠。",
+    "paragraphSeventeen": "重叠区域定义了混合的持续时间。"
+  },
+
   "TrackingScenario3D": {
     "title": "3D跟踪场景",
     "paragraphOne": "利用Cinemachine跟随和观察您的3D游戏中的活动角色",

@@ -28,6 +28,10 @@ import EssentialElementsPage from "../pages/GetStarted/DiscoverConcepts/Essentia
 import ControlAndTransationsPage from "../pages/GetStarted/DiscoverConcepts/ControlAndTransations/ControlAndTransationsPage.tsx";
 import CinemachineTimelinePage from "../pages/GetStarted/DiscoverConcepts/Timeline/CinemachineTimelinePage.tsx";
 import ProceduralMotionPage from "../pages/GetStarted/DiscoverConcepts/ProceduralMotion/ProceduralMotionPage.tsx";
+import SetupEnvironmentPage from "../pages/GetStarted/SetupEnvironmentPage.tsx";
+import SetupMultipleCamPage from "../pages/GetStarted/SetupMultipleCamPage.tsx";
+import SetupProcedualBehaviorPage from "../pages/GetStarted/SetupProcedualBehaviorPage.tsx";
+import SetupTimelinePage from "../pages/GetStarted/SetupTimelinePage.tsx";
 
 const RoutersList: React.FC = () => {
   return (
@@ -72,6 +76,26 @@ const RoutersList: React.FC = () => {
       <Route
         path="section3-1-4-Cinemachine-and-Timeline"
         element={<CinemachineTimelinePage />}
+      />
+
+      <Route
+        path="section3-2-Set-up-a-basic-Cinemachine-environment"
+        element={<SetupEnvironmentPage />}
+      />
+
+      <Route
+        path="section3-3-Set-up-multiple-Cinemachine-Cameras-and-transitions"
+        element={<SetupMultipleCamPage />}
+      />
+
+      <Route
+        path="section3-4-Add-procedural-behavior-to-a-Cinemachine-Camera"
+        element={<SetupProcedualBehaviorPage />}
+      />
+
+      <Route
+        path="section3-5-Set-up-Timeline-with-Cinemachine-Cameras"
+        element={<SetupTimelinePage />}
       />
 
       {/* Section4 */}
