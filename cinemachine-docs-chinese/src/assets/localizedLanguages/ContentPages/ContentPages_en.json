@@ -5,7 +5,8 @@
     "Section": "Section",
     "Description": "Description",
     "Note": "Note",
-    "Warning": "Warning"
+    "Warning": "Warning",
+    "Feature": "Feature"
   },
 
   "CinemachinePackage": {
@@ -518,6 +519,82 @@
     "paragraphFifteen": "To make the Cinemachine Cameras blend their properties between two shots:",
     "paragraphSixteen": "Move the two Cinemachine Shot Clips or edit their boundaries so that the clips overlap.",
     "paragraphSeventeen": "The resulting overlap area defines the blend duration."
+  },
+
+  "UseToolsAndShortcuts": {
+    "title": "Use convenient tools and shortcuts",
+    "paragraphOne": "Cinemachine includes several user interface tools and shortcuts to help you target the proper Cinemachine elements to set up according to your needs and ease your configuration experience.",
+    "features": ["Pre-built cameras", "Scene handles", "Save in Play mode"],
+    "descriptions": [
+      "Use menu shortcuts to create pre-built Cinemachine Cameras that target specific use cases.",
+      "Use a set of 3D controls to manipulate CinemachineCamera parameters visually in the Scene view.",
+      "Allow the Unity Editor to save the Cinemachine parameter changes you make in Play mode."
+    ]
+  },
+  "PreBuiltCameras": {
+    "title": "Pre-built Cinemachine Cameras",
+    "paragraphOne": "The Cinemachine package includes a series of shortcuts for pre-built Cinemachine Cameras that target specific use cases. To use a pre-built Cinemachine Camera, from the Editor's menu, select GameObject > Cinemachine, and then select the camera type according to the following list:",
+    "menuItems": [
+      "State-Driven Camera",
+      "Targeted Cameras > Follow Camera",
+      "Targeted Cameras > Target Group Camera",
+      "Targeted Cameras > FreeLook Camera",
+      "Targeted Cameras > Third Person Aim Camera",
+      "Targeted Cameras > 2D Camera",
+      "Cinemachine Camera",
+      "Sequencer Camera",
+      "Dolly Camera with Spline",
+      "Dolly Cart with Spline",
+      "Mixing Camera",
+      "ClearShot Camera"
+    ],
+    "descriptions": [
+      "Creates a Manager Camera that parents a group of Cinemachine Cameras and handles them according to animation state changes.",
+      "Creates a Cinemachine Camera with preselected behaviors suitable for following and framing a character.",
+      "Creates a Cinemachine Camera with preselected behaviors and extension suitable for following and framing groups. Also creates an empty Target Group and assigns it to the Tracking Target field of the new Cinemachine camera.",
+      "Creates a Cinemachine Camera with preselected behaviors and extensions suitable for character-centric free look scenarios with user input.",
+      "Creates a Cinemachine Camera with preselected position behavior and aim extension suitable for third-person aiming scenarios. The ThirdPerson Aim camera is a fixed rig that is driven by the tracking target's rotation and position. No direct user control is provided. For a camera that provides user control of the camera position, choose FreeLook Camera.",
+      "Creates a Cinemachine Camera with preselected position composer behavior suitable for 2D game scenarios.",
+      "Creates a default Cinemachine Camera without preselected behaviors. Use it to create a passive Cinemachine Camera or to build your own custom Cinemachine Camera from scratch. The camera will be positioned and rotated to match the current scene view camera.",
+      "Creates a Manager Camera that parents a group of Cinemachine Cameras and handles them according to a specified sequence.",
+      "Creates a Cinemachine Camera with preselected behaviors to make it move along a Spline. Also creates a spline and assigns it to the camera. You can modify this spline or replace it with another one.",
+      "Creates an empty GameObject with its Transform constrained to a Spline. Use it to animate any GameObject along a path, or as a tracking target for Cinemachine Camera. Also creates a spline and assigns it to the dolly cart. You can modify this spline or replace it with another one.",
+      "Creates a Manager Camera that parents a group of Cinemachine Cameras and provides a continuous blend according to a specified weighting.",
+      "Creates a Manager Camera that parents a group of Cinemachine Cameras and chooses from them according to shot quality criteria."
+    ],
+    "note": "If you right-click on a GameObject and create one of the targeted cameras, the 'Tracking Target' of the new camera will automatically be populated with the object on which you right-clicked."
+  },
+  "SceneHandles": {
+    "title": "Cinemachine Handle toolbar",
+    "paragraphOne": "The Cinemachine Handle toolbar is a group of 3D controls that allow you to manipulate CinemachineCamera parameters visually in the Scene view. You can use the handle tools to interactively adjust the selected object's parameters quickly and efficiently rather than controlling them via the inspector.",
+    "paragraphTwo": "The toolbar automatically appears in the Scene view toolbar Overlay when you select a type of CinemachineCamera with an associated handle.",
+    "handleToolsTitle": "Handle tools",
+    "paragraphThree": "The following four Handle tools are available in the toolbar:",
+    "fovTitle": "1. Field of View (FOV)",
+    "fovDescription": "The FOV tool can adjust Vertical FOV, Horizontal FOV, Orthographic Size, or Focal Length depending on what's selected by the user. It can control:",
+    "fovList": [
+      "Vertical or Horizontal FOV (depending on the selection in the Main Camera) when the camera is in Perspective mode.",
+      "Orthographic Size when the camera is in Orthographic mode.",
+      "Focal length when the camera is in Physical mode."
+    ],
+    "paragraphFour": "For more information on the Field of View (FOV) property see, Setting CinemachineCamera properties.",
+    "clipPlanesTitle": "2. Far/Near clip planes",
+    "paragraphFive": "You can drag the points to increase the far clip plane and near clip plane.",
+    "paragraphSix": "For more information on the Far and Near clip plane properties see, Setting CinemachineCamera properties.",
+    "followOffsetTitle": "3. Follow offset",
+    "paragraphSeven": "The Follow offset is an offset from the Follow Target. You can drag the points to increase or decrease the Follow offset position.",
+    "paragraphEight": "For more information on the Follow offset property see, Orbital Follow properties.",
+    "trackedObjectOffsetTitle": "4. Tracked object offset",
+    "paragraphNine": "This starts from where the camera is placed. You can drag the points to increase or decrease the tracking target position when the desired area isn't the tracked object’s center.",
+    "paragraphTen": "For more information on the Tracked object offset property see, Rotation Composer properties."
+  },
+  "SavingInPlayMode": {
+    "title": "Saving in Play Mode",
+    "paragraphOne": "It’s often most convenient to adjust camera settings while the game is playing. But normally, Unity does not save your changes to the Scene when you exit Play Mode. Cinemachine has a special feature to preserve the tweaks you make during Play Mode. It doesn’t save structural changes, like adding or removing a behavior. With the exception of certain properties, Cinemachine preserves most of the settings in your CinemachineCameras when you exit Play Mode.",
+    "paragraphTwo": "When you exit Play Mode, Cinemachine scans the Scene to collect any changed properties in the CinemachineCameras. Cinemachine saves these changes a second or so after exiting. Use the Edit > Undo command to revert these changes.",
+    "paragraphThree": "Check Save During Play on any CinemachineCamera in the Inspector to enable this feature. This is a global property, not per-camera, so you only need to check or uncheck it once.",
+    "paragraphFour": "Cinemachine components have the special attribute [SaveDuringPlay] to enable this functionality. Specific fields are excluded from being saved by having the [NoSaveDuringPlay] attribute added to the field.",
+    "paragraphFive": "You can also use the [SaveDuringPlay] and [NoSaveDuringPlay] on your own custom scripts, to acquire the same functionality for them as well."
   },
 
   "TrackingScenario3D": {

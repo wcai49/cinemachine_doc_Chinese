@@ -32,6 +32,10 @@ import SetupEnvironmentPage from "../pages/GetStarted/SetupEnvironmentPage.tsx";
 import SetupMultipleCamPage from "../pages/GetStarted/SetupMultipleCamPage.tsx";
 import SetupProcedualBehaviorPage from "../pages/GetStarted/SetupProcedualBehaviorPage.tsx";
 import SetupTimelinePage from "../pages/GetStarted/SetupTimelinePage.tsx";
+import UseToolsAndShortcutsPage from "../pages/GetStarted/UseToolAndShortcuts/UseToolsAndShotcutsPage.tsx";
+import PreBuiltCamerasPage from "../pages/GetStarted/UseToolAndShortcuts/ToolsAndShortcutsPages/PreBuiltCamerasPage.tsx";
+import SceneHandlesPage from "../pages/GetStarted/UseToolAndShortcuts/ToolsAndShortcutsPages/SceneHandlesPage.tsx";
+import SavingInPlayModePage from "../pages/GetStarted/UseToolAndShortcuts/ToolsAndShortcutsPages/SavingInPlayModePage.tsx";
 
 const RoutersList: React.FC = () => {
   return (
@@ -98,6 +102,20 @@ const RoutersList: React.FC = () => {
         element={<SetupTimelinePage />}
       />
 
+      <Route
+        path="section3-6-Use-convenient-tools-and-shortcuts"
+        element={<UseToolsAndShortcutsPage />}
+      />
+
+      <Route
+        path="section3-6-1-Pre-built-cameras"
+        element={<PreBuiltCamerasPage />}
+      />
+      <Route path="section3-6-2-Scene-Handles" element={<SceneHandlesPage />} />
+      <Route
+        path="section3-6-3-Saving-in-Play-Mode"
+        element={<SavingInPlayModePage />}
+      />
       {/* Section4 */}
       <Route
         path="/section4-3D-tracking-scenarios"

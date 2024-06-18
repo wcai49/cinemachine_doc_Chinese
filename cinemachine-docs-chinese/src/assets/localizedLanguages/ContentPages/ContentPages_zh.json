@@ -5,7 +5,8 @@
     "Section": "章节",
     "Description": "描述",
     "Note": "注意",
-    "Warning": "警告"
+    "Warning": "警告",
+    "Feature": "功能"
   },
   "CinemachinePackage": {
     "title": "Cinemachine 组件",
@@ -421,7 +422,7 @@
     "listOne": [
       "创建具有不同属性的多个 Cinemachine 相机，",
       "在 Cinemachine Brain 中管理 Cinemachine 相机过渡，和",
-      "在播放模式下测试实时相机激活机制和过渡。"
+      "在运行模式下测试实时相机激活机制和过渡。"
     ],
     "noteOne": "您的场景必须仅包含一个 Unity 相机 - 一个具有相机组件的游戏对象。",
     "subtitleOne": "添加 Cinemachine 相机",
@@ -436,8 +437,8 @@
       "选择在所有 Cinemachine 相机之间使用的默认混合，或",
       "创建并定位一个定义在特定 Cinemachine 相机对之间使用的自定义混合的资产。"
     ],
-    "subtitleThree": "在播放模式下测试过渡",
-    "paragraphEight": "进入播放模式。",
+    "subtitleThree": "在运行模式下测试过渡",
+    "paragraphEight": "进入运行模式。",
     "paragraphNine": "依次更改每个 Cinemachine 相机游戏对象的活动状态，以查看它们根据您设置 Cinemachine Brain 的方式如何相互混合。",
     "paragraphTen": "退出播放模式。",
     "subtitleFour": "后续步骤",
@@ -523,6 +524,81 @@
     "paragraphFifteen": "要使 Cinemachine 摄像机在两个镜头之间混合它们的属性：",
     "paragraphSixteen": "移动两个 Cinemachine 镜头剪辑或编辑它们的边界，使剪辑重叠。",
     "paragraphSeventeen": "重叠区域定义了混合的持续时间。"
+  },
+  "UseToolsAndShortcuts": {
+    "title": "使用便捷工具和快捷方式",
+    "paragraphOne": "Cinemachine 包含多个用户界面工具和快捷方式，帮助您根据需要定位适当的 Cinemachine 元素并简化配置体验。",
+    "features": ["预制相机", "场景处理", "在运行模式下保存"],
+    "descriptions": [
+      "使用菜单快捷方式创建针对特定用例的预制 Cinemachine 相机。",
+      "使用一组 3D 控件在场景视图中可视化地操纵 CinemachineCamera 参数。",
+      "允许 Unity 编辑器保存您在运行模式下进行的 Cinemachine 参数更改。"
+    ]
+  },
+  "PreBuiltCameras": {
+    "title": "预制 Cinemachine 相机",
+    "paragraphOne": "Cinemachine 包含一系列快捷方式，用于预制 Cinemachine 相机，以满足特定的使用情景。要使用预制 Cinemachine 相机，请从编辑器菜单中选择 GameObject > Cinemachine，然后根据以下列表选择相机类型：",
+    "menuItems": [
+      "状态驱动相机",
+      "定向相机 > 跟随相机",
+      "定向相机 > 目标组相机",
+      "定向相机 > 自由视角相机",
+      "定向相机 > 第三人称瞄准相机",
+      "定向相机 > 2D 相机",
+      "Cinemachine 相机",
+      "序列相机",
+      "轨道摄影机与样条",
+      "手推车与样条",
+      "混合相机",
+      "清晰相机"
+    ],
+    "descriptions": [
+      "创建一个管理相机，将一组 Cinemachine 相机作为子对象，并根据动画状态更改对它们进行处理。",
+      "创建一个具有预选行为的 Cinemachine 相机，适合于跟随和定位角色。",
+      "创建一个具有预选行为和扩展的 Cinemachine 相机，适合于跟踪和定位组。还会创建一个空的目标组，并将其分配给新 Cinemachine 相机的跟踪目标字段。",
+      "创建一个具有预选行为和扩展的 Cinemachine 相机，适合于角色中心的自由视角场景与用户输入。",
+      "创建一个具有预选位置行为和瞄准扩展的 Cinemachine 相机，适合于第三人称瞄准场景。第三人称瞄准相机是一个固定架构，由跟踪目标的旋转和位置驱动。不提供直接的用户控制。若要提供相机位置的用户控制，请选择自由视角相机。",
+      "创建一个具有预选位置构图行为的 Cinemachine 相机，适合于 2D 游戏场景。",
+      "创建一个默认的 Cinemachine 相机，不包含预选行为。可用于创建被动的 Cinemachine 相机，或者从头开始构建自定义的 Cinemachine 相机。该相机将被定位和旋转以匹配当前场景视图相机。",
+      "创建一个管理相机，将一组 Cinemachine 相机作为子对象，并根据指定的序列对它们进行处理。",
+      "创建一个具有预选行为的 Cinemachine 相机，使其沿着样条移动。还会创建一个样条并将其分配给相机。您可以修改此样条或替换为其他样条。",
+      "创建一个空的 GameObject，并将其 Transform 约束到样条上。可用于沿路径动画化任何 GameObject，或作为 Cinemachine 相机的跟踪目标。还会创建一个样条并将其分配给手推车。您可以修改此样条或替换为其他样条。",
+      "创建一个管理相机，将一组 Cinemachine 相机作为子对象，并根据指定的加权值提供连续混合。",
+      "创建一个管理相机，将一组 Cinemachine 相机作为子对象，并根据拍摄质量标准选择其中一个。"
+    ],
+    "note": "如果右键单击 GameObject 并创建其中一个定向相机，则新相机的“跟踪目标”将自动填充为您右键单击的对象。"
+  },
+  "SceneHandles": {
+    "title": "Cinemachine 控制柄工具栏",
+    "paragraphOne": "Cinemachine 控制柄工具栏是一组 3D 控件，允许您在场景视图中直观地操纵 CinemachineCamera 参数。您可以使用控制柄工具交互式地快速高效地调整选定对象的参数，而不是通过检查器控制它们。",
+    "paragraphTwo": "当您选择具有相关控制柄的 CinemachineCamera 类型时，工具栏会自动出现在场景视图工具栏覆盖层中。",
+    "handleToolsTitle": "控制柄工具",
+    "paragraphThree": "工具栏中提供以下四种控制柄工具：",
+    "fovTitle": "1. 视场 (FOV)",
+    "fovDescription": "FOV 工具可以根据用户选择调整垂直 FOV、水平 FOV、正交大小或焦距。它可以控制：",
+    "fovList": [
+      "当相机处于透视模式时，控制垂直或水平 FOV（取决于主相机中的选择）。",
+      "当相机处于正交模式时，控制正交大小。",
+      "当相机处于物理模式时，控制焦距。"
+    ],
+    "paragraphFour": "有关视场 (FOV) 属性的更多信息，请参见设置 CinemachineCamera 属性。",
+    "clipPlanesTitle": "2. 远/近剪辑面",
+    "paragraphFive": "您可以拖动点来增加远剪辑面和近剪辑面。",
+    "paragraphSix": "有关远剪辑面和近剪辑面属性的更多信息，请参见设置 CinemachineCamera 属性。",
+    "followOffsetTitle": "3. 跟随偏移",
+    "paragraphSeven": "跟随偏移是跟随目标的偏移量。您可以拖动点来增加或减少跟随偏移位置。",
+    "paragraphEight": "有关跟随偏移属性的更多信息，请参见轨道跟随属性。",
+    "trackedObjectOffsetTitle": "4. 跟踪对象偏移",
+    "paragraphNine": "这从相机放置的位置开始。您可以拖动点来增加或减少跟踪目标位置，当所需区域不是跟踪对象的中心时。",
+    "paragraphTen": "有关跟踪对象偏移属性的更多信息，请参见旋转作曲属性。"
+  },
+  "SavingInPlayMode": {
+    "title": "在运行模式下保存",
+    "paragraphOne": "在游戏运行时调整相机设置通常最为方便。但是，通常情况下，当您退出播放模式时，Unity 不会保存您对场景所做的更改。Cinemachine 具有一个特殊功能，可以保留您在播放模式期间所做的调整。它不会保存结构更改，例如添加或删除行为。除某些属性外，Cinemachine 在您退出播放模式时保留 CinemachineCameras 中的大多数设置。",
+    "paragraphTwo": "当您退出播放模式时，Cinemachine 会扫描场景以收集 CinemachineCameras 中的任何更改属性。Cinemachine 在退出后大约一秒钟保存这些更改。使用 编辑 > 撤销 命令可以还原这些更改。",
+    "paragraphThree": "在 Inspector 中选中任何 CinemachineCamera 的“在播放期间保存”以启用此功能。这是一个全局属性，而不是每个相机的属性，因此您只需选中或取消选中一次。",
+    "paragraphFour": "Cinemachine 组件具有特殊属性 [SaveDuringPlay] 以启用此功能。特定字段通过添加 [NoSaveDuringPlay] 属性被排除在保存期间。",
+    "paragraphFive": "您还可以在自己的自定义脚本中使用 [SaveDuringPlay] 和 [NoSaveDuringPlay]，以便为它们获得相同的功能。"
   },
 
   "TrackingScenario3D": {
