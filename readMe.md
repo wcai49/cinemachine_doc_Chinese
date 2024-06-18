@@ -10,19 +10,18 @@ This project is about Unity's official verified package: cinemachine's documenta
 
 | Section/Page       | Status          | Expected Release Time  |
 |--------------------|-----------------|--------------------|
-| 了解Cinemachine概念 | Deployed     | June 5th, 2024     |
-| Cinemachine基本元素 | Deployed     | June 5th, 2024     |
-| 相机控制与过度       | Deployed     | June 5th, 2024     |
-| 程序化运动          | Deployed     | June 5th, 2024     |
-| Cinemachine与时间轴 | Deployed     | June 5th, 2024     |
 | 设置基本cinemachine环境 | Deployed     | June 12th, 2024     |
 | 设置多个cinemachien摄像机 | Deployed    | June 12th, 2024     |
 | 向cinemachine摄像机添加程序化行为| Deployed     | June 12th, 2024     |
 | 使用cinemachine摄像机设置时间轴 | Deployed    | June 12th, 2024     |
-|使用方便的工具和快捷方式 | Not started    | June 19th, 2024     |
-|预置相机| Not started    | June 19th, 2024     |
-|场景处理| Not started    | June 19th, 2024     |
-|播放模式下保存| Not started    | June 19th, 2024     |
+|使用方便的工具和快捷方式 | Deployed    | June 19th, 2024     |
+|预置相机| Deployed    | June 19th, 2024     |
+|场景处理| Deployed    | June 19th, 2024     |
+|运行模式下保存| Deployed    | June 19th, 2024     |
+|跟踪和框定角色 | Not Started | June 26th, 2024 |
+|跟踪和框定群组 | Not Started | June 26th, 2024 |
+|创建自由视角相机 | Not Started | June 26th, 2024 |
+|创建第三人称相机 | Not Started | June 26th, 2024 |
 
 ## 状态更新表 Status check
 
