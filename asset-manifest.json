@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cinemachine_doc_Chinese/static/css/main.1b533184.css",
-    "main.js": "/cinemachine_doc_Chinese/static/js/main.e55108de.js",
+    "main.js": "/cinemachine_doc_Chinese/static/js/main.bd517035.js",
     "static/js/453.17a9f8c6.chunk.js": "/cinemachine_doc_Chinese/static/js/453.17a9f8c6.chunk.js",
     "static/media/CinemachineSplash.png": "/cinemachine_doc_Chinese/static/media/CinemachineSplash.892e5732819151f0de97.png",
     "static/media/handleToolbar_image1.png": "/cinemachine_doc_Chinese/static/media/handleToolbar_image1.ff00f7e7d7eaab5ab4b9.png",
@@ -16,10 +16,13 @@
     "static/media/control-transition-image2.png": "/cinemachine_doc_Chinese/static/media/control-transition-image2.18b673dde151e2983fc6.png",
     "static/media/setup-timeline-camera-cut-image3.png": "/cinemachine_doc_Chinese/static/media/setup-timeline-camera-cut-image3.2485d065856df36a4f77.png",
     "static/media/UpgradingFrom2x5.png": "/cinemachine_doc_Chinese/static/media/UpgradingFrom2x5.75d9b415183cedfbe162.png",
+    "static/media/followframegroupimage1.png": "/cinemachine_doc_Chinese/static/media/followframegroupimage1.66d00df4c38768c53cdb.png",
     "static/media/setup-timeline-camera-cut-image2.png": "/cinemachine_doc_Chinese/static/media/setup-timeline-camera-cut-image2.848329831e7cc3110435.png",
     "static/media/essentialElementsImage2.png": "/cinemachine_doc_Chinese/static/media/essentialElementsImage2.6d492bfc743455ffcc73.png",
     "static/media/UpgradingFrom2x.png": "/cinemachine_doc_Chinese/static/media/UpgradingFrom2x.5e8f5e84dda87717c2b7.png",
     "static/media/UpgradingFrom2x3.png": "/cinemachine_doc_Chinese/static/media/UpgradingFrom2x3.b57ecb293d7fac7bc98e.png",
+    "static/media/freelookcamimage2.png": "/cinemachine_doc_Chinese/static/media/freelookcamimage2.98f32d12bb2650c880b6.png",
+    "static/media/freelookcamimage1.png": "/cinemachine_doc_Chinese/static/media/freelookcamimage1.4095abdd3ae92e314c9d.png",
     "static/media/CinemachineChannels-brain.png": "/cinemachine_doc_Chinese/static/media/CinemachineChannels-brain.0c8171dc0328cfc6d515.png",
     "static/media/UpgradingFrom2x2.png": "/cinemachine_doc_Chinese/static/media/UpgradingFrom2x2.0c8171dc0328cfc6d515.png",
     "static/media/CinemachineChannels-camera.png": "/cinemachine_doc_Chinese/static/media/CinemachineChannels-camera.7472d63e1e6cd3e8f1fe.png",
@@ -31,11 +34,11 @@
     "static/media/UpgradingFrom2x4.png": "/cinemachine_doc_Chinese/static/media/UpgradingFrom2x4.c468d10b6573f05c9fb2.png",
     "index.html": "/cinemachine_doc_Chinese/index.html",
     "main.1b533184.css.map": "/cinemachine_doc_Chinese/static/css/main.1b533184.css.map",
-    "main.e55108de.js.map": "/cinemachine_doc_Chinese/static/js/main.e55108de.js.map",
+    "main.bd517035.js.map": "/cinemachine_doc_Chinese/static/js/main.bd517035.js.map",
     "453.17a9f8c6.chunk.js.map": "/cinemachine_doc_Chinese/static/js/453.17a9f8c6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1b533184.css",
-    "static/js/main.e55108de.js"
+    "static/js/main.bd517035.js"
   ]
 }
