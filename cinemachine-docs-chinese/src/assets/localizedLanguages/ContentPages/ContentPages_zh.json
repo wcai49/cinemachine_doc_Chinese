@@ -611,6 +611,78 @@
       "创建第三人称相机"
     ]
   },
+  "FollowFrameCharacter": {
+    "title": "跟踪并框选角色",
+    "paragraphOne": "创建和设置一个Cinemachine相机，自动跟踪并框选一个角色。",
+    "noteOne": "您的场景必须包含一个GameObject，您可以将其作为目标用Cinemachine相机进行跟踪。",
+    "subTitleOne": "添加一个“跟踪”Cinemachine相机",
+    "stepsOne": [
+      "在Unity菜单中，选择GameObject > Cinemachine > Targeted Cameras > Follow Camera。",
+      "验证Unity相机是否包含Cinemachine Brain组件。",
+      "在Inspector中，在Cinemachine Camera组件中，设置Tracking Target属性以指定要跟踪和查看的GameObject。"
+    ],
+    "stepsOneSubparagraph": "Unity添加了一个新的GameObject，其中包括：",
+    "stepsOneList": [
+      "一个Cinemachine Camera组件，",
+      "一个Cinemachine Follow组件，处理位置控制的Cinemachine相机行为，",
+      "一个Cinemachine Rotation Composer组件，处理旋转控制的Cinemachine相机行为。"
+    ],
+    "stepsThree": "CinemachineCamera始终自动将Unity相机相对于此GameObject进行定位，并旋转相机以查看此GameObject，即使您在场景中移动它。",
+    "noteTwo": "如果您通过右键点击要跟踪的GameObject来调用跟随相机菜单项，则新相机的“跟踪目标”将自动填充为您右键点击的对象。",
+    "subTitleTwo": "调整Cinemachine相机行为",
+    "paragraphTwoList": [
+      "使用Inspector访问Cinemachine Camera组件属性以进行进一步配置。",
+      "调整如下属性："
+    ],
+    "stepsTwo": [
+      "跟随偏移",
+      "跟随阻尼",
+      "屏幕组成",
+      "重新瞄准相机时使用的阻尼",
+      "镜头设置"
+    ]
+  },
+  "FollowFrameGroup": {
+    "title": "跟踪并框选一个组",
+    "paragraphOne": "使用 Cinemachine 目标组将多个变换视为单个跟踪目标。",
+    "paragraphTwo": "它还可以用作需要知道目标大小的程序行为的目标，例如组框架扩展。",
+    "subtitleOne": "创建目标组",
+    "ulListOne": ["向空 GameObject 添加 CinemachineTargetGroup 组件。"],
+    "subtitleTwo": "使用目标组创建新的 Cinemachine 相机",
+    "ulListTwo": [
+      "在 Unity 菜单中，选择 GameObject > Cinemachine > Targeted Cameras > Target Group Camera。"
+    ],
+    "paragraphThree": "Unity 将新的 CinemachineCamera 和目标组添加到场景中。CinemachineCamera 中的跟踪目标指的是新的目标组。",
+    "subTitleThree": "将现有的 CinemachineCamera 目标转换为目标组",
+    "ulListThree": [
+      "从 CinemachineCamera 检查器中跟踪目标字段右侧的弹出菜单中选择“转换为目标组”。这将创建一个新的目标组游戏对象，将当前目标添加到组中，并将 Cinemachine 相机的跟踪目标设置为该组。"
+    ],
+    "subtitleFour": "填充目标组",
+    "olListOne": [
+      "选择新的目标组对象。",
+      "在检查器中，点击 + 号向组中添加新项目。",
+      "在新项目中，分配一个 GameObject（您可以从层次结构中拖放），并编辑权重和半径属性。重要的是给目标一个非零的权重，否则它会被组忽略。",
+      "要向目标组添加更多的 GameObject，请重复步骤 2-3。"
+    ]
+  },
+  "FreeLookCamera": {
+    "title": "创建自由视角相机",
+    "paragraphOne": "在Cinemachine 3.0中，自由视角相机不再是以前版本中的单独类别。而是通过设置带有适当行为的CinemachineCamera来实现。",
+    "paragraphTwo": "自由视角相机是一种CinemachineCamera，用于跟踪游戏对象目标，并允许用户控制相机的视角。本质上，它是一种可以根据用户输入围绕目标旋转的相机。有几种可能的实现方式，每种方式都有其自身的行为风格和特点。您选择的方式将取决于目标移动的方式以及您想要的具体相机行为。认真思考您想让相机如何行为是很重要的。并没有一种适合所有情况的解决方案。",
+    "paragraphThree": "当您在GameObject菜单中选择Cinemachine > 自由视角相机时，默认情况下将创建一个具有以下组件的CinemachineCamera：",
+    "paragraphFour": "轨道跟随提供了轨道定位功能，旋转组合器确保相机始终从任何位置查看目标。用户输入由输入轴控制器组件提供。那里的设置将允许您将相机角度映射到您喜欢的任何输入控件，并调整它们的响应速度。",
+    "paragraphFive": "Cinemachine自由视角修饰器的作用是允许您根据相机的垂直视角调整一些设置。例如，您可以根据从顶部或底部查看的位置设置不同的镜头设置。该组件提供了许多不同的可能性，当然，您也可以自行设计并添加自定义设置。Cinemachine自由视角修饰器是一个可选组件，如果您不需要它提供的功能，可以将其删除。",
+    "paragraphSix": "通过将位置控制行为更改为位置组合器和旋转控制行为更改为平移，可以制作自由视角的另一种版本。",
+    "paragraphSeven": "在这种情况下，平移设置视角，位置组合器则使相机定位正确，以便目标正确显示在屏幕上。"
+  },
+  "ThirdPersonCamera": {
+    "title": "创建第三人称摄像机",
+    "paragraphOne": "虽然使用自由看摄像机创建第三人称摄像机可能是可能的，而且通常也是合适的，但在某些情况下，这种方式可能无法提供您所需的所有控制。例如，当您希望有肩膀上的偏移或精确的瞄准控制（例如在射击游戏中），并希望在混合到瞄准摄像机时保持该控制时，使用自由看摄像机可能难以保持所需的精度。",
+    "paragraphTwo": "为解决这个问题，Cinemachine提供了第三人称跟随行为。使用此行为的范例与自由看不同。具体来说，第三人称摄像机刚性地附着在跟踪目标上，为了调整摄像机的方向，您必须旋转目标本身。摄像机的前方方向将始终与目标的前方方向相匹配，即使摄像机从目标稍微偏移，正如在构架设置中指定的那样。",
+    "paragraphThree": "这意味着瞄准控制不是内置在摄像机中的，而必须由目标提供。通常，目标将是玩家的一个不可见的子对象，从而使玩家瞄准与玩家模型的旋转分离。请参阅Cinemachine示例，了解如何实现这一点的示例：",
+    "ulListOne": ["ThirdPersonWithAimMode", "ThirdPersonWithRoadieRun"],
+    "paragraphFour": "这些示例使用第三人称瞄准扩展，使用射线投射来确定摄像机瞄准的目标，并确保此点锁定到屏幕中心，即使摄像机上有过程噪声也是如此。"
+  },
   "TopDownGamesAnd2DPage": {
     "title": "2D和俯视视角游戏",
     "paragraphOne": "使用和配置Cinemachine以满足2D游戏和俯视视角游戏的特定要求。",

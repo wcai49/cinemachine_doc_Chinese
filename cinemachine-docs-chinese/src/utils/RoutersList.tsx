@@ -36,6 +36,10 @@ import UseToolsAndShortcutsPage from "../pages/GetStarted/UseToolAndShortcuts/Us
 import PreBuiltCamerasPage from "../pages/GetStarted/UseToolAndShortcuts/ToolsAndShortcutsPages/PreBuiltCamerasPage.tsx";
 import SceneHandlesPage from "../pages/GetStarted/UseToolAndShortcuts/ToolsAndShortcutsPages/SceneHandlesPage.tsx";
 import SavingInPlayModePage from "../pages/GetStarted/UseToolAndShortcuts/ToolsAndShortcutsPages/SavingInPlayModePage.tsx";
+import FollowFrameCharacterPage from "../pages/3DTrackingScenarios/3DTrackingPages/FollowFrameCharacterPage.tsx";
+import FollowFrameGroupPage from "../pages/3DTrackingScenarios/3DTrackingPages/FollowFrameGroupPage.tsx";
+import CreateFreeLookCameraPage from "../pages/3DTrackingScenarios/3DTrackingPages/CreateFreeLookCamPage.tsx";
+import CreateThirdPersonCameraPage from "../pages/3DTrackingScenarios/3DTrackingPages/CreateThirdPersonCamPage.tsx";
 
 const RoutersList: React.FC = () => {
   return (
@@ -120,6 +124,25 @@ const RoutersList: React.FC = () => {
       <Route
         path="/section4-3D-tracking-scenarios"
         element={<TrackingScenario3DPage />}
+      />
+
+      <Route
+        path="section4-1-Follow-and-frame-a-character"
+        element={<FollowFrameCharacterPage />}
+      />
+      <Route
+        path="section4-2-Follow-and-frame-a-group"
+        element={<FollowFrameGroupPage />}
+      />
+
+      <Route
+        path="section4-3-Create-a-FreeLook-Camera"
+        element={<CreateFreeLookCameraPage />}
+      />
+
+      <Route
+        path="section4-4-Create-a-Third-Person-Camera"
+        element={<CreateThirdPersonCameraPage />}
       />
 
       {/* Section5 */}

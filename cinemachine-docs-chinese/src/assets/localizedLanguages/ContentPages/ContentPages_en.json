@@ -607,6 +607,80 @@
       "Create a Third Person Camera"
     ]
   },
+  "FollowFrameCharacter": {
+    "title": "Follow and frame a character",
+    "paragraphOne": "Create and set up a Cinemachine Camera that automatically follows and frames a character.",
+    "noteOne": "Your Scene must include a GameObject you can target to follow it with the Cinemachine Camera.",
+    "subTitleOne": "Add a 'Follow' Cinemachine Camera",
+    "stepsOne": [
+      "In the Unity menu, select GameObject > Cinemachine > Targeted Cameras > Follow Camera.",
+      "Verify that the Unity Camera includes a Cinemachine Brain component.",
+      "In the Inspector, in the Cinemachine Camera component, set the Tracking Target property to specify the GameObject to follow and look at. "
+    ],
+    "stepsOneSubparagraph": "Unity adds a new GameObject with:",
+    "stepsOneList": [
+      "A Cinemachine Camera component,",
+      "A Cinemachine Follow component handling the Cinemachine Camera behavior for Position Control, and",
+      "A Cinemachine Rotation Composer component handling the Cinemachine Camera behavior for Rotation Control."
+    ],
+    "stepsThree": "The CinemachineCamera automatically positions the Unity camera relative to this GameObject at all times, and rotates the camera to look at the GameObject, even as you move it in the Scene.",
+    "noteTwo": "If you invoked the Follow Camera menu item by right-clicking on the GameObject that you want to follow, the 'Tracking Target' of the new camera will automatically be populated with the object on which you right-clicked.",
+    "subTitleTwo": "Adjust the Cinemachine Camera behavior",
+    "paragraphTwoList": [
+      "Use the Inspector to access the Cinemachine Camera component properties for further configuration.",
+      "Adjust the properties such as:"
+    ],
+    "stepsTwo": [
+      "The follow offset",
+      "The follow damping",
+      "The screen composition",
+      "The damping used when re-aiming the camera",
+      "The Lens settings"
+    ]
+  },
+  "FollowFrameGroup": {
+    "title": "Follow and frame a group",
+    "paragraphOne": "Use Cinemachine Target Group to treat multiple Transforms as a single Tracking target.",
+    "paragraphTwo": "It can also be used as targets for procedural behaviours that need to know the size of the target, for example the Group Framing extension.",
+    "subtitleOne": "To create a Target Group",
+    "ulListOne": [
+      "Add a CinemachineTargetGroup component to an empty GameObject."
+    ],
+    "subtitleTwo": "To create a new Cinemachine Camera with a Target Group",
+    "ulListTwo": [
+      "In the Unity menu, choose GameObject > Cinemachine > Targeted Cameras > Target Group Camera."
+    ],
+    "paragraphThree": "Unity adds a new CinemachineCamera and Target Group to the Scene. The Trancking Target in the CinemachineCamera refers to the new Target Group.",
+    "subTitleThree": "To convert an existing CinemachineCamera target to a target group",
+    "ulListThree": [
+      "Select Convert to TargetGroup from the popup menu to the right of the Tracking Target field in the CinemachineCamera inspector.  This will create a new Target Group game object, add the current target to the group, and set the Cinemachine Camera's Tracking Target to be that group."
+    ],
+    "subtitleFour": "To Populate a Target Group",
+    "olListOne": [
+      "Select the new Target Group object.",
+      "In the Inspector, click the + sign to add a new item to the group.",
+      "In the new item, assign a GameObject (you can drag and drop from the Hierarchy), and edit the Weight and Radius properties.  It's important to give the target a non-zero weight, or it will be ignored by the group.",
+      "To add more GameObjects to the Target Group, repeat steps 2-3."
+    ]
+  },
+  "FreeLookCamera": {
+    "title": "Create a FreeLook Camera",
+    "paragraphOne": "With Cinemachine 3.0, the FreeLook camera is no longer a separate class as it was in prior versions of Cinemachine. Instead, it is implemented by setting up a CinemachineCamera with the appropriate behaviors.",
+    "paragraphTwo": "A FreeLook is a CinemachineCamera that tracks a GameObject target and allows the user to control the camera's viewing angle. Essentially, it is a camera that can orbit the target in response to user input. There are several possible ways to implement such a camera, each with its own style of behavior and idiosyncrasies. The one you choose will depend on the way your target moves, and on the specific camera behavior that you want. It's a good exercise to think carefully about how you want the camera to behave. There is no one-size-fits-all.",
+    "paragraphThree": "When you choose Cinemachine > FreeLook Camera from the GameObject menu, it will by default create a CinemachineCamera with the following components:",
+    "paragraphFour": "The Orbital Follow provides the orbiting position functionality, and the Rotation Composer ensures that the camera always looks at the target, from whatever position it is. User input is provided by the Input Axis Controller component. The settings there will allow you to map the camera angle to whatever input controls you like, and to tune their responsiveness.",
+    "paragraphFive": "The Cinemachine Free Look Modifier behavior's job is to allow you to tweak some settings as a function of the vertical viewing angle of the camera. For example, you can have different lens settings depending on whether you look from the top or from the bottom. A number of different possibilities are provided with that component, and of course it is always possible to craft your own and add them. Cinemachine Free Look Modifier is an optional component, and you can remove it if you don't need what it provides.",
+    "paragraphSix": "An alternative version of a FreeLook can be made by changing the Position Control behavior to Position Composer and the Rotation Control behavior to Pan Tilt.",
+    "paragraphSeven": "In this case, Pan Tilt sets the viewing angle, and Position Composer positions the camera such that the target is properly placed on the screen."
+  },
+  "ThirdPersonCamera": {
+    "title": "Create a Third Person Camera",
+    "paragraphOne": "While it is possible - and often appropriate - to make a Third Person camera using a FreeLook Camera, there are cases where that doesn't give you all the control you need. For example, when you want to have an over-the-shoulder offset, or precise aiming control (in a shooter, for instance) and want to keep that control while blending to an aiming camera, it can be difficult to maintain the desired precision with the FreeLook.",
+    "paragraphTwo": "To address this problem, Cinemachine provides the Third Person Follow behaviour. The paradigm for using this behaviour is not the same as with the FreeLook. Specifically, the ThirdPersonCamera is rigidly attached to the Tracking target, and to aim the camera, you must rotate the target itself. The camera's forward direction will always match the Target's forward direction, even though the camera is offset a little from the target, as specified in the rig settings.",
+    "paragraphThree": "This means that aim control is not built into the camera, it must be provided by the target. Often, the target will be an invisible child object of the player, thus decoupling player aim from player model rotation. See these Cinemachine samples for examples of how this might be implemented:",
+    "ulListOne": ["ThirdPersonWithAimMode", "ThirdPersonWithRoadieRun"],
+    "paragraphFour": "These samples make use of the Third Person Aim extension which uses raycasts to determine what the camera is aiming at, and ensures that this point is locked to screen center, even if there is procedural noise active on the camera."
+  },
   "TopDownGamesAnd2DPage": {
     "title": "2D and top-down games",
     "paragraphOne": "Use and configure Cinemachine to meet your expectations according to specific requirements of 2D graphics and top-down games.",
