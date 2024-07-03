@@ -22,8 +22,8 @@ This project is about Unity's official verified package: cinemachine's documenta
 |跟踪和框定群组 | Deployed | June 26th, 2024 |
 |创建自由视角相机 | Deployed | June 26th, 2024 |
 |创建第三人称相机 | Deployed | June 26th, 2024 |
-|Cinemachine与2D图形 | Not Started | July 3rd, 2024 |
-|Cinemachine与俯视游戏 | Not Started | July 3rd, 2024 |
+|Cinemachine与2D图形 | Not Started | July 5th, 2024 |
+|Cinemachine与俯视游戏 | Not Started | July 5th, 2024 |
 
 
 ## 状态更新表 Status check
