@@ -688,6 +688,18 @@
     "paragraphOne": "使用和配置Cinemachine以满足2D游戏和俯视视角游戏的特定要求。",
     "list": ["Cinemachine和2D图像", "Cinemachine和俯视视角游戏"]
   },
+  "2DGraphics": {
+    "title": "2D 图形",
+    "paragraphOne": "Cinemachine 支持正交相机。当您将 Unity 相机的投影设置为正交时，Cinemachine 会进行调整以适应它。在 CinemachineCamera 的镜头属性中，FOV 被正交大小取代。请注意，与 FOV 相关的设置以及某些以 FOV 为导向的行为（如跟随缩放）如果相机是正交的，则没有效果。",
+    "paragraphTwo": "在正交环境中，旋转相机通常没有意义。因此，Cinemachine 提供位置作曲器来处理框架和构图，而无需旋转相机。",
+    "paragraphThree": "当主相机具有像素完美组件时，您可以向 CinemachineCamera 添加 Cinemachine 像素完美扩展，使其能够与像素完美环境很好地配合。",
+    "paragraphFour": "要将相机限制在 2D 世界的特定区域，您可以使用 Cinemachine Confiner 2D 扩展。"
+  },
+  "TopDownGames": {
+    "title": "俯视游戏",
+    "paragraphOne": "Cinemachine CinemachineCameras 模仿人类摄像师及其操作真实相机的方式。因此，它们对上下轴有敏感性，并且总是尽量避免在相机框架中引入滚动。由于这种敏感性，CinemachineCamera 避免长时间向上或向下看。它们可能会在经过时这样做，但如果目标长时间在正上方或正下方，它们将不总是给出理想的结果。",
+    "paragraphTwo": "如果您正在构建一个俯视游戏，其中相机直视下方，最佳做法是为相机重新定义上方向。您可以通过在 Cinemachine Brain 中将世界上方向覆盖设置为一个 GameObject 来实现此目的，该对象的本地上方向指向您希望 CinemachineCamera 的上方向通常所在的方向。此上方向的定义适用于由该 Cinemachine Brain 控制的所有 CinemachineCameras。"
+  },
   "ConstrainCameraToPath": {
     "title": "使相机沿路径移动",
     "paragraphOne": "利用样条线约束相机沿着预定义且可自定义的路径移动。",

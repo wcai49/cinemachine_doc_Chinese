@@ -686,6 +686,18 @@
     "paragraphOne": "Use and configure Cinemachine to meet your expectations according to specific requirements of 2D graphics and top-down games.",
     "list": ["Cinemachine and 2D graphics", "Cinemachine and top-down games"]
   },
+  "2DGraphics": {
+    "title": "2D graphics",
+    "paragraphOne": "Cinemachine supports orthographic cameras. When you set the Unity camera's projection to Orthographic, Cinemachine adjusts to accommodate it. In CinemachineCamera properties for Lens, FOV is replaced by Orthographic Size. Note that settings related to FOV and certain FOV-oriented behaviors such as Follow Zoom have no effect if the camera is orthographic.",
+    "paragraphTwo": "In orthographic environments, it doesn’t usually make sense to rotate the camera. Accordingly, Cinemachine provides the Position Composer to handle framing and composition without rotating the camera.",
+    "paragraphThree": "When the main camera has a Pixel Perfect component, you can add a The Cinemachine Pixel Perfect extension to your CinemachineCamera to enable it to play well with the Pixel Perfect environment.",
+    "paragraphFour": "To confine the camera to a specific region of your 2D world, you can use the Cinemachine Confiner 2D extension"
+  },
+  "TopDownGames": {
+    "title": "Top-down games",
+    "paragraphOne": "Cinemachine CinemachineCameras are modelled after human camera operators and how they operate real-life cameras. As such, they have a sensitivity to the up/down axis, and always try to avoid introducing roll into the camera framing. Because of this sensitivity, the CinemachineCamera avoids looking straight up or down for extended periods. They may do it in passing, but if the Look At target is straight up or down for extended periods, they will not always give the desired result.",
+    "paragraphTwo": "If you are building a top-down game where the cameras look straight down, the best practice is to redefine the up direction, for the purposes of the camera. You do this by setting the World Up Override in the Cinemachine Brain to a GameObject whose local up points in the direction that you want the CinemachineCamera’s up to normally be. This definition of Up is applied to all CinemachineCameras controlled by that Cinemachine Brain."
+  },
   "ConstrainCameraToPath": {
     "title": "Constrain a camera to a path",
     "paragraphOne": "Use a Spline to constrain the movement of a camera along a predefined and customizable path.",

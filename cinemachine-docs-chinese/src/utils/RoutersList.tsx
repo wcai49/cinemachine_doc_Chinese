@@ -40,6 +40,8 @@ import FollowFrameCharacterPage from "../pages/3DTrackingScenarios/3DTrackingPag
 import FollowFrameGroupPage from "../pages/3DTrackingScenarios/3DTrackingPages/FollowFrameGroupPage.tsx";
 import CreateFreeLookCameraPage from "../pages/3DTrackingScenarios/3DTrackingPages/CreateFreeLookCamPage.tsx";
 import CreateThirdPersonCameraPage from "../pages/3DTrackingScenarios/3DTrackingPages/CreateThirdPersonCamPage.tsx";
+import Cinemachine2DGraphicsPage from "../pages/2DAndTopDown/2DTopDownSubpages/2DGraphicsPage.tsx";
+import TopDownGamesPage from "../pages/2DAndTopDown/2DTopDownSubpages/TopDownGamesPage.tsx";
 
 const RoutersList: React.FC = () => {
   return (
@@ -149,6 +151,16 @@ const RoutersList: React.FC = () => {
       <Route
         path="/section5-2D-and-top-down-games"
         element={<TopDownGamesAnd2DPage />}
+      />
+
+      <Route
+        path="section5-1-Cinemachine-and-2D-graphics"
+        element={<Cinemachine2DGraphicsPage />}
+      />
+
+      <Route
+        path="section5-2-Cinemachine-and-top-down-games"
+        element={<TopDownGamesPage />}
       />
 
       {/* Section6 */}
