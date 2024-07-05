@@ -18,10 +18,13 @@ This project is about Unity's official verified package: cinemachine's documenta
 |预置相机| Deployed    | June 19th, 2024     |
 |场景处理| Deployed    | June 19th, 2024     |
 |运行模式下保存| Deployed    | June 19th, 2024     |
-|跟踪和框定角色 | Not Started | June 26th, 2024 |
-|跟踪和框定群组 | Not Started | June 26th, 2024 |
-|创建自由视角相机 | Not Started | June 26th, 2024 |
-|创建第三人称相机 | Not Started | June 26th, 2024 |
+|跟踪和框定角色 | Deployed | June 26th, 2024 |
+|跟踪和框定群组 | Deployed | June 26th, 2024 |
+|创建自由视角相机 | Deployed | June 26th, 2024 |
+|创建第三人称相机 | Deployed | June 26th, 2024 |
+|Cinemachine与2D图形 | Not Started | July 5th, 2024 |
+|Cinemachine与俯视游戏 | Not Started | July 5th, 2024 |
+
 
 ## 状态更新表 Status check
 
