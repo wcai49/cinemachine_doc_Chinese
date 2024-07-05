@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cinemachine_doc_Chinese/static/css/main.1b533184.css",
-    "main.js": "/cinemachine_doc_Chinese/static/js/main.bd517035.js",
+    "main.js": "/cinemachine_doc_Chinese/static/js/main.9a960f0b.js",
     "static/js/453.17a9f8c6.chunk.js": "/cinemachine_doc_Chinese/static/js/453.17a9f8c6.chunk.js",
     "static/media/CinemachineSplash.png": "/cinemachine_doc_Chinese/static/media/CinemachineSplash.892e5732819151f0de97.png",
     "static/media/handleToolbar_image1.png": "/cinemachine_doc_Chinese/static/media/handleToolbar_image1.ff00f7e7d7eaab5ab4b9.png",
@@ -34,11 +34,11 @@
     "static/media/UpgradingFrom2x4.png": "/cinemachine_doc_Chinese/static/media/UpgradingFrom2x4.c468d10b6573f05c9fb2.png",
     "index.html": "/cinemachine_doc_Chinese/index.html",
     "main.1b533184.css.map": "/cinemachine_doc_Chinese/static/css/main.1b533184.css.map",
-    "main.bd517035.js.map": "/cinemachine_doc_Chinese/static/js/main.bd517035.js.map",
+    "main.9a960f0b.js.map": "/cinemachine_doc_Chinese/static/js/main.9a960f0b.js.map",
     "453.17a9f8c6.chunk.js.map": "/cinemachine_doc_Chinese/static/js/453.17a9f8c6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1b533184.css",
-    "static/js/main.bd517035.js"
+    "static/js/main.9a960f0b.js"
   ]
 }
