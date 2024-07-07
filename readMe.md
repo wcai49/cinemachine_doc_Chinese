@@ -31,6 +31,7 @@ This project is about Unity's official verified package: cinemachine's documenta
 | Bugs       | Status          | Expected Fixing Time  |  Comment |
 |--------------------|-----------------|--------------------|-----------------|
 | 希望在翻译完所有页面之前，先将英文页面都上传完成 | won't fix     | N/A     | 具体原因可关注B站直播消息，将在直播时解答 |
+| 希望可以保留Unity原专有名词，例如input system， inspector 等等 | Will fix    | N/A     | |
 
 ## 声明 Disclaimer
 
