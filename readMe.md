@@ -8,29 +8,16 @@ This project is about Unity's official verified package: cinemachine's documenta
 
 ## 更新计划表 Release Schedule
 
+**由于近期都没有收到反馈和更新要求，所以我会暂缓翻译的更新，投入更多的精力到我的游戏项目中。如果你有任何页面想要尽快得到更新，请记得通过文档下方的反馈通道给我反馈！也欢迎任何专家一起完善我们的项目。**
+
 | Section/Page       | Status          | Expected Release Time  |
 |--------------------|-----------------|--------------------|
-| 设置基本cinemachine环境 | Deployed     | June 12th, 2024     |
-| 设置多个cinemachien摄像机 | Deployed    | June 12th, 2024     |
-| 向cinemachine摄像机添加程序化行为| Deployed     | June 12th, 2024     |
-| 使用cinemachine摄像机设置时间轴 | Deployed    | June 12th, 2024     |
-|使用方便的工具和快捷方式 | Deployed    | June 19th, 2024     |
-|预置相机| Deployed    | June 19th, 2024     |
-|场景处理| Deployed    | June 19th, 2024     |
-|运行模式下保存| Deployed    | June 19th, 2024     |
-|跟踪和框定角色 | Deployed | June 26th, 2024 |
-|跟踪和框定群组 | Deployed | June 26th, 2024 |
-|创建自由视角相机 | Deployed | June 26th, 2024 |
-|创建第三人称相机 | Deployed | June 26th, 2024 |
-|Cinemachine与2D图形 | Deployed | July 5th, 2024 |
-|Cinemachine与俯视游戏 | Deployed | July 5th, 2024 |
 
 
 ## 状态更新表 Status check
 
 | Bugs       | Status          | Expected Fixing Time  |  Comment |
 |--------------------|-----------------|--------------------|-----------------|
-| 希望在翻译完所有页面之前，先将英文页面都上传完成 | won't fix     | N/A     | 具体原因可关注B站直播消息，将在直播时解答 |
 | 希望可以保留Unity原专有名词，例如input system， inspector 等等 | Will fix    | N/A     | |
 
 ## 声明 Disclaimer
