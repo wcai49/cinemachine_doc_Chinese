@@ -32,4 +32,4 @@ https://wcai49.github.io/cinemachine_doc_Chinese/
 
 ## 官方文档地址
 
-[https://docs.unity3d.com/Packages/com.unity.cinemachine@3.0/manual/index.html 。](https://docs.unity3d.com/Packages/com.unity.cinemachine@3.1/manual/index.html)
+[https://docs.unity3d.com/Packages/com.unity.cinemachine@3.0/manual/index.html](https://docs.unity3d.com/Packages/com.unity.cinemachine@3.1/manual/index.html)
